@@ -1,17 +1,67 @@
 ---
 title: "From Frequentist Problems Towards Bayesian Solutions"
 author: "Jorge N. Tendeiro"
-date: "10 August    2019"
+date: "10 August 2019"
 output: 
   ioslides_presentation:
+    smaller: true
+    transition: slower
+    logo: figures/rugr_logoenv_rood_rgb.png
     css: slides.css
+    template: quarterly-report.html
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+[comment]: # (See here: https://stackoverflow.com/questions/42690955/how-to-insert-footnotes-in-ioslides-presentations-using-rmarkdown/45569765)
+<style>
+div.footnotes {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 0.6em;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+
+  $('footnote').each(function(index) {
+    var text  = $(this).html();
+    var fnNum = (index+1).toString();
+    $(this).html(fnNum.sup());
+
+    var footnote   = fnNum + '. ' + text + '<br/>';
+    var oldContent = $(this).parents('slide').children('div.footnotes').html();
+    var newContent = oldContent + footnote;
+    $(this).parents('slide').children('div.footnotes').html(newContent);
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Section maybe? | Let's see\ldots
+
 ## R Markdown
+Some more text.<footnote>And *another* **footnote**</footnote>
+
+$x^2 = \exp\left(\frac{\sqrt{a}}{b}\right)$
 
 This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -19,15 +69,26 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ## Slide with Bullets
 
-- Bullet 1
+- Bullet 1<footnote> *Humm* **errr**</footnote>
 - Bullet 2
 - Bullet 3
+
+Enter one at a time:
+
+> - aaa
+> - bbb
+> - ccc
 
 ## Slide with R Output
 
 ```{r cars, echo = TRUE}
 summary(cars)
 ```
+
+### <b>
+x <- 10
+y <- x * 2
+### </b>
 
 ## Slide with Plot
 

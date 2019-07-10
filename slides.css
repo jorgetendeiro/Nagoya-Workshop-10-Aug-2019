@@ -1,4 +1,10 @@
-.title-slide hgroup h1 {
+slides > .title-slide hgroup h1 {
   font-size: 32px;
   letter-spacing: 0;
+}
+
+slides > slide:not(.nobackground):before {
+  width: 0;
+  height: 0;
+  background-size: 0 0;
 }
