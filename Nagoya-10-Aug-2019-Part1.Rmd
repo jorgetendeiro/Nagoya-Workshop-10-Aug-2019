@@ -1,5 +1,6 @@
 ---
 title: "From Frequentist Problems Towards Bayesian Solutions"
+subtitle: "Part 1: Replication crisis in Psychology <br> (and what does Statistics have to do with it)"
 author: "Jorge N. Tendeiro"
 date: "10 August 2019"
 output: 
@@ -8,7 +9,8 @@ output:
     transition: slower
     logo: figures/rugr_logoenv_rood_rgb.png
     css: slides.css
-    template: quarterly-report.html
+bibliography: references.bib
+csl: apa-old-doi-prefix.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -49,14 +51,62 @@ $(document).ready(function() {
 
 
 
+# Fraud
+
+## Definition
+Fraud = scientifc misconduct.
+
+- Falsifying data.
+- Fabricating data.
+- 
+
+
+
+
+
+# Questionable research practices
+
+## QRPs
+Coin termed by @john2012a.<br>
+See also @simmons2011a.
+<br><br>
+
+- Not necessarily fraud.
+- Includes the (ab)use of actually *acceptable* research practices.
+- Problem with QRPs:<br>
+    * Introduce bias (typically, in *favor* of the researcher's intentions...).
+    * Inflate effect size.
+    * Results not replicable.
+
+## QRPs
+Some examples [@john2012a; @schimmack2015]: 
+
+- Omit some DVs.
+- Omit some conditions.
+- Uncontrolled sequential testing --- Look and decide:
+    * $p > .05$: Collect more
+    * $p < .05$: Stop.
+- $p = .054 \longrightarrow p = .05$.
+- Only report $p<.05$ results.
+- Exclusion of outliers dependent on $p$.
+- Convert exploratory result into research question.
+- ...
+
+# But *why*?...
+
+## Why risking scientific misconduct?
+It is strongly related to incentives [@nosek2012a; @schonbrodt2015].
+
+- "Publish or perish":<br>
+Publish a lot, at highly prestigious journals.
+- Journals only publish a fraction of all manuscripts.
+- 
 
 
 
 
 
 
-
-# Section maybe? | Let's see\ldots
 
 ## R Markdown
 Some more text.<footnote>And *another* **footnote**</footnote>
@@ -95,4 +145,15 @@ y <- x * 2
 ```{r pressure}
 plot(pressure)
 ```
+
+# References
+
+----
+
+<style>
+slides > slide { overflow: scroll; }
+slides > slide:not(.nobackground):after {
+  content: '';
+}
+</style>
 

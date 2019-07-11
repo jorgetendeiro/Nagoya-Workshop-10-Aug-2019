@@ -1,6 +1,15 @@
 slides > .title-slide hgroup h1 {
   font-size: 32px;
   letter-spacing: 0;
+  top: 50%;
+  transform: translate(0%, -75%);
+}
+
+slides > .title-slide hgroup h2 {
+  font-size: 24px;
+  letter-spacing: 0;
+  color: gray;
+  line-height: 1.1;
 }
 
 slides > slide:not(.nobackground):before {
