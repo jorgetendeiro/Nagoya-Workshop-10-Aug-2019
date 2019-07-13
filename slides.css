@@ -17,3 +17,19 @@ slides > slide:not(.nobackground):before {
   height: 0;
   background-size: 0 0;
 }
+
+.remark-slide-number {
+  font-size: 10pt;
+  margin-bottom: -11.6px;
+  margin-right: 10px;
+  color: #FFFFFF; /* white */
+  opacity: 1; /* default: 0.5 */
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 1.5em;
+}
+
