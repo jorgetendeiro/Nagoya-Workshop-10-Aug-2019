@@ -11,6 +11,8 @@ output:
     css: slides.css
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
+nocite: | 
+  @wasserstein2016
 ---
 
 ```{r setup, include=FALSE}
@@ -78,9 +80,9 @@ Probability of an effect at least as extreme as the one we observed, *given that
 \[\fbox{$ p\text{-value} = P\left(X_\text{obs} \text{ or more extreme}|\mathcal{H}_0\right) $}\]
 
 The definition is simple enough, right?...
-<br><br>
+<br>
 
-Consider the following statement [@gigerenzer2004]:
+Consider the following statement [@oakes1986; @falk1995; @haller2002; @gigerenzer2004]:
 
 > *Suppose you have a treatment that you suspect may alter performance on a certain task. You compare the
 means of your control and experimental groups (say, 20 subjects in each sample). Furthermore, suppose you
@@ -89,24 +91,39 @@ each of the statements below as "true" or "false."* False *means that the statem
 from the above premises. Also note that several or none of the statements may be correct.*
 
 ## Definition
-[@gigerenzer2004, p. 3 PDF]:
-<br><br>
-
-```{r, out.width='100%', fig.align='center', fig.cap=''}
+```{r, out.width='100%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px; display: inline-block;"'}
 knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
 ## Definition
 **All** statements are incorrect. But how did students and teachers perceive these statements?
 
-```{r, out.width='40%', fig.align='center', fig.cap=''}
+```{r, out.width='35%', fig.align='center', fig.cap=''}
 knitr::include_graphics('figures/Gigerenzer p values 2.png')
 ```
 
-## Definition
-This was in 2004. But things did not improve since; see 
+This was in 2004. But things did not improve since...
 
+## @goodman2008
 
+```{r, out.width='60%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Goodman.png')
+```
+<br>
+
+```{r, out.width='90%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Goodman2.png')
+```
+
+## @greenland2016
+
+```{r, out.width='80%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Greenland.png')
+```
+
+<br><br><br>
+
+This paper expands @goodman2008 and elaborates on 25 (yes, 二十五!!!) misinterpretations.
 
 ## If $p$-values are inflated... What to do?
 Publication bias and QRPs ($p$-hacking) inflate $p$-values. Can we "deflate" them?
@@ -118,6 +135,68 @@ Publication bias and QRPs ($p$-hacking) inflate $p$-values. Can we "deflate" the
 - $z$-curve; see 
 
 See @schonbrodt2015a for a nice presentation.
+
+# Confidence intervals
+
+## Definition
+
+
+
+
+
+# What do statistical associations advice?
+
+## ASA 2016 [@wasserstein2016]
+```{r, out.width='80%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Wasserstein2016.png')
+```
+
+Six principles:
+
+1. $p$-values can indicate how incompatible the data are with a specified statistical model.
+2. $p$-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
+3. Scientific conclusions and business or policy decisions should not be based only on whether a $p$-value passes a specific threshold.
+4. Proper inference requires full reporting and transparency.
+5. A $p$-value, or statistical significance, does not measure the size of an effect or the importance of a result.
+6. By itself, a $p$-value does not provide a good measure of evidence regarding a model or hypothesis.
+
+## ASA 2019 [@wasserstein2019]
+```{r, out.width='80%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Wasserstein2019.png')
+```
+
+This is an editorial of a special issue consisting of 43 (!!) papers.
+
+Main ideas:
+
+- "Don't" is not enough -- Some *what to do* advices are provided.
+- However... Don’t say “statistically significant” -- Just <span style="color:red">**don't**</span>.
+
+> "(...) it is time to stop using the term “statistically significant” entirely. Nor should variants such as “significantly different,” “$p < 0.05$,” and “nonsignificant” survive, whether expressed in words, by asterisks in a table, or in some other way."
+
+But:
+
+> "Despite the limitations of p-values (...), however, we are not recommending that the calculation and use of continuous
+$p$-values be discontinued. Where $p$-values are used, they should be reported as continuous quantities (e.g., $p = 0.08$).
+They should also be described in language stating what the value means in the scientific context."
+
+- There is no unique "do":
+
+> "What you will NOT find in this issue is one solution that majestically replaces the outsized role that statistical significance has come to play."
+
+- Accept uncertainty. Be thoughtful, open, and modest.
+
+- Editorial, educational and other institutional practices will have to change.
+<br>
+This includes: Journals, funding agencies, education, career system.
+
+- Value replicability, open materials and data, and reliable practices (which all take time) over "publish or perish".
+
+## ASA 2019: Also advocate Bayesian statistics
+```{r, out.width='50%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Ruberg2019.png')
+```
+
 
 
 
