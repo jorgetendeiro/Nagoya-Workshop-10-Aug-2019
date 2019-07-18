@@ -12,7 +12,7 @@ output:
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
 nocite: | 
-  @wasserstein2016
+  @cuddy2018, @wasserstein2016
 ---
 
 ```{r setup, include=FALSE}
@@ -24,10 +24,16 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Definition
 Fraud = scientifc misconduct.
 
-- Falsifying data.
-- Fabricating data.
-- 
+- Falsifying or fabricating data.
+- This is intentional, not accidental. 
+- Puts all science under a bad light.
+- Markedly different from QRPs (next).
 
+Notable examples:
+
+- Diederik Stapel, social psychologist. Suspended in 2011. [Fabricating and manipulating data] 
+- Jens Förster, social psychologist. Resigned in 2017. [Data tampering](https://retractionwatch.com/2017/12/12/psychologist-fire-leaves-university-start-private-practice/).
+- 
 
 
 
@@ -35,8 +41,8 @@ Fraud = scientifc misconduct.
 # Questionable research practices
 
 ## QRPs
-Coin termed by @john2012.<br>
-See also @simmons2011.
+Coin termed by @john2012a.<br>
+See also @simmons2011a.
 <br><br>
 
 - Not necessarily fraud.
@@ -47,29 +53,95 @@ See also @simmons2011.
     * Results not replicable.
 
 ## QRPs
-Some examples [@john2012; @schimmack2015]: 
+Some examples [@john2012a; @schimmack2015]: 
 
 - Omit some DVs.
 - Omit some conditions.
-- Uncontrolled sequential testing --- Look and decide:
+- <span style="color:red">Peeking</span>: Sequential testing --- Look and decide:
     * $p > .05$: Collect more.
     * $p < .05$: Stop.
-- $p = .054 \longrightarrow p = .05$.
 - Only report $p<.05$ results.
-- Exclusion of outliers dependent on $p$.
-- Convert exploratory result into research question.
+- <span style="color:red">$p$-hacking</span>: E.g., 
+    - exclusion of outliers dependent on $p$.
+    - $p = .054 \longrightarrow p = .05$.
+- <span style="color:red">HARKing</span>: Convert exploratory result into research question.
 - ...
+
+## Researcher's degrees of freedom
+- Researchers have a multitude of decisions to make (experiment design, data collection, analyses performed); @wicherts2016.
+- It is very possible to manipulate results *in favor* of one's interests.
+- This is now known as *researcher's degrees of freedom* [@simmons2011a].
+- Consequence: Inflated false positive findings [@ioannidis2005].
+
+## A now famous example...
+Prof. Brian Wansink at Cornell University.
+
+[His description](https://web.archive.org/web/20170312041524/http:/www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no) of the efforts of a visiting Ph.D student:
+
+> I gave her a data set of a self-funded, failed study which had null results (...). I said, "This cost us a lot of time and our own money to collect. There’s got to be something here we can salvage because it’s a cool (rich & unique) data set." I had three ideas for potential Plan B, C, & D directions (since Plan A had failed). I told her what the analyses should be and what the tables should look like. I then asked her if she wanted to do them.
+
+> Every day she came back with puzzling new results, and every day we would scratch our heads, ask "Why," and come up with another way to reanalyze the data with yet another set of plausible hypotheses. Eventually we started discovering solutions that held up regardless of how we pressure-tested them. I outlined the first paper, and she wrote it up (...). This happened with a second paper, and then a third paper (which was one that was based on her own discovery while digging through the data).
+
+<br><br>
+
+This isn't creative, thinking outside the box, or worthy in any way.
+
+This is QRPing.
+
+## What happened to Wansink?
+- He was severely criticized, his work was scrutinized [e.g., @vanderzee2017].
+<br>
+(Over 100 (!!) errors in a set of four papers...)
+- Has now 40 (!!) publications [retracted](http://retractiondatabase.org/RetractionSearch.aspx#?auth%3dWansink%252c%2bBrian) (as of July 2019).
+- After a year-long internal investigation, he was forced to [resign](https://news.cornell.edu/stories/2018/09/provost-issues-statement-wansink-academic-misconduct-investigation).
+
+## Is it really *that* bad?...
+[Yes](https://www.westernalliance.org.au/2018/05/restoring-trust-in-science-what-are-questionable-research-practices).
+
+- @martinson2005: "Scientists behaving badly".
+- @fanelli2009: Meta-analysis shows evidence of science misconduct.
+- @john2012a: Evidence for QRPs in psychology.
+- @mobley2013: Reported evidence of pressure to *find* significant results.
+- @agnoli2017: Evidence of QRPs, now in Italy.
+- @fraser2018: In other fields of science.
+
+Interestingly, science misconduct has been a longtime concern [see @babbage1830a].
+<br><br>
+
+There are also some voices against this state of affairs [e.g., @fiedler2016].
 
 
 # But *why*?...
 
 ## Why risking scientific misconduct?
-It is strongly related to incentives [@nosek2012; @schonbrodt2015].
+It is strongly related to incentives [@nosek2012a; @schonbrodt2015].
 
 - "Publish or perish":<br>
 Publish a lot, at highly prestigious journals.
 - Journals only publish a fraction of all manuscripts.
 - 
+
+# (I)reproducibility
+
+## Threats to reproducible science
+```{r, out.width='60%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px; display: inline-block;"'}
+knitr::include_graphics('figures/Mufano et al (2017).png')
+```
+
+[@munafo2017]
+
+## Large-scale replication projects
+
+- Many Labs [@ebersole2016; @klein2014]
+- Open Science Collaboration [@osc2015]
+
+
+
+
+
+
+
+
 
 # $p$-values
 
@@ -80,8 +152,8 @@ Probability of an effect at least as extreme as the one we observed, *given that
 \[\fbox{$ p\text{-value} = P\left(X_\text{obs} \text{ or more extreme}|\mathcal{H}_0\right) $}\]
 
 The definition is simple enough, right?...
-<br>
 
+## Test yourself
 Consider the following statement [@oakes1986; @falk1995; @haller2002; @gigerenzer2004]:
 
 > *Suppose you have a treatment that you suspect may alter performance on a certain task. You compare the
@@ -90,12 +162,12 @@ use a simple independent means $t$-test and your result is significant ($t = 2.7
 each of the statements below as "true" or "false."* False *means that the statement does not follow logically
 from the above premises. Also note that several or none of the statements may be correct.*
 
-## Definition
+## Test yourself
 ```{r, out.width='100%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px; display: inline-block;"'}
 knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
-## Definition
+## Results
 **All** statements are incorrect. But how did students and teachers perceive these statements?
 
 ```{r, out.width='35%', fig.align='center', fig.cap=''}
@@ -160,7 +232,7 @@ Six principles:
 5. A $p$-value, or statistical significance, does not measure the size of an effect or the importance of a result.
 6. By itself, a $p$-value does not provide a good measure of evidence regarding a model or hypothesis.
 
-## ASA 2019 [@wasserstein2019]
+## ASA 2019 [@wasserstein2019a]
 ```{r, out.width='80%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
 knitr::include_graphics('figures/Wasserstein2019.png')
 ```
@@ -196,6 +268,87 @@ This includes: Journals, funding agencies, education, career system.
 ```{r, out.width='50%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
 knitr::include_graphics('figures/Ruberg2019.png')
 ```
+
+# What do experts advice?
+
+## @munafo2017
+```{r, out.width='80%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Mufano et al (2017) 2.png')
+```
+
+Methods:
+
+- Protecting against cognitive biases
+- Improving methodological training
+- Implementing independent methodological support
+- Encouraging collaboration and team science
+
+## @munafo2017
+```{r, out.width='100%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Mufano et al (2017) 3.png')
+```
+
+# Key ideas
+## Better education [@button2018]
+
+```{r, out.width='100%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/Button2018.png')
+```
+
+## Registered reports 
+Visit the [Center for Open Science](https://cos.io/rr/).
+
+```{r, out.width='80%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/COS.png')
+```
+<br>
+
+*Prior* to data collection [@chambers2013]:
+
+- Decide hypotheses, methods, and analysis.
+<br>
+(Eliminate several QRPs, e.g., $p$-hacking, hiding null findings.)
+- Peer review of paper.
+- Conditional acceptance of paper!
+- Not only original studies, but also replications are of value!
+
+## Registered reports 
+As of July 2019, 205 journals use Registered Reports.
+
+
+To learn:
+
+- @nosek2014: Special issue in *Social Psychology* in 2014, with examples.
+- @chambers2014: Includes useful FAQs.
+- @chambers2017: [Slides](https://osf.io/ux24b/) at OSF.
+
+## Preregistration
+
+## Preregistration *works* [@kaplan2015]
+
+```{r, out.width='50%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/kaplan2015.png')
+```
+
+## 'statcheck'
+R package that can assist detecting statistical reporting of errors [@nuijten2016].
+
+# What to avoid
+
+## Bullying
+
+- Debates in blogs, Twitter, and journals can be fierce.
+- Criticism should be part of science, of course.
+- It's not bullying to criticize, of course, in particular, with grounded reasons (vide Wansink).
+- But sometimes criticism gets too carried away, IMHO.
+<br><br>
+
+```{r, out.width='55%', fig.align='center', fig.cap='', out.extra='style="background-color: #000000; padding:5px;"'}
+knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
+```
+[NYT, 2017](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html)
+
+(Interestingly: A comeback in [Psychological Science](https://journals-sagepub-com.proxy-ub.rug.nl/eprint/CzbNAn7Ch6ZZirK9yMGH/full).)
 
 
 
