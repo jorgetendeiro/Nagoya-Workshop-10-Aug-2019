@@ -19,7 +19,6 @@ navigation: section
 ```{r setup, include = FALSE, fig.align = 'center'}
 knitr::opts_chunk$set(
   echo      = FALSE, 
-  # fig.align = 'center', 
   fig.cap   = '', 
   out.extra = 'style="background-color: #000000; padding:5px; display:block; margin:auto;"'
   ) 
