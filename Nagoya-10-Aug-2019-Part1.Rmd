@@ -229,7 +229,7 @@ Replicability of 13 classic and contemporary effects across 36 independent sampl
 See also Many Labs 2 [@klein2018], Many Labs 3 [@ebersole2016].
 
 ## Open Science Collaboration [@osc2015]
-```{r, out.width='50%'}
+```{r, out.width='45%'}
 knitr::include_graphics('figures/OSC1.jpg')
 ```
 <br><br>
@@ -248,7 +248,7 @@ knitr::include_graphics('figures/Psychological Science 2014.png')
 knitr::include_graphics('figures/BASP 2015.png')
 ```
 
-> "The Basic and Applied Social Psychology (BASP) (...) emphasized that the null hypothesis significance testing procedure (NHSTP) is invalid (...). From now on, BASP is banning the NHSTP."
+> "The Basic and Applied Social Psychology (BASP) (...) emphasized that the null hypothesis significance testing procedure (NHSTP) is <span style="color:red">invalid</span> (...). From now on, <span style="color:red">BASP is banning the NHSTP</span>."
 
 ## Child Adolescent Mental Health [@spreckelsen2018]
 ```{r, out.width='90%'}
@@ -262,7 +262,7 @@ knitr::include_graphics('figures/TNEJOM Editorial 2019.png')
 
 Editorial [@harrington2019].
 
-> "(...) a requirement to replace P values with estimates of effects or association and 95% confidence intervals"
+> "(...) a requirement to <span style="color:red">replace $p$ values</span> with estimates of effects or association and 95% confidence intervals"
 
 # Education
 
@@ -276,7 +276,7 @@ knitr::include_graphics('figures/Teaching 2012.png')
 knitr::include_graphics('figures/Sarafoglou et al 2019.png')
 ```
 
-Research Master course on open science practices. Materials available!
+Research Master course on open science practices. Materials available (add link)!
 
 ## @chambers2017a
 ```{r, out.width='30%'}
@@ -291,7 +291,7 @@ knitr::include_graphics('figures/SIPS 2019 Kiers.png')
 # $p$-values
 
 ## Definition
-Probability of an effect at least as extreme as the one we observed, *given that $\mathcal{H}_0$ is true*.
+> Probability of an effect at least as extreme as the one we observed, *given that $\mathcal{H}_0$ is true*.
 
 
 \[\fbox{$ p\text{-value} = P\left(X_\text{obs} \text{ or more extreme}|\mathcal{H}_0\right) $}\]
@@ -303,7 +303,7 @@ Consider the following statement [@oakes1986; @falk1995; @haller2002; @gigerenze
 
 > *Suppose you have a treatment that you suspect may alter performance on a certain task. You compare the
 means of your control and experimental groups (say, 20 subjects in each sample). Furthermore, suppose you
-use a simple independent means $t$-test and your result is significant ($t = 2.7$, $df = 18$, $p = .01$). Please mark
+use a simple <span style="color:red">independent means $t$-test</span> and your result is <span style="color:red">significant</span> ($t = 2.7$, $df = 18$, $p = .01$). Please mark
 each of the statements below as "true" or "false."* False *means that the statement does not follow logically
 from the above premises. Also note that several or none of the statements may be correct.*
 
@@ -313,7 +313,10 @@ knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
 ## Results
-**All** statements are incorrect. But how did students and teachers perceive these statements?
+**All** statements are <span style="color:red">incorrect</span>. 
+
+## Results
+But how did students and teachers perceive these statements? (see other plots)
 
 ```{r, out.width='35%'}
 knitr::include_graphics('figures/Gigerenzer p values 2.png')
@@ -328,7 +331,7 @@ knitr::include_graphics('figures/Goodman.png')
 ```
 <br>
 
-```{r, out.width='90%'}
+```{r, out.width='85%'}
 knitr::include_graphics('figures/Goodman2.png')
 ```
 
@@ -351,20 +354,71 @@ Publication bias and QRPs ($p$-hacking) inflate $p$-values. Can we "deflate" the
 
 - $z$-curve; see 
 
-See @schonbrodt2015a for a nice presentation.
+See @schonbrodt2015a for a nice presentation. (add link)
 
 # Confidence intervals
 
-## Definition
+## A better alternative?
+- Confidence intervals (CIs) have been often advocated as the best inferential alternative to NHST.
+- Recall, for example the Wilkinson Task Force:
 
+> "(...) it is hard to imagine a situation in which a dichotomous accept–reject decision is better than reporting an actual $p$-value or, better still, a <span style="color:red">confidence interval</span>.”
 
+- But, are CIs really a better alternative? 
+
+## Definition (e.g., rink's paper)
+> A (say) 95% CI is a numerical interval found through a procedure that, if repeated across a series of hypothetical data, leads to an interval covering the true parameter 95% of the times.
+
+- A CI indicates a property of the performance of the <span style="color:red">procedure</span> used to compute it:<br>
+How is the <span style="color:red">procedure</span> expected to perform in the long run?
+- A CI for a parameter is constructed <span style="color:red"> around the parameter's estimate</span>.
+- However, a CI does not (really <span style="color:red">not</span>!) directly indicate a property of the parameter being estimated!
+<br><br>
+
+Confused?<br>
+So is the vast majority of the social sciences population...
+
+## Test yourself
+From rink's paper, mimicking the $p$ value study by @gigerenzer2004.
+
+Rink's Appendix 2.
+The setting
+
+## Test yourself
+Rink's Appendix 2.
+The 6 statements.
+
+## Results
+**All** statements are <span style="color:red">incorrect</span>. 
+
+## Results
+But how did students and teachers perceive these statements?
+
+Put screenshot of rink's table 1.
+
+See also the ryan paper for extra confusion.
+
+## What would be correct, then?...
+> “If we were to repeat the experiment over and over, then 95% of the time the confidence intervals contain the true mean.”
+(rink's paper)
+
+How informative is this?!
+<br><br><br>
+
+Mental note:<br>
+Remember this when interpreting <span style="color:red">Bayesian credible intervals</span> in part 1 of today's workshop!
+<br><br><br>
+
+For completeness, not everyone agrees with the Hoekstra study (miller and garcia-perez papers, and morey reply).
 
 
 
 # What do statistical associations advice?
 
+## Task Force 1999
+
 ## ASA 2016 [@wasserstein2016]
-```{r, out.width='80%'}
+```{r, out.width='70%'}
 knitr::include_graphics('figures/Wasserstein2016.png')
 ```
 
@@ -389,11 +443,11 @@ Main ideas:
 - "Don't" is not enough -- Some *what to do* advices are provided.
 - However... Don’t say “statistically significant” -- Just <span style="color:red">**don't**</span>.
 
-> "(...) it is time to stop using the term “statistically significant” entirely. Nor should variants such as “significantly different,” “$p < 0.05$,” and “nonsignificant” survive, whether expressed in words, by asterisks in a table, or in some other way."
+> "(...) it is time to <span style="color:red">stop</span> using the term “statistically significant” entirely. Nor should variants such as “significantly different,” “$p < 0.05$,” and “nonsignificant” survive, whether expressed in words, by asterisks in a table, or in some other way."
 
 But:
 
-> "Despite the limitations of p-values (...), however, we are not recommending that the calculation and use of continuous
+> "Despite the limitations of $p$-values (...), however, we are not recommending that the calculation and use of continuous
 $p$-values be discontinued. Where $p$-values are used, they should be reported as continuous quantities (e.g., $p = 0.08$).
 They should also be described in language stating what the value means in the scientific context."
 
@@ -401,9 +455,10 @@ They should also be described in language stating what the value means in the sc
 
 > "What you will NOT find in this issue is one solution that majestically replaces the outsized role that statistical significance has come to play."
 
-- Accept uncertainty. Be thoughtful, open, and modest.
+- <span style="color:red">Accept uncertainty</span> (I cannot stress this enough!). <br>
+Be thoughtful, open, and modest.
 
-- Editorial, educational and other institutional practices will have to change.
+- Editorial, educational, and other institutional practices will have to change.
 <br>
 This includes: Journals, funding agencies, education, career system.
 
@@ -443,7 +498,7 @@ knitr::include_graphics('figures/Button2018.png')
 ## Registered reports 
 Visit the [Center for Open Science](https://cos.io/rr/).
 
-```{r, out.width='80%'}
+```{r, out.width='75%'}
 knitr::include_graphics('figures/COS.png')
 ```
 <br>
@@ -458,7 +513,7 @@ knitr::include_graphics('figures/COS.png')
 - Not only original studies, but also replications are of value!
 
 ## Registered reports 
-As of July 2019, 205 journals use Registered Reports.
+As of July 2019, 205 journals use Registered Reports. (add link)
 
 
 To learn:
@@ -471,7 +526,7 @@ To learn:
 
 ## Preregistration *works* [@kaplan2015]
 
-```{r, out.width='50%'}
+```{r, out.width='45%'}
 knitr::include_graphics('figures/kaplan2015.png')
 ```
 
@@ -483,17 +538,21 @@ R package that can assist detecting statistical reporting of errors [@nuijten201
 ## Bullying
 
 - Debates in blogs, Twitter, and journals can be fierce.
-- Criticism should be part of science, of course.
+- Criticism <span style="color:red">should be part</span> of science, of course.
 - It's not bullying to criticize, of course, in particular, with grounded reasons (vide Wansink).
-- But sometimes criticism gets too carried away, IMHO.
+- But sometimes criticism gets <span style="color:red">too carried away</span>, IMHO.
 <br><br>
 
-```{r, out.width='55%'}
+```{r, out.width='50%'}
 knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 ```
 [NYT, 2017](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html)
 
-(Interestingly: A comeback in [Psychological Science](https://journals-sagepub-com.proxy-ub.rug.nl/eprint/CzbNAn7Ch6ZZirK9yMGH/full).)
+(Interestingly: A recent comeback in [Psychological Science](https://journals-sagepub-com.proxy-ub.rug.nl/eprint/CzbNAn7Ch6ZZirK9yMGH/full).)
+
+# Warm-up Bayesian statistics
+## Alternative
+Lecoutre et al (2001) paper in rink's CI literature
 
 
 
