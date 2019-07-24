@@ -53,8 +53,8 @@ knitr::include_graphics('figures/Forster.jpg')
 # Questionable research practices
 
 ## QRPs
-Coin termed by @john2012a.<br>
-See also @simmons2011a.
+Coin termed by @john2012.<br>
+See also @simmons2011.
 <br><br>
 
 - <span style="color:red">Not necessarily</span> fraud.
@@ -65,7 +65,7 @@ See also @simmons2011a.
     * Results <span style="color:red">not replicable</span>.
 
 ## QRPs
-Some examples [@john2012a; @schimmack2015]: 
+Some examples [@john2012; @schimmack2015]: 
 
 - Omit some DVs.
 - Omit some conditions.
@@ -82,7 +82,7 @@ Some examples [@john2012a; @schimmack2015]:
 ## Researcher's degrees of freedom
 - Researchers have a multitude of decisions to make (experiment design, data collection, analyses performed); @wicherts2016.
 - It is very possible to manipulate results *in favor* of one's interests.
-- This is now known as *researcher's degrees of freedom* [@simmons2011a].
+- This is now known as *researcher's degrees of freedom* [@simmons2011].
 - Consequence: Inflated false positive findings [@ioannidis2005].
 
 ## @fried2017
@@ -138,13 +138,13 @@ This isn't creative, thinking outside the box, or worthy in any way.
 
 - @martinson2005: "Scientists behaving badly".
 - @fanelli2009: Meta-analysis shows evidence of science misconduct.
-- @john2012a: Evidence for QRPs in psychology.
+- @john2012: Evidence for QRPs in psychology.
 - @mobley2013: Reported evidence of pressure to *find* significant results.
 - @agnoli2017: Evidence of QRPs, now in Italy.
 - @fraser2018: In other fields of science.
 <br><br>
 
-Interestingly, science misconduct has been a longtime concern [see @babbage1830a].
+Interestingly, science misconduct has been a longtime concern [see @babbage1830].
 <br><br>
 
 There are also some voices against this state of affairs [e.g., @fiedler2016].
@@ -152,7 +152,7 @@ There are also some voices against this state of affairs [e.g., @fiedler2016].
 # But *why*?...
 
 ## Why risking scientific misconduct?
-It is strongly related to incentives [@nosek2012a; @schonbrodt2015].
+It is strongly related to incentives [@nosek2012; @schonbrodt2015].
 
 - "Publish or perish":<br>
 Publish a lot, at highly prestigious journals.
@@ -431,7 +431,7 @@ Six principles:
 5. A $p$-value, or statistical significance, does not measure the size of an effect or the importance of a result.
 6. By itself, a $p$-value does not provide a good measure of evidence regarding a model or hypothesis.
 
-## ASA 2019 [@wasserstein2019a]
+## ASA 2019 [@wasserstein2019]
 ```{r, out.width='80%'}
 knitr::include_graphics('figures/Wasserstein2019.png')
 ```
