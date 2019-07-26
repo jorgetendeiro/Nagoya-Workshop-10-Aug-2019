@@ -7,7 +7,7 @@ output:
   ioslides_presentation:
     smaller: true
     widescreen: true
-    transition: slower
+    transition: .4
     css: slides.css
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
@@ -23,6 +23,10 @@ knitr::opts_chunk$set(
   out.extra = 'style="background-color: #000000; padding:5px; display:block; margin:auto;"'
   ) 
 ```
+
+<!-- To print to PDF, run: 
+pagedown::chrome_print("Nagoya-10-Aug-2019-Part1.html")
+-->
 
 # Fraud
 
@@ -123,13 +127,13 @@ This isn't creative, thinking outside the box, or worthy in any way.
 - The [Marshmallow Test](https://www.vox.com/science-and-health/2018/6/6/17413000/marshmallow-test-replication-mischel-psychology) [@watts2018]
 - [Ego depletion](https://digest.bps.org.uk/2017/12/14/strongest-evidence-yet-for-ego-depletion-the-idea-that-self-control-is-a-limited-resource/) [@hagger2016; @vadillo2018; @friese2019]
 - [Power posing](https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are#t-543464) [@ranehill2015]
-- The [Stanford Prison Experiment](https://medium.com/s/trustissues/the-lifespan-of-a-lie-d869212b1f62) [@reicher2006]
+- The [Stanford Prison Experiment](https://medium.com/s/trustissues/the-lifespan-of-a-lie-d869212b1f62) [@reicher2006;@griggs2014]
 - The [facial feedback hypothesis](https://digest.bps.org.uk/2016/09/01/no-reason-to-smile-another-modern-psychology-classic-has-failed-to-replicate/) [@wagenmakers2016]
 - [Newborn babies’ imitation](https://digest.bps.org.uk/2016/05/20/a-classic-finding-about-newborn-babies-imitation-skills-is-probably-wrong/) [@oostenbroek2016]
 - The [blocking effect](https://www-nature-com.proxy-ub.rug.nl/news/psychologists-fail-to-replicate-well-known-behaviour-linked-to-learning-1.20659) [@maes2016]
 - [The stereotype threat](https://www.nationalreview.com/corner/another-replication-failure-stereotype-threat-is-probably-empty/) [@flore2019]
 - The [facial expression](https://www.popsci.com/article/science/facial-expressions-arent-universal-we-thought/#page-2) [@gendron2018]
-- [ESP](https://www.theguardian.com/science/2012/mar/15/precognition-studies-curse-failed-replications), of course! [@ritchie2012]
+- [ESP](https://www.theguardian.com/science/2012/mar/15/precognition-studies-curse-failed-replications), of course! [@ritchie2012;@galak2012]
 - The Mozart Effect [@steele1999]
 - ...
 
@@ -157,7 +161,9 @@ It is strongly related to incentives [@nosek2012; @schonbrodt2015].
 - "Publish or perish":<br>
 Publish a lot, at highly prestigious journals.
 - Journals only publish a fraction of all manuscripts.
-- 
+- Get tenured.
+- Get research grant.
+- Fame (prizes, press coverage, ...).
 
 # (I)reproducibility
 
@@ -215,7 +221,42 @@ Low-powered experiments:
 
 </div>
 
-## Timeline Gelman
+## Kahneman (2012), see [here](https://www.nature.com/news/polopoly_fs/7.6716.1349271308!/suppinfoFile/Kahneman%20Letter.pdf)
+<div style="float: left; width: 40%;">
+```{r, out.width='70%'}
+knitr::include_graphics('figures/Kahneman.jpg')
+```
+
+Nobel prize winner, 2002.
+</div>
+
+<div style="float: right; width: 55%;">
+About priming effects (but quite general remarks...):
+
+> "The storm of doubts is fed by (...) the recent exposure of fraudulent researchers, general concerns with replicability (...), multiple reported failures to replicate salient results (...), and the growing belief in the existence of a pervasive file drawer problem (...)."
+<br><br>
+"My reason for writing this letter is that <span style="color:red">I see a train wreck looming</span>."
+<br><br>
+"I believe that you should <span style="color:red">collectively do something</span> about this mess."
+
+</div>
+
+
+## Timeline of a train wreck
+```{r, out.width='100%'}
+knitr::include_graphics('figures/Gelman 2016.png')
+```
+
+- Gelman blogged an impressive [timeline](https://statmodeling.stat.columbia.edu/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/) about the replication crisis. 
+- The whole blog post is worth reading for many reasons, including Gelman's rebuttal to a strong defender of the traditional *status quo*.
+
+## Timeline of a train wreck
+See also this impressive dynamic plot:<br>
+[https://psyborgs.github.io/projects/replication-in-psychology/](https://psyborgs.github.io/projects/replication-in-psychology/)
+
+```{r, out.width='70%'}
+knitr::include_graphics('figures/psyborgs.png')
+```
 
 
 # Large-scale replication projects
@@ -229,12 +270,23 @@ Replicability of 13 classic and contemporary effects across 36 independent sampl
 See also Many Labs 2 [@klein2018], Many Labs 3 [@ebersole2016].
 
 ## Open Science Collaboration [@osc2015]
-```{r, out.width='45%'}
+```{r, out.width='35%'}
 knitr::include_graphics('figures/OSC1.jpg')
 ```
 <br><br>
 
 A gazilion authors.
+
+(For the sake of balance, and for an interesting rebuttal (!), see @gilbert2016).
+
+## The Psychological Science Accelerator
+@moshontz2018a; 92 authors!
+
+```{r, out.width='90%'}
+knitr::include_graphics('figures/Moshontz et al 2018.png')
+```
+
+
 
 # Publication policies
 
@@ -507,7 +559,7 @@ knitr::include_graphics('figures/COS.png')
 
 - Decide hypotheses, methods, and analysis.
 <br>
-(Eliminate several QRPs, e.g., $p$-hacking, hiding null findings.)
+(Eliminate several QRPs, e.g., $p$-hacking, publication bias by researchers and journals.)
 - Peer review of paper.
 - Conditional acceptance of paper!
 - Not only original studies, but also replications are of value!
@@ -530,6 +582,58 @@ To learn:
 knitr::include_graphics('figures/kaplan2015.png')
 ```
 
+## Replication studies
+@brandt2014
+
+```{r, out.width='90%'}
+knitr::include_graphics('figures/Brandt 2014.png')
+```
+
+## Concern in major journals
+@lindsay2015
+
+```{r, out.width='75%'}
+knitr::include_graphics('figures/Psych Science 2015.png')
+```
+
+> "(...) Replicability is not the only criterion of a first-rate science journal, but it had better be a <span style="color:red">fundamental</span> one."
+
+> "My emphasis here is on experiments and NHST, (...) (By the way, I am enthusiastically open to submissions that make appropriate use of <span style="color:red">alternatives to NHST</span> [read: Bayes].)"
+
+## In *Nature*
+```{r, out.width='75%'}
+knitr::include_graphics('figures/Camerer 2018.png')
+```
+
+
+## In Nature [@camerer2018]
+> "The replications follow <span style="color:red">analysis plans reviewed by the original authors</span> and <span style="color:red">pre-registered</span> prior to the replications."
+
+> The replications are high powered, with <span style="color:red">sample sizes on average about five times higher</span> than in the original studies."
+
+> "We find a <span style="color:red">significant effect in the same direction</span> as the original study for 13 (<span style="color:red">62%</span>) studies, and the <span style="color:red">effect size</span> of the replications is on average <span style="color:red">about 50%</span> of the original effect size."
+
+Conclusion:<br>
+Results published in high rank journals should be considered with care until they are <span style="color:red">replicated</span>.
+
+## The PRO initiative [@morey2016a]
+- PRO = <span style="color:red">P</span>eer <span style="color:red">R</span>eviewers' <span style="color:red">O</span>penness.
+- Thus, guidelines for paper <span style="color:red">reviewers</span>.
+- See [https://opennessinitiative.org](https://opennessinitiative.org).
+<br><br><br>
+
+Main [goals](https://opennessinitiative.org/the-initiative/):
+
+1. Data should be made publicly available.
+2. Stimuli and materials should be made publicly available.
+3. In case some data or materials are not open, clear reasons (e.g., legal, ethical constraints, or severe impracticality) should be given why.
+4. Documents containing details for interpreting any files or code, and how to compile and run any software programs should be made available with the above items. 
+5. The location of all of these files should be advertised in the manuscript, and all files should be hosted by a reliable third party.
+
+
+
+
+
 ## 'statcheck'
 R package that can assist detecting statistical reporting of errors [@nuijten2016].
 
@@ -549,6 +653,27 @@ knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 [NYT, 2017](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html)
 
 (Interestingly: A recent comeback in [Psychological Science](https://journals-sagepub-com.proxy-ub.rug.nl/eprint/CzbNAn7Ch6ZZirK9yMGH/full).)
+
+## Self-appointed police
+Most likely, each of us has some skeleton's in their scientific closets.
+
+We've all fallen prey to one or more of the problems mentioned today.
+
+Full disclosure:
+
+> I have to!!
+
+So: 
+
+> *No one is better than anyone.*
+
+Or in the words of Brian Nosek (as quoted [here](https://fivethirtyeight.com/features/psychologys-replication-crisis-has-made-the-field-better/)):
+
+> "We’re not here to *be right*. We’re here to *get it right*."
+
+
+
+
 
 # Warm-up Bayesian statistics
 ## Alternative
