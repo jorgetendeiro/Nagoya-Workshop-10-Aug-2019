@@ -8,12 +8,13 @@ output:
     smaller: true
     widescreen: true
     transition: .4
-    css: slides.css
+    css: [slides.css, toc-style.css]
+    includes:
+      in_header: TOC_generator.js.wrapper
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
 nocite: | 
-  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018
-navigation: section
+  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999
 ---
 
 ```{r setup, include = FALSE, fig.align = 'center'}
@@ -28,7 +29,11 @@ knitr::opts_chunk$set(
 pagedown::chrome_print("Nagoya-10-Aug-2019-Part1.html")
 -->
 
-# Fraud
+## Today
+<!-- add div element table of content for javascript to fill -->
+<div id="toc"></div>
+
+# Fraud {.section}
 
 ## Definition
 Fraud = scientifc misconduct.
@@ -38,23 +43,19 @@ Fraud = scientifc misconduct.
 - Puts all science under a <span style="color:red">bad light</span>.
 - Markedly different from QRPs (next).
 
-## Notable examples  {.columns-2}
-Diederik Stapel, social psychologist. Suspended in 2011. [Fabricating and manipulating data](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html?pagewanted=1&_r=0&src=recg)
-<br><br>
-```{r, out.width='90%'}
-knitr::include_graphics('figures/Stapel.jpg')
-```
+## Notable examples
+- Diederik Stapel, social psychologist. Suspended in 2011. [Fabricating and manipulating data](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html?pagewanted=1&_r=0&src=recg).
+- Marc Hauser, psychologist at Harvard. Resigned in 2011. [Scientific misconduct](https://www.bostonglobe.com/metro/2014/05/29/internal-harvard-report-shines-light-misconduct-star-psychology-researcher-marc-hauser/maSUowPqL4clXrOgj44aKP/story.html).
+- Jens Förster, social psychologist. Resigned in 2017. [Data tampering](https://retractionwatch.com/2017/12/12/psychologist-fire-leaves-university-start-private-practice/).
+<br><br><br>
 
-Jens Förster, social psychologist. Resigned in 2017. [Data tampering](https://retractionwatch.com/2017/12/12/psychologist-fire-leaves-university-start-private-practice/).
-<br><br>
-```{r, out.width='100%'}
-knitr::include_graphics('figures/Forster.jpg')
-```
+Today we don't talk about fraud *explicitly*.
 
+We talk about something much harder to identify and erradicate:
 
+<p align="center"><span style="color:red">Questionable research practices</span>.</p>
 
-
-# Questionable research practices
+# Questionable research practices {.section}
 
 ## QRPs
 Coin termed by @john2012.<br>
@@ -68,8 +69,8 @@ See also @simmons2011.
     * <span style="color:red">Inflated power</span> at the cost of inflated Type I error probability ($\gg 5\%$).
     * Results <span style="color:red">not replicable</span>.
 
-## QRPs
-Some examples [@john2012; @schimmack2015]: 
+## Example of QRPs
+[@john2012; @schimmack2015].
 
 - Omit some DVs.
 - Omit some conditions.
@@ -78,13 +79,13 @@ Some examples [@john2012; @schimmack2015]:
     * $p < .05$: Stop.
 - Only report $p<.05$ results.
 - <span style="color:red">$p$-hacking</span>: E.g., 
-    - exclusion of outliers dependent on $p$.
+    - Exclusion of outliers depending on whether $p<.05$.
     - $p = .054 \longrightarrow p = .05$.
-- <span style="color:red">HARKing</span> [@kerr1998]: Convert exploratory result into research question.
+- <span style="color:red">HARKing</span> [@kerr1998]: Convert exploratory results into research questions.
 - ...
 
 ## Researcher's degrees of freedom
-- Researchers have a multitude of decisions to make (experiment design, data collection, analyses performed); @wicherts2016.
+- Researchers have a <span style="color:red">multitude</span> of decisions to make (experiment design, data collection, analyses performed); @wicherts2016, @steegen2016.
 - It is very possible to manipulate results *in favor* of one's interests.
 - This is now known as *researcher's degrees of freedom* [@simmons2011].
 - Consequence: Inflated false positive findings [@ioannidis2005].
@@ -109,11 +110,9 @@ Prof. Brian Wansink at Cornell University.
 
 > I gave her a <span style="color:red">data set</span> of a self-funded, failed study which had <span style="color:red">null results</span> (...). I said, "This cost us a lot of time and our own money to collect. There’s got to be something here we can salvage because it’s a cool (rich & unique) data set." I had three ideas for potential Plan B, C, & D directions (since Plan A had failed). I told her what the analyses should be and what the tables should look like. I then asked her if she wanted to do them.
 
-> Every day she came back with puzzling new results, and every day we would scratch our heads, ask "Why," and come up with another way to reanalyze the data with yet another set of plausible hypotheses. Eventually <span style="color:red">we started discovering solutions</span> that held up regardless of how we pressure-tested them. I outlined the first paper, and she wrote it up (...). This happened with a second paper, and then a third paper (which was one that was based on her own discovery while digging through the data).
+> Every day she came back with puzzling new results, and every day we would scratch our heads, ask "Why," and <span style="color:red">come up with another way to reanalyze the data</span> with yet another set of plausible hypotheses. Eventually <span style="color:red">we started discovering solutions</span> that held up regardless of how we pressure-tested them. I outlined the first paper, and she wrote it up (...). This happened with a second paper, and then a third paper (which was one that was based on her own discovery while digging through the data).
 
-<br><br>
-
-This isn't creative, thinking outside the box, or worthy in any way.
+This isn't being *creative* or *thinking outside the box*.
 
 <span style="color:red">This is QRPing.</span>
 
@@ -122,20 +121,6 @@ This isn't creative, thinking outside the box, or worthy in any way.
 - Over 100 (!!) errors in a set of four papers...
 - Has now <span style="color:red">40</span> (!!) publications [retracted](http://retractiondatabase.org/RetractionSearch.aspx#?auth%3dWansink%252c%2bBrian) (as of July 2019).
 - After a year-long internal investigation, he was forced to [resign](https://news.cornell.edu/stories/2018/09/provost-issues-statement-wansink-academic-misconduct-investigation).
-
-## Other [famous failures](https://bit.ly/2y7qeer)
-- The [Marshmallow Test](https://www.vox.com/science-and-health/2018/6/6/17413000/marshmallow-test-replication-mischel-psychology) [@watts2018]
-- [Ego depletion](https://digest.bps.org.uk/2017/12/14/strongest-evidence-yet-for-ego-depletion-the-idea-that-self-control-is-a-limited-resource/) [@hagger2016; @vadillo2018; @friese2019]
-- [Power posing](https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are#t-543464) [@ranehill2015]
-- The [Stanford Prison Experiment](https://medium.com/s/trustissues/the-lifespan-of-a-lie-d869212b1f62) [@reicher2006;@griggs2014]
-- The [facial feedback hypothesis](https://digest.bps.org.uk/2016/09/01/no-reason-to-smile-another-modern-psychology-classic-has-failed-to-replicate/) [@wagenmakers2016]
-- [Newborn babies’ imitation](https://digest.bps.org.uk/2016/05/20/a-classic-finding-about-newborn-babies-imitation-skills-is-probably-wrong/) [@oostenbroek2016]
-- The [blocking effect](https://www-nature-com.proxy-ub.rug.nl/news/psychologists-fail-to-replicate-well-known-behaviour-linked-to-learning-1.20659) [@maes2016]
-- [The stereotype threat](https://www.nationalreview.com/corner/another-replication-failure-stereotype-threat-is-probably-empty/) [@flore2019]
-- The [facial expression](https://www.popsci.com/article/science/facial-expressions-arent-universal-we-thought/#page-2) [@gendron2018]
-- [ESP](https://www.theguardian.com/science/2012/mar/15/precognition-studies-curse-failed-replications), of course! [@ritchie2012;@galak2012]
-- The Mozart Effect [@steele1999]
-- ...
 
 ## Is it really *that* bad?...
 [Yes](https://www.westernalliance.org.au/2018/05/restoring-trust-in-science-what-are-questionable-research-practices).
@@ -151,39 +136,74 @@ This isn't creative, thinking outside the box, or worthy in any way.
 Interestingly, science misconduct has been a longtime concern [see @babbage1830].
 <br><br>
 
-There are also some voices against this state of affairs [e.g., @fiedler2016].
+And for the sake of balance:<br>
+There are also some voices *against* this description of the current state of affairs [e.g., @fiedler2016].
 
-# But *why*?...
+# But *why*?... {.section}
 
-## Why risking scientific misconduct?
+## Why are QRPs so prevalent?
 It is strongly related to incentives [@nosek2012; @schonbrodt2015].
 
 - "Publish or perish":<br>
 Publish a lot, at highly prestigious journals.
-- Journals only publish a fraction of all manuscripts.
+    - Journals only publish a fraction of all manuscripts.
+    - Journals don't like publishing null findings...
 - Get tenured.
 - Get research grant.
 - Fame (prizes, press coverage, ...).
+- ...
+<br><br><br>
 
-# (I)reproducibility
+But, <span style="color:red">very importantly</span>, it also happens in spite of the <span style="color:green">researcher's best intentions</span>.
+
+- Deficient statistics education (yes, statisticians need to acknowledge this!...).
+- Perpetuating traditions in the field.
+
+# (I)reproducibility {.section}
 
 ## Threats to reproducible science
-```{r, out.width='60%'}
+<div style="float: left; width: 75%;">
+```{r, out.width='80%'}
 knitr::include_graphics('figures/Mufano et al (2017).png')
 ```
-<br><br>
+</div>
+<div style="float: left; width: 20%;">
+@munafo2017
+</div>
 
-[@munafo2017]
+<div style="float: left; width: 100%;">
+- Hypothetico-deductive model of the scientific method.
+- In <span style="color:red">red</span>: Potential threats to this model.
+</div>
 
 ## Lack of replications
 Until very recently [@makel2012].
-<br><br>
+<br>
 
-```{r, out.width='90%'}
+```{r, out.width='80%'}
 knitr::include_graphics('figures/Makel 2012.png')
 ```
 
-# Didn't we see this coming?
+- Very low rate of replications in Psychology (estimated ~1%).
+- Until 2012, majority of replications were actually <span style="color:red">successful</span>!!
+- However, in most cases both the original and replication studies shared authorship...
+- Conflict of interest?...
+
+## Famous [replication failures](https://bit.ly/2y7qeer)
+- The [Marshmallow Test](https://www.vox.com/science-and-health/2018/6/6/17413000/marshmallow-test-replication-mischel-psychology) [@watts2018]
+- [Ego depletion](https://digest.bps.org.uk/2017/12/14/strongest-evidence-yet-for-ego-depletion-the-idea-that-self-control-is-a-limited-resource/) [@hagger2016; @vadillo2018; @friese2019]
+- [Power posing](https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are#t-543464) [@ranehill2015]
+- The [Stanford Prison Experiment](https://medium.com/s/trustissues/the-lifespan-of-a-lie-d869212b1f62) [@reicher2006;@griggs2014]
+- The [facial feedback hypothesis](https://digest.bps.org.uk/2016/09/01/no-reason-to-smile-another-modern-psychology-classic-has-failed-to-replicate/) [@wagenmakers2016]
+- [Newborn babies’ imitation](https://digest.bps.org.uk/2016/05/20/a-classic-finding-about-newborn-babies-imitation-skills-is-probably-wrong/) [@oostenbroek2016]
+- The [blocking effect](https://www-nature-com.proxy-ub.rug.nl/news/psychologists-fail-to-replicate-well-known-behaviour-linked-to-learning-1.20659) [@maes2016]
+- [The stereotype threat](https://www.nationalreview.com/corner/another-replication-failure-stereotype-threat-is-probably-empty/) [@flore2019]
+- The [facial expression](https://www.popsci.com/article/science/facial-expressions-arent-universal-we-thought/#page-2) [@gendron2018]
+- [ESP](https://www.theguardian.com/science/2012/mar/15/precognition-studies-curse-failed-replications), of course! [@ritchie2012;@galak2012]
+- The Mozart Effect [@steele1999; @mckelvie2002]
+- ...
+
+# Didn't we see this coming? {.section}
 ## @meehl1967
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
@@ -241,14 +261,14 @@ About priming effects (but quite general remarks...):
 
 </div>
 
-
 ## Timeline of a train wreck
 ```{r, out.width='100%'}
 knitr::include_graphics('figures/Gelman 2016.png')
 ```
 
-- Gelman blogged an impressive [timeline](https://statmodeling.stat.columbia.edu/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/) about the replication crisis. 
-- The whole blog post is worth reading for many reasons, including Gelman's rebuttal to a strong defender of the traditional *status quo*.
+- Gelman blogged about an impressive [timeline](https://statmodeling.stat.columbia.edu/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/) about the replication crisis. 
+- The whole blog post is worth reading for many reasons, including Gelman's criticism over criticism!<br>
+(versus Susan Fiske's [position](https://www.psychologicalscience.org/observer/a-call-to-change-sciences-culture-of-shaming)).
 
 ## Timeline of a train wreck
 See also this impressive dynamic plot:<br>
@@ -258,89 +278,7 @@ See also this impressive dynamic plot:<br>
 knitr::include_graphics('figures/psyborgs.png')
 ```
 
-
-# Large-scale replication projects
-## Many Labs [@klein2014]
-```{r, out.width='55%'}
-knitr::include_graphics('figures/Many Labs 1-1.png')
-```
-
-Replicability of 13 classic and contemporary effects across 36 independent samples totaling 6,344 participants.
-
-See also Many Labs 2 [@klein2018], Many Labs 3 [@ebersole2016].
-
-## Open Science Collaboration [@osc2015]
-```{r, out.width='35%'}
-knitr::include_graphics('figures/OSC1.jpg')
-```
-<br><br>
-
-A gazilion authors.
-
-(For the sake of balance, and for an interesting rebuttal (!), see @gilbert2016).
-
-## The Psychological Science Accelerator
-@moshontz2018a; 92 authors!
-
-```{r, out.width='90%'}
-knitr::include_graphics('figures/Moshontz et al 2018.png')
-```
-
-
-
-# Publication policies
-
-## Psychological Science [@eich2014]
-```{r, out.width='90%'}
-knitr::include_graphics('figures/Psychological Science 2014.png')
-```
-
-## Basic and Applied Social Psychology
-```{r, out.width='80%'}
-knitr::include_graphics('figures/BASP 2015.png')
-```
-
-> "The Basic and Applied Social Psychology (BASP) (...) emphasized that the null hypothesis significance testing procedure (NHSTP) is <span style="color:red">invalid</span> (...). From now on, <span style="color:red">BASP is banning the NHSTP</span>."
-
-## Child Adolescent Mental Health [@spreckelsen2018]
-```{r, out.width='90%'}
-knitr::include_graphics('figures/CAMH 2018.png')
-```
-
-## The New England Journal of Medicin 
-```{r, out.width='60%'}
-knitr::include_graphics('figures/TNEJOM Editorial 2019.png')
-```
-
-Editorial [@harrington2019].
-
-> "(...) a requirement to <span style="color:red">replace $p$ values</span> with estimates of effects or association and 95% confidence intervals"
-
-# Education
-
-## @frank2012
-```{r, out.width='90%'}
-knitr::include_graphics('figures/Teaching 2012.png')
-```
-
-## @sarafoglou2019
-```{r, out.width='60%'}
-knitr::include_graphics('figures/Sarafoglou et al 2019.png')
-```
-
-Research Master course on open science practices. Materials available (add link)!
-
-## @chambers2017a
-```{r, out.width='30%'}
-knitr::include_graphics('figures/Chambers book.png')
-```
-
-## @kiers2019
-```{r, out.width='100%'}
-knitr::include_graphics('figures/SIPS 2019 Kiers.png')
-```
-
-# $p$-values
+# $p$-values {.section}
 
 ## Definition
 > Probability of an effect at least as extreme as the one we observed, *given that $\mathcal{H}_0$ is true*.
@@ -368,9 +306,9 @@ knitr::include_graphics('figures/Gigerenzer p values.png')
 **All** statements are <span style="color:red">incorrect</span>. 
 
 ## Results
-But how did students and teachers perceive these statements? (see other plots)
+But how did students and teachers perceive these statements?
 
-```{r, out.width='35%'}
+```{r, out.width='30%'}
 knitr::include_graphics('figures/Gigerenzer p values 2.png')
 ```
 
@@ -395,30 +333,21 @@ knitr::include_graphics('figures/Greenland.png')
 
 <br><br><br>
 
-This paper expands @goodman2008 and elaborates on 25 (yes, 二十五!!!) misinterpretations.
+This paper expands @goodman2008 and elaborates on <span style="color:red">25 (yes, 二十五!!!) misinterpretations</span>.
 
-## If $p$-values are inflated... What to do?
-Publication bias and QRPs ($p$-hacking) inflate $p$-values. Can we "deflate" them?
-
-- $p$-curve; see @simonsohn2014, @simonsohn2014a, or a [5 min Youtube clip](https://www.youtube.com/watch?time_continue=298&v=V7pvYLZkcK4).
-
-> "$p$-curve is the distribution of statistically significant $p$ values for a set of studies ($ps < .05$)."
-
-- $z$-curve; see 
-
-See @schonbrodt2015a for a nice presentation. (add link)
-
-# Confidence intervals
+# Confidence intervals {.section}
 
 ## A better alternative?
 - Confidence intervals (CIs) have been often advocated as the best inferential alternative to NHST.
-- Recall, for example the Wilkinson Task Force:
+- Recall, for example the Wilkinson Task Force [@wilkinson1999]:
 
-> "(...) it is hard to imagine a situation in which a dichotomous accept–reject decision is better than reporting an actual $p$-value or, better still, a <span style="color:red">confidence interval</span>.”
+> "(...) it is hard to imagine a situation in which a dichotomous accept–reject decision is better than reporting an actual $p$ value or, better still, a <span style="color:red">confidence interval</span>.”
 
 - But, are CIs really a better alternative? 
 
-## Definition (e.g., rink's paper)
+## Definition
+See, for instance, @hoekstra2014.
+
 > A (say) 95% CI is a numerical interval found through a procedure that, if repeated across a series of hypothetical data, leads to an interval covering the true parameter 95% of the times.
 
 - A CI indicates a property of the performance of the <span style="color:red">procedure</span> used to compute it:<br>
@@ -428,17 +357,19 @@ How is the <span style="color:red">procedure</span> expected to perform in the l
 <br><br>
 
 Confused?<br>
-So is the vast majority of the social sciences population...
+So is the vast majority of social scientists...
 
 ## Test yourself
-From rink's paper, mimicking the $p$ value study by @gigerenzer2004.
+From @hoekstra2014, mimicking the $p$ value study by @gigerenzer2004.
 
-Rink's Appendix 2.
-The setting
+```{r, out.width='75%'}
+knitr::include_graphics('figures/Hoekstra2014 I.png')
+```
 
 ## Test yourself
-Rink's Appendix 2.
-The 6 statements.
+```{r, out.width='65%'}
+knitr::include_graphics('figures/Hoekstra2014 II.png')
+```
 
 ## Results
 **All** statements are <span style="color:red">incorrect</span>. 
@@ -446,28 +377,65 @@ The 6 statements.
 ## Results
 But how did students and teachers perceive these statements?
 
-Put screenshot of rink's table 1.
-
-See also the ryan paper for extra confusion.
+```{r, out.width='45%'}
+knitr::include_graphics('figures/Hoekstra2014 III.png')
+```
 
 ## What would be correct, then?...
 > “If we were to repeat the experiment over and over, then 95% of the time the confidence intervals contain the true mean.”
-(rink's paper)
 
 How informative is this?!
 <br><br><br>
 
 Mental note:<br>
-Remember this when interpreting <span style="color:red">Bayesian credible intervals</span> in part 1 of today's workshop!
+Remember this when interpreting <span style="color:red">Bayesian credible intervals</span> in part 2 of today's workshop!
 <br><br><br>
 
-For completeness, not everyone agrees with the Hoekstra study (miller and garcia-perez papers, and morey reply).
+For completeness, not everyone agrees with the Hoekstra study [@garcia-perez2016; @miller2016; see also a reply by @morey2016].
 
+# Publication policies {.section}
 
+## Psychological Science [@eich2014]
+```{r, out.width='90%'}
+knitr::include_graphics('figures/Psychological Science 2014.png')
+```
 
-# What do statistical associations advice?
+## Basic and Applied Social Psychology
+```{r, out.width='80%'}
+knitr::include_graphics('figures/BASP 2015.png')
+```
 
-## Task Force 1999
+> "The Basic and Applied Social Psychology (BASP) (...) emphasized that the null hypothesis significance testing procedure (NHSTP) is <span style="color:red">invalid</span> (...). From now on, <span style="color:red">BASP is banning the NHSTP</span>."
+
+Did it actually *work*? For a reflection, see @fricker2019.
+
+## Child Adolescent Mental Health
+```{r, out.width='70%'}
+knitr::include_graphics('figures/CAMH 2018.png')
+```
+
+> (...) I will encourage authors to <span style="color:red">provide replication syntax and data</span> through public repositories. Moreover, I will encourage the journal to <span style="color:red">focus on a manuscript’s research design</span> and the author’s justification thereof, <span style="color:red">rather than the results</span>, with the aim of ensuring that transparent studies that explore a research question with equipoise, will be published.
+
+## The New England Journal of Medicin
+```{r, out.width='60%'}
+knitr::include_graphics('figures/TNEJOM Editorial 2019.png')
+```
+
+Editorial [@harrington2019].
+
+> "(...) a requirement to <span style="color:red">replace $p$ values</span> with estimates of effects or association and 95% confidence intervals"
+
+# What do statistical associations advice? {.section}
+
+## Wilkinson Task Force 1999
+Among many many, advices, 
+
+- Do not focus on $p$ values.
+- Report effect sizes.
+- Report power analyses.
+- Check model assumptions.
+
+> "Novice researchers err either by overgeneralizing their results or, equally unfortunately, by overparticularizing."
 
 ## ASA 2016 [@wasserstein2016]
 ```{r, out.width='70%'}
@@ -521,26 +489,79 @@ This includes: Journals, funding agencies, education, career system.
 knitr::include_graphics('figures/Ruberg2019.png')
 ```
 
-# What do experts advice?
+<!-- # What do experts advice? {.section} -->
 
-## @munafo2017
-```{r, out.width='80%'}
-knitr::include_graphics('figures/Mufano et al (2017) 2.png')
+<!-- ## @munafo2017 -->
+<!-- ```{r, out.width='80%'} -->
+<!-- knitr::include_graphics('figures/Mufano et al (2017) 2.png') -->
+<!-- ``` -->
+
+<!-- Methods: -->
+
+<!-- - Protecting against cognitive biases -->
+<!-- - Improving methodological training -->
+<!-- - Implementing independent methodological support -->
+<!-- - Encouraging collaboration and team science -->
+
+<!-- ## @munafo2017 -->
+<!-- ```{r, out.width='100%'} -->
+<!-- knitr::include_graphics('figures/Mufano et al (2017) 3.png') -->
+<!-- ``` -->
+
+# Large-scale replication projects {.section}
+## Many Labs [@klein2014]
+```{r, out.width='55%'}
+knitr::include_graphics('figures/Many Labs 1-1.png')
 ```
 
-Methods:
+Replicability of 13 classic and contemporary effects across 36 independent samples totaling 6,344 participants.
 
-- Protecting against cognitive biases
-- Improving methodological training
-- Implementing independent methodological support
-- Encouraging collaboration and team science
+See also Many Labs 2 [@klein2018], Many Labs 3 [@ebersole2016].
 
-## @munafo2017
+## Open Science Collaboration [@osc2015]
+```{r, out.width='35%'}
+knitr::include_graphics('figures/OSC1.jpg')
+```
+<br><br>
+
+A gazilion authors.
+
+(For the sake of balance, and for an interesting rebuttal (!), see @gilbert2016).
+
+## The Psychological Science Accelerator
+@moshontz2018a; 92 authors!
+
+```{r, out.width='90%'}
+knitr::include_graphics('figures/Moshontz et al 2018.png')
+```
+
+
+
+# Education {.section}
+
+## @frank2012
+```{r, out.width='90%'}
+knitr::include_graphics('figures/Teaching 2012.png')
+```
+
+## @sarafoglou2019
+```{r, out.width='60%'}
+knitr::include_graphics('figures/Sarafoglou et al 2019.png')
+```
+
+Research Master course on open science practices. Materials available (add link)!
+
+## @chambers2017a
+```{r, out.width='30%'}
+knitr::include_graphics('figures/Chambers book.png')
+```
+
+## @kiers2019
 ```{r, out.width='100%'}
-knitr::include_graphics('figures/Mufano et al (2017) 3.png')
+knitr::include_graphics('figures/SIPS 2019 Kiers.png')
 ```
 
-# Key ideas
+# Key ideas {.section}
 ## Better education [@button2018]
 
 ```{r, out.width='100%'}
@@ -637,7 +658,7 @@ Main [goals](https://opennessinitiative.org/the-initiative/):
 ## 'statcheck'
 R package that can assist detecting statistical reporting of errors [@nuijten2016].
 
-# What to avoid
+# What to avoid {.section}
 
 ## Bullying
 
@@ -675,9 +696,11 @@ Or in the words of Brian Nosek (as quoted [here](https://fivethirtyeight.com/fea
 
 
 
-# Warm-up Bayesian statistics
+# Warm-up Bayesian statistics {.section}
 ## Alternative
-Lecoutre et al (2001) paper in rink's CI literature
+After the break:
+
+Gentle introduction to <span style="color:red">Bayesian statistics</span>.
 
 
 
@@ -687,9 +710,6 @@ slides > slide { overflow: scroll; }
 }
 </style>
 
-# References
+# References {.section}
 
 ----
-
-
-
