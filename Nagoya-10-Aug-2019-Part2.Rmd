@@ -1,0 +1,93 @@
+---
+title: "From Frequentist Problems Towards Bayesian Solutions"
+subtitle: "Part 2: Introduction to Bayesian statistics (with JASP)"
+author: "Jorge N. Tendeiro"
+date: "10 August 2019"
+output: 
+  ioslides_presentation:
+    smaller: true
+    widescreen: true
+    transition: .4
+    css: [slides.css, toc-style.css]
+    includes:
+      in_header: TOC_generator.js.wrapper
+bibliography: references.bib
+csl: apa-old-doi-prefix.csl
+---
+
+```{r setup, include = FALSE, fig.align = 'center'}
+knitr::opts_chunk$set(
+  echo      = FALSE, 
+  fig.cap   = '', 
+  out.extra = 'style="background-color: #000000; padding:5px; display:block; margin:auto;"'
+  ) 
+```
+
+<!-- To print to PDF, run: 
+pagedown::chrome_print("Nagoya-10-Aug-2019-Part2.html")
+-->
+
+## Today
+<!-- add div element table of content for javascript to fill -->
+<div id="toc"></div>
+
+# Suggested learning material {.section}
+
+## Introduction to Bayes
+<span style="color:green">Papers:</span>
+
+- @etz2018: The "Harry Potter" paper.<br>
+*Very* accessible introduction, with examples.
+- @etz2018a: "How to become a Bayesian in eight easy steps: An annotated reading list".<br>
+Yes, Alexander Etz writes 'readible' papers *very* well. Strongly advised read, but it takes quite some time to process.
+- @kruschke2013: Besides providing an excellent introduction to core concepts, Kruschke offers a discussion over the "testing" versus "estimation" tension. I personally like Kruschke's position on this matter.
+
+<span style="color:green">Books:</span>
+
+- @kruschke2015: The "puppies" book.<br>
+Accessible book, with plenty of examples and code. Perfect as a first pick.
+- @mcelreath2016: From what I read thus far, this book is a jewel.
+- @lambert2018: I'm currently half way. Seems perfect for teaching (hence learning!).
+- @gelman2014: More advanced read (perhaps not the first pick), but truly a master piece.
+
+## Learn about JASP
+
+<span style="color:green">Website</span><br> [https://jasp-stats.org/how-to-use-jasp/](https://jasp-stats.org/how-to-use-jasp/).<br>
+It includes:
+
+- [Tutorial section](https://jasp-stats.org/how-to-use-jasp/)
+- [YouTube channel](http://www.youtube.com/channel/UCSulowI4mXFyBkw3bmp7pXg) to see (and hear) it in action.
+- [Forum](http://forum.cogsci.nl/index.php?p=/categories/jasp-bayesfactor) to post lingering questions.
+- [Teaching with JASP](https://jasp-stats.org/teaching-with-jasp/) includes much more material.
+
+<br>
+<span style="color:green">Video tutorials</span><br>
+Etz (who else?) is making videos as we speak.<br>
+[https://alexanderetz.com/jasp-tutorials/](https://alexanderetz.com/jasp-tutorials/).
+
+<br>
+<span style="color:green">Papers</span>
+
+- @marsman2017[, in *European Journal of Developmental Psychology*].
+- @wagenmakers2018[, in a special issue in *Psychonomic Bulletin & Review*].
+
+# Basics of Bayesian inference {.section}
+
+## Frequentists *versus* Bayesian inference
+Frequentist
+
+## Parameter estimation
+
+## Hypothesis testing
+
+
+
+
+<style type="text/css">
+slides > slide { overflow: scroll; }
+}
+</style>
+
+# References {.section}
+
+----
