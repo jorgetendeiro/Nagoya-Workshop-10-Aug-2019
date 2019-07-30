@@ -31,9 +31,9 @@ pagedown::chrome_print("Nagoya-10-Aug-2019-Part2.html")
 <!-- add div element table of content for javascript to fill -->
 <div id="toc"></div>
 
-# Suggested learning material {.section}
+# Suggested reading material {.section}
 
-## Introduction to Bayes
+## Introduction to Bayes {.build}
 <span style="color:green">Papers:</span>
 
 - @etz2018: The "Harry Potter" paper.<br>
@@ -50,7 +50,7 @@ Accessible book, with plenty of examples and code. Perfect as a first pick.
 - @lambert2018: I'm currently half way. Seems perfect for teaching (hence learning!).
 - @gelman2014: More advanced read (perhaps not the first pick), but truly a master piece.
 
-## Learn about JASP
+## Learn about JASP {.build}
 
 <span style="color:green">Website</span><br> [https://jasp-stats.org/how-to-use-jasp/](https://jasp-stats.org/how-to-use-jasp/).<br>
 It includes:
@@ -71,15 +71,115 @@ Etz (who else?) is making videos as we speak.<br>
 - @marsman2017[, in *European Journal of Developmental Psychology*].
 - @wagenmakers2018[, in a special issue in *Psychonomic Bulletin & Review*].
 
-# Basics of Bayesian inference {.section}
+# Frequentist *versus* Bayes {.section}
+## Frequentist paradigm {.build}
+Concept of <span style="color:green">probability</span>:
 
-## Frequentists *versus* Bayesian inference
-Frequentist
+- Long-run frequency of a <span style="color:red">procedure</span>.
 
-## Parameter estimation
+> The probability of a fair coin landing up heads is 50%.
 
-## Hypothesis testing
+- One cannot state anything about one single event in the long-run sequence.
 
+> What is the probability that the <span style="color:red">next</span> coin toss lands heads?
+
+- Recall the definitions of a <span style="color:red">$p$-value</span> and <span style="color:red">confidence interval</span>:
+They are based on long-run frequencies.<br>
+<span style="color:green">Conclusion:</span> What can we really conclude from one $p$-value or one confidence interval?...
+
+
+## Bayesian paradigm {.build}
+Concept of <span style="color:green">probability</span>:
+
+- Degree of belief.
+- Expression of uncertainty about the true state of affairs.
+- Subjective: Different people have different beliefs.
+- Data are used to update one's belief, by means of the *laws of probability*.
+- Applies to both single and repetitive events.
+
+<br>
+But how do we update our belief in light of data?
+
+# Bayes' rule {.section}
+
+## Bayes' rule {.build}
+Let $\mathcal{A}$ denote something we want to study.
+<br>
+This can be:
+
+- A parameter, like the mean $\mu$ of a population.
+- A hypothesis, like $\mu > 100$.
+
+Bayes' rule:
+
+<p align="center"><span style="color:green">
+$p(\mathcal{A}|\text{data}) = \frac{p(\mathcal{A})p(\text{data}|\mathcal{A})}{p(\text{data})}$
+</span></p>
+
+- $p(\mathcal{A})$: <span style="color:red">Prior</span> probability.
+- $p(\text{data}|\mathcal{A})$: Data <span style="color:red">likelihood</span>.
+- $p(\text{data})$: Marginal likelihood.
+- $p(\mathcal{A}|\text{data})$: <span style="color:red">Posterior</span> probability.
+
+## Bayes' rule and frequentism
+<span style="color:red">Important:</span>
+
+- The Bayes' rule is a mathematical necessity, it follows from the axioms of probability.
+- Frequentists do not dispute this formula!
+
+## Bayes' rule and model comparison {.build}
+Say we have <span style="color:red">in total</span> two competing hypotheses, $\mathcal{H}_0$ and $\mathcal{H}_1$.
+
+We can apply the Bayes' rule to either hypothesis:
+
+<p align="center">
+$p(\mathcal{H}_0|\text{data}) = \frac{p(\mathcal{H}_0)p(\text{data}|\mathcal{H}_0)}{p(\text{data})}
+\quad,\quad
+p(\mathcal{H}_1|\text{data}) = \frac{p(\mathcal{H}_1)p(\text{data}|\mathcal{H}_1)}{p(\text{data})}$.
+</p>
+
+Now divide both equations:
+
+<p align="center"><span style="color:green">
+$\underset{\text{Posterior odds}}{\underbrace{\frac{p(\mathcal{H}_0|\text{data})}{p(\mathcal{H}_1|\text{data})}}} =
+\underset{\text{Prior odds}}{\underbrace{\frac{p(\mathcal{H}_0)}{p(\mathcal{H}_1)}}}
+\times
+\underset{BF_{01}}{\underbrace{\frac{p(\text{data}|\mathcal{H}_0)}{p(\text{data}|\mathcal{H}_1)}}}$
+</span></p>
+
+where $BF_{01}$ is the <span style="color:red">Bayes factor</span>.
+
+The Bayes factor is a measure of the *relative evidence* in the data for either model.
+E.g., if $BF_{01} = 5$:
+
+- The data are 5 times as likely under $\mathcal{H}_0$ than under $\mathcal{H}_1$.
+- After looking at the data, we now support $\mathcal{H}_0$ five times as much.
+
+## Bayes factor
+A whole lot can be said about Bayes factors.
+
+They have fervent followers [e.g., @kass1995; @dienes2014; @morey2016b; @wagenmakers2018a].
+
+But there are also critics, including myself [@tendeiro2019a].
+
+# JASP {.section}
+
+## Note of caution
+
+JASP is 'Bayes factor'-oriented.
+
+I personally dislike it, as I think parameter estimation offers a far a clearer, all-inclusive, paradigm.
+
+- To see why I think this, see our preprint: @kiers2019a.
+
+## Worked-out example
+Let's jump to JASP now!
+
+Things to pay attention to:
+
+- Importing data.
+- Editing data.
+- ...
 
 
 
