@@ -14,7 +14,7 @@ output:
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
 nocite: | 
-  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999
+  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999, @ikeda2019
 ---
 
 ```{r setup, include = FALSE, fig.align = 'center'}
@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 ```
 
 <!-- To print to PDF, run: 
-pagedown::chrome_print("Nagoya-10-Aug-2019-Part1-JP.html")
+pagedown::chrome_print("Nagoya-10-Aug-2019-Part1.html")
 -->
 
 ## Today
@@ -81,7 +81,8 @@ See also @simmons2011.
 - <span style="color:red">$p$-hacking</span>: E.g.,
     - Exclusion of outliers depending on whether $p<.05$.
     - $p = .054 \longrightarrow p = .05$.
-- <span style="color:red">HARKing</span> [@kerr1998]: Convert exploratory results into research questions.
+- <span style="color:red">HARKing</span> [@kerr1998]: Convert exploratory results into research questions.<br>
+(@bem2004, the author of the famous 2011 precognition paper, *defended* this practice...)
 - ...
 
 ## Researcher's degrees of freedom
@@ -138,6 +139,16 @@ Interestingly, science misconduct has been a longtime concern [see @babbage1830]
 
 And for the sake of balance:<br>
 There are also some voices *against* this description of the current state of affairs [e.g., @fiedler2016].
+
+## Preregistration eliminates QRPs, right?...
+Well, maybe not (yet).
+
+Here's an interesting preprint (from July 2019!) from a Japanese research group (Kyushu University):
+
+> Ikeda, A., Xu, H., Fuji, N., Zhu, S., & Yamada, Y. (2019). *Questionable research practices following pre-registration* [Preprint]. doi: [10.31234/osf.io/b8pw9](https://doi.org/10.31234/osf.io/b8pw9)
+
+
+
 
 # But *why*?... {.section}
 
@@ -494,177 +505,177 @@ This includes: Journals, funding agencies, education, career system.
 knitr::include_graphics('figures/Ruberg2019.png')
 ```
 
-# What do experts advice? {.section}
+<!-- # What do experts advice? {.section} -->
 
-## @munafo2017
-```{r, out.width='80%'}
-knitr::include_graphics('figures/Mufano et al (2017) 2.png')
-```
+<!-- ## @munafo2017 -->
+<!-- ```{r, out.width='80%'} -->
+<!-- knitr::include_graphics('figures/Mufano et al (2017) 2.png') -->
+<!-- ``` -->
 
-Methods:
+<!-- Methods: -->
 
-- Protecting against cognitive biases
-- Improving methodological training
-- Implementing independent methodological support
-- Encouraging collaboration and team science
+<!-- - Protecting against cognitive biases -->
+<!-- - Improving methodological training -->
+<!-- - Implementing independent methodological support -->
+<!-- - Encouraging collaboration and team science -->
 
-## @munafo2017
-```{r, out.width='100%'}
-knitr::include_graphics('figures/Mufano et al (2017) 3.png')
-```
+<!-- ## @munafo2017 -->
+<!-- ```{r, out.width='100%'} -->
+<!-- knitr::include_graphics('figures/Mufano et al (2017) 3.png') -->
+<!-- ``` -->
 
-# Large-scale replication projects {.section}
-## Many Labs [@klein2014]
-```{r, out.width='55%'}
-knitr::include_graphics('figures/Many Labs 1-1.png')
-```
+<!-- # Large-scale replication projects {.section} -->
+<!-- ## Many Labs [@klein2014] -->
+<!-- ```{r, out.width='55%'} -->
+<!-- knitr::include_graphics('figures/Many Labs 1-1.png') -->
+<!-- ``` -->
 
-Replicability of 13 classic and contemporary effects across 36 independent samples totaling 6,344 participants.
+<!-- Replicability of 13 classic and contemporary effects across 36 independent samples totaling 6,344 participants. -->
 
-See also Many Labs 2 [@klein2018], Many Labs 3 [@ebersole2016].
+<!-- See also Many Labs 2 [@klein2018], Many Labs 3 [@ebersole2016]. -->
 
-## Open Science Collaboration [@osc2015]
-```{r, out.width='35%'}
-knitr::include_graphics('figures/OSC1.jpg')
-```
-<br><br>
+<!-- ## Open Science Collaboration [@osc2015] -->
+<!-- ```{r, out.width='35%'} -->
+<!-- knitr::include_graphics('figures/OSC1.jpg') -->
+<!-- ``` -->
+<!-- <br><br> -->
 
-A gazilion authors.
+<!-- A gazilion authors. -->
 
-(For the sake of balance, and for an interesting rebuttal (!), see @gilbert2016).
+<!-- (For the sake of balance, and for an interesting rebuttal (!), see @gilbert2016). -->
 
-## The Psychological Science Accelerator
-@moshontz2018a; 92 authors!
+<!-- ## The Psychological Science Accelerator -->
+<!-- @moshontz2018a; 92 authors! -->
 
-```{r, out.width='90%'}
-knitr::include_graphics('figures/Moshontz et al 2018.png')
-```
-
-
-
-# Education {.section}
-
-## @frank2012
-```{r, out.width='90%'}
-knitr::include_graphics('figures/Teaching 2012.png')
-```
-
-## @chambers2017a
-```{r, out.width='30%'}
-knitr::include_graphics('figures/Chambers book.png')
-```
-
-## @button2018
-```{r, out.width='100%'}
-knitr::include_graphics('figures/Button2018.png')
-```
-
-## @sarafoglou2019
-```{r, out.width='60%'}
-knitr::include_graphics('figures/Sarafoglou et al 2019.png')
-```
-
-Research Master course on open science practices. Materials freely available at [OSF](https://osf.io/v3z7q/)!
-
-## @kiers2019
-```{r, out.width='100%'}
-knitr::include_graphics('figures/SIPS 2019 Kiers.png')
-```
-
-# Key ideas {.section}
-## Registered reports (RRs)
-Visit the [Center for Open Science](https://cos.io/rr/).
-
-```{r, out.width='75%'}
-knitr::include_graphics('figures/COS.png')
-```
-<br>
-
-*Prior* to data collection [@chambers2013]:
-
-- Decide hypotheses, methods, and analysis.
-<br>
-(Eliminate several QRPs, e.g., $p$-hacking, publication bias by researchers and journals.)
-- Peer review of paper.
-- Conditional acceptance of paper!
-- Not only original studies, but also replications are of value!
-
-## Registered reports (RRs)
-As of July 2019, [204 journals](https://cos.io/rr/) use Registered Reports.
-
-And recently, quite notably, [Nature](https://www.nature.com/articles/s41562-019-0652-0):
-
-- January 2017: Editorial announcing RRs [@editorialnature2017].
-- July 2019: Editorial announcing first two RRs [@editorialnature2019]:
-    - @he2019
-    - @brannon2019
-
-To learn:
-
-- @chambers2013: Inception of RRs at Cortex in 2013.
-- Read the [APS statement](https://www.psychologicalscience.org/publications/replication).
-- @nosek2014: Special issue in *Social Psychology* in 2014, with examples.
-- @chambers2014: Includes useful FAQs.
-- @chambers2017: [Slides](https://osf.io/ux24b/) at OSF.
-
-## Preregistration
-
-## Preregistration *works* [@kaplan2015]
-
-```{r, out.width='45%'}
-knitr::include_graphics('figures/kaplan2015.png')
-```
-
-## Replication studies
-@brandt2014
-
-```{r, out.width='90%'}
-knitr::include_graphics('figures/Brandt 2014.png')
-```
-
-## Concern in major journals
-@lindsay2015
-
-```{r, out.width='75%'}
-knitr::include_graphics('figures/Psych Science 2015.png')
-```
-
-> "(...) Replicability is not the only criterion of a first-rate science journal, but it had better be a <span style="color:red">fundamental</span> one."
-
-> "My emphasis here is on experiments and NHST, (...) (By the way, I am enthusiastically open to submissions that make appropriate use of <span style="color:red">alternatives to NHST</span> [read: Bayes].)"
-
-## In *Nature*
-```{r, out.width='75%'}
-knitr::include_graphics('figures/Camerer 2018.png')
-```
+<!-- ```{r, out.width='90%'} -->
+<!-- knitr::include_graphics('figures/Moshontz et al 2018.png') -->
+<!-- ``` -->
 
 
-## In Nature [@camerer2018]
-> "The replications follow <span style="color:red">analysis plans reviewed by the original authors</span> and <span style="color:red">pre-registered</span> prior to the replications."
 
-> The replications are high powered, with <span style="color:red">sample sizes on average about five times higher</span> than in the original studies."
+<!-- # Education {.section} -->
 
-> "We find a <span style="color:red">significant effect in the same direction</span> as the original study for 13 (<span style="color:red">62%</span>) studies, and the <span style="color:red">effect size</span> of the replications is on average <span style="color:red">about 50%</span> of the original effect size."
+<!-- ## @frank2012 -->
+<!-- ```{r, out.width='90%'} -->
+<!-- knitr::include_graphics('figures/Teaching 2012.png') -->
+<!-- ``` -->
 
-Conclusion:<br>
-Results published in high rank journals should be considered with care until they are <span style="color:red">replicated</span>.
+<!-- ## @chambers2017a -->
+<!-- ```{r, out.width='30%'} -->
+<!-- knitr::include_graphics('figures/Chambers book.png') -->
+<!-- ``` -->
 
-## The PRO initiative [@morey2016a]
-- PRO = <span style="color:red">P</span>eer <span style="color:red">R</span>eviewers' <span style="color:red">O</span>penness.
-- Thus, guidelines for paper <span style="color:red">reviewers</span>.
-- See [https://opennessinitiative.org](https://opennessinitiative.org).
-<br><br><br>
+<!-- ## @button2018 -->
+<!-- ```{r, out.width='100%'} -->
+<!-- knitr::include_graphics('figures/Button2018.png') -->
+<!-- ``` -->
 
-Main [goals](https://opennessinitiative.org/the-initiative/):
+<!-- ## @sarafoglou2019 -->
+<!-- ```{r, out.width='60%'} -->
+<!-- knitr::include_graphics('figures/Sarafoglou et al 2019.png') -->
+<!-- ``` -->
 
-1. Data should be made publicly available.
-2. Stimuli and materials should be made publicly available.
-3. In case some data or materials are not open, clear reasons (e.g., legal, ethical constraints, or severe impracticality) should be given why.
-4. Documents containing details for interpreting any files or code, and how to compile and run any software programs should be made available with the above items.
-5. The location of all of these files should be advertised in the manuscript, and all files should be hosted by a reliable third party.
+<!-- Research Master course on open science practices. Materials freely available at [OSF](https://osf.io/v3z7q/)! -->
 
-## 'statcheck'
-R package that can assist detecting statistical reporting of errors [@nuijten2016].
+<!-- ## @kiers2019 -->
+<!-- ```{r, out.width='100%'} -->
+<!-- knitr::include_graphics('figures/SIPS 2019 Kiers.png') -->
+<!-- ``` -->
+
+<!-- # Key ideas {.section} -->
+<!-- ## Registered reports (RRs) -->
+<!-- Visit the [Center for Open Science](https://cos.io/rr/). -->
+
+<!-- ```{r, out.width='75%'} -->
+<!-- knitr::include_graphics('figures/COS.png') -->
+<!-- ``` -->
+<!-- <br> -->
+
+<!-- *Prior* to data collection [@chambers2013]: -->
+
+<!-- - Decide hypotheses, methods, and analysis. -->
+<!-- <br> -->
+<!-- (Eliminate several QRPs, e.g., $p$-hacking, publication bias by researchers and journals.) -->
+<!-- - Peer review of paper. -->
+<!-- - Conditional acceptance of paper! -->
+<!-- - Not only original studies, but also replications are of value! -->
+
+<!-- ## Registered reports (RRs) -->
+<!-- As of July 2019, [204 journals](https://cos.io/rr/) use Registered Reports. -->
+
+<!-- And recently, quite notably, [Nature](https://www.nature.com/articles/s41562-019-0652-0): -->
+
+<!-- - January 2017: Editorial announcing RRs [@editorialnature2017]. -->
+<!-- - July 2019: Editorial announcing first two RRs [@editorialnature2019]: -->
+<!--     - @he2019 -->
+<!--     - @brannon2019 -->
+
+<!-- To learn: -->
+
+<!-- - @chambers2013: Inception of RRs at Cortex in 2013. -->
+<!-- - Read the [APS statement](https://www.psychologicalscience.org/publications/replication). -->
+<!-- - @nosek2014: Special issue in *Social Psychology* in 2014, with examples. -->
+<!-- - @chambers2014: Includes useful FAQs. -->
+<!-- - @chambers2017: [Slides](https://osf.io/ux24b/) at OSF. -->
+
+<!-- ## Preregistration -->
+
+<!-- ## Preregistration *works* [@kaplan2015] -->
+
+<!-- ```{r, out.width='45%'} -->
+<!-- knitr::include_graphics('figures/kaplan2015.png') -->
+<!-- ``` -->
+
+<!-- ## Replication studies -->
+<!-- @brandt2014 -->
+
+<!-- ```{r, out.width='90%'} -->
+<!-- knitr::include_graphics('figures/Brandt 2014.png') -->
+<!-- ``` -->
+
+<!-- ## Concern in major journals -->
+<!-- @lindsay2015 -->
+
+<!-- ```{r, out.width='75%'} -->
+<!-- knitr::include_graphics('figures/Psych Science 2015.png') -->
+<!-- ``` -->
+
+<!-- > "(...) Replicability is not the only criterion of a first-rate science journal, but it had better be a <span style="color:red">fundamental</span> one." -->
+
+<!-- > "My emphasis here is on experiments and NHST, (...) (By the way, I am enthusiastically open to submissions that make appropriate use of <span style="color:red">alternatives to NHST</span> [read: Bayes].)" -->
+
+<!-- ## In *Nature* -->
+<!-- ```{r, out.width='75%'} -->
+<!-- knitr::include_graphics('figures/Camerer 2018.png') -->
+<!-- ``` -->
+
+
+<!-- ## In Nature [@camerer2018] -->
+<!-- > "The replications follow <span style="color:red">analysis plans reviewed by the original authors</span> and <span style="color:red">pre-registered</span> prior to the replications." -->
+
+<!-- > The replications are high powered, with <span style="color:red">sample sizes on average about five times higher</span> than in the original studies." -->
+
+<!-- > "We find a <span style="color:red">significant effect in the same direction</span> as the original study for 13 (<span style="color:red">62%</span>) studies, and the <span style="color:red">effect size</span> of the replications is on average <span style="color:red">about 50%</span> of the original effect size." -->
+
+<!-- Conclusion:<br> -->
+<!-- Results published in high rank journals should be considered with care until they are <span style="color:red">replicated</span>. -->
+
+<!-- ## The PRO initiative [@morey2016a] -->
+<!-- - PRO = <span style="color:red">P</span>eer <span style="color:red">R</span>eviewers' <span style="color:red">O</span>penness. -->
+<!-- - Thus, guidelines for paper <span style="color:red">reviewers</span>. -->
+<!-- - See [https://opennessinitiative.org](https://opennessinitiative.org). -->
+<!-- <br><br><br> -->
+
+<!-- Main [goals](https://opennessinitiative.org/the-initiative/): -->
+
+<!-- 1. Data should be made publicly available. -->
+<!-- 2. Stimuli and materials should be made publicly available. -->
+<!-- 3. In case some data or materials are not open, clear reasons (e.g., legal, ethical constraints, or severe impracticality) should be given why. -->
+<!-- 4. Documents containing details for interpreting any files or code, and how to compile and run any software programs should be made available with the above items. -->
+<!-- 5. The location of all of these files should be advertised in the manuscript, and all files should be hosted by a reliable third party. -->
+
+<!-- ## 'statcheck' -->
+<!-- R package that can assist detecting statistical reporting of errors [@nuijten2016]. -->
 
 # What to avoid {.section}
 
