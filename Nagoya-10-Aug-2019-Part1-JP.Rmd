@@ -1,6 +1,6 @@
 ---
 title: "From Frequentist Problems Towards Bayesian Solutions"
-subtitle: "Part 1: Replication crisis in Psychology <br> (and what does Statistics have to do with it)"
+subtitle: "Part 1: 心理学における再現性の危機 <br> (と統計学との関係)"
 author: "Jorge N. Tendeiro"
 date: "10 August 2019"
 output: 
@@ -35,61 +35,63 @@ pagedown::chrome_print("Nagoya-10-Aug-2019-Part1.html")
 
 # Fraud {.section}
 
-## Definition
-Fraud = scientifc misconduct.
+## 定義
+Fraud = 科学における不正行為.
 
-- Falsifying or fabricating data.
-- This is intentional, not accidental.
-- Puts all science under a <span style="color:red">bad light</span>.
-- Markedly different from QRPs (next).
+- データの偽造または加工.
+- 意図的であり、故意的でないもの.
+- 全科学的研究が <span style="color:red">疑われる</span>.
+- QRPsとは際立って異なるもの (next).
 
-## Notable examples
-- Diederik Stapel, social psychologist. Suspended in 2011. [Fabricating and manipulating data](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html?pagewanted=1&_r=0&src=recg).
-- Marc Hauser, psychologist at Harvard. Resigned in 2011. [Scientific misconduct](https://www.bostonglobe.com/metro/2014/05/29/internal-harvard-report-shines-light-misconduct-star-psychology-researcher-marc-hauser/maSUowPqL4clXrOgj44aKP/story.html).
-- Jens Förster, social psychologist. Resigned in 2017. [Data tampering](https://retractionwatch.com/2017/12/12/psychologist-fire-leaves-university-start-private-practice/).
+## 有名な例
+- Diederik Stapel, 社会心理学者. 2011年 停職. [データの偽造と加工](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html?pagewanted=1&_r=0&src=recg).
+- Marc Hauser, ハーバード大学心理学者. 2011年　辞職. [科学における不正行為](https://www.bostonglobe.com/metro/2014/05/29/internal-harvard-report-shines-light-misconduct-star-psychology-researcher-marc-hauser/maSUowPqL4clXrOgj44aKP/story.html).
+- Jens Förster, 社会心理学者. 2017年　辞職. [データ改ざん](https://retractionwatch.com/2017/12/12/psychologist-fire-leaves-university-start-private-practice/).
 <br><br><br>
 
-Today we don't talk about fraud *explicitly*.
+今日は科学における不正行為*そのもの*については
+詳しくお話しません.
 
-We talk about something much harder to identify and erradicate:
+もっと発見しにくくて撲滅するのが難しいものについてお話します:
 
-<p align="center"><span style="color:red">Questionable research practices</span>.</p>
+<p align="center"><span style="color:red">Questionable research practices (QRPs)</span>.</p>
 
-# Questionable research practices {.section}
+# Questionable research practices （好ましくない研究行為）{.section}
 
-## QRPs
-Coin termed by @john2012.<br>
+## QRPs（好ましくない研究行為）
+@john2012 によって作られた用語.<br>
 See also @simmons2011.
 <br><br>
 
-- <span style="color:red">Not necessarily</span> fraud.
-- Includes the (ab)use of actually *acceptable* research practices.
-- Problem with QRPs:<br>
-    * Introduce <span style="color:red">bias</span> (typically, in *favor* of the researcher's intentions...).
-    * <span style="color:red">Inflated power</span> at the cost of inflated Type I error probability ($\gg 5\%$).
-    * Results <span style="color:red">not replicable</span>.
+- <span style="color:red">必ずしも</span> fraud(科学における不正行為）<span style="color:red">ではない</span>.
+- 実際に*許容される範囲内の* 研究行為とその悪用も含む.
+- QRPs（好ましくない研究行為）に関する問題点:<br>
+    * <span style="color:red">バイアス</span>を加えてしまう (典型的には, 研究者の意図を*支持する*方向にバイアスが加えられる...).
+    *  第一種過誤(Type I error)の確率が上がるのを犠牲に($\gg 5\%$)<span style="color:red">power(検出力)
+    </span>がつり上げられる.
+    * 結果が <span style="color:red">再現されない</span>.
 
-## Example of QRPs
+## QRPs（好ましくない研究行為）の例
 [@john2012; @schimmack2015].
 
-- Omit some DVs.
-- Omit some conditions.
-- <span style="color:red">Peeking</span>: Sequential testing --- Look and decide:
-    * $p > .05$: Collect more.
-    * $p < .05$: Stop.
-- Only report $p<.05$ results.
-- <span style="color:red">$p$-hacking</span>: E.g.,
-    - Exclusion of outliers depending on whether $p<.05$.
+- いくつかの従属変数（dependent variables）を取り除く.
+- いくつかの条件を取り除く.
+- <span style="color:red">覗き見</span>: 逐次試験 --- 結果を見ながら決める:
+    * $p > .05$: もっとデータを集める.
+    * $p < .05$: データ収集を止める.
+- $p<.05$の結果のみ報告する.
+- <span style="color:red">$p$-hacking</span>: 例,
+    -  $p<.05$になるかどうかに基づいて外れ値を取り除く.
     - $p = .054 \longrightarrow p = .05$.
-- <span style="color:red">HARKing</span> [@kerr1998]: Convert exploratory results into research questions.<br>
-(@bem2004, the author of the famous 2011 precognition paper, *defended* this practice...)
+- <span style="color:red">HARKing</span> [@kerr1998]: 探索的に得られた結果を研究課題に変えること.<br>
+(@bem2004,  2011年に出版された予知に関する有名な論文の著者はこの手法を, *正当防衛しようと*したが...)
 - ...
 
-## Researcher's degrees of freedom
-- Researchers have a <span style="color:red">multitude</span> of decisions to make (experiment design, data collection, analyses performed); @wicherts2016, @steegen2016.
-- It is very possible to manipulate results *in favor* of one's interests.
-- This is now known as *researcher's degrees of freedom* [@simmons2011].
-- Consequence: Inflated false positive findings [@ioannidis2005].
+## 研究者の自由度
+- 研究者は <span style="color:red">多数</span> の決断を下さなければならない (実験デザイン, データ収集,　分析手法); @wicherts2016, @steegen2016.
+- 研究者にとって*好ましい*結果になるよう操作することは充分、考えられることである.
+- これらは *研究者の自由度*として知られている [@simmons2011].
+- 結果的に: 誤検出による発見が増える [@ioannidis2005].
 
 ## @fried2017
 <div style="float: left; width: 50%;">
@@ -99,13 +101,13 @@ knitr::include_graphics('figures/Fried 2017.png')
 </div>
 
 <div style="float: right; width: 45%;">
-- The 7 most common depression scales contain 52 symptoms.
-- That's 7 different sum scores.
-- Yet, all are interpreted as `level of depression'.
+- 主に使われている７つのうつ病のスケールには52種類の症状が含まれている.
+- これは7つの異なるスケールに相当する.
+- しかし、これらは全て `うつ病のレベル'として解釈される.
 </div>
 
-## A now famous example...
-Prof. Brian Wansink at Cornell University.
+## 今日における有名な例...
+コーネル大学のBrian Wansink教授.
 
 [His description](https://web.archive.org/web/20170312041524/http:/www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no) of the efforts of a visiting Ph.D student:
 
@@ -113,18 +115,18 @@ Prof. Brian Wansink at Cornell University.
 
 > Every day she came back with puzzling new results, and every day we would scratch our heads, ask "Why," and <span style="color:red">come up with another way to reanalyze the data</span> with yet another set of plausible hypotheses. Eventually <span style="color:red">we started discovering solutions</span> that held up regardless of how we pressure-tested them. I outlined the first paper, and she wrote it up (...). This happened with a second paper, and then a third paper (which was one that was based on her own discovery while digging through the data).
 
-This isn't being *creative* or *thinking outside the box*.
+これは *クリエイティブ* または *型にはまらない考え方*といったものではない.
 
-<span style="color:red">This is QRPing.</span>
+<span style="color:red">これは QRPing　（好ましくない研究行為）である.</span>
 
-## What happened to Wansink?
-- He was severely criticized, his work was scrutinized [e.g., @vanderzee2017].
-- Over 100 (!!) errors in a set of four papers...
-- Has now <span style="color:red">40</span> (!!) publications [retracted](http://retractiondatabase.org/RetractionSearch.aspx#?auth%3dWansink%252c%2bBrian) (as of July 2019).
-- After a year-long internal investigation, he was forced to [resign](https://news.cornell.edu/stories/2018/09/provost-issues-statement-wansink-academic-misconduct-investigation).
+## Wansink教授はどうなったか?
+- かなり批判され, 彼の研究は精査された [e.g., @vanderzee2017].
+- 100以上におよぶ間違い が４セットの論文から発見された...
+- 現在では <span style="color:red">40本</span> (!!) の論文が [撤回されている](http://retractiondatabase.org/RetractionSearch.aspx#?auth%3dWansink%252c%2bBrian) (as of July 2019).
+- １年に及ぶ国際的な調査の結果, 彼は [辞職](https://news.cornell.edu/stories/2018/09/provost-issues-statement-wansink-academic-misconduct-investigation)へと追い込まれた.
 
-## Is it really *that* bad?...
-[Yes](https://www.westernalliance.org.au/2018/05/restoring-trust-in-science-what-are-questionable-research-practices).
+## これって本当に *そこまで* いけない事なの?...
+[もちろん](https://www.westernalliance.org.au/2018/05/restoring-trust-in-science-what-are-questionable-research-practices).
 
 - @martinson2005: "Scientists behaving badly".
 - @fanelli2009: Meta-analysis shows evidence of science misconduct.
@@ -134,45 +136,45 @@ This isn't being *creative* or *thinking outside the box*.
 - @fraser2018: In other fields of science.
 <br><br>
 
-Interestingly, science misconduct has been a longtime concern [see @babbage1830].
+興味深いことに、研究における不正行為は長い間懸念されてきた [see @babbage1830].
 <br><br>
 
-And for the sake of balance:<br>
-There are also some voices *against* this description of the current state of affairs [e.g., @fiedler2016].
+参考までに:<br>
+数名の研究者は、現在の研究における現状は*それ程悪くない*としている[e.g., @fiedler2016].
 
-## Preregistration eliminates QRPs, right?...
-Well, maybe not (yet).
+## 研究の事前登録(preregistration)をすればQRPs（好ましくない研究行為）はなくなるのか?...
+残念ながら, （まだ）そうはならない.
 
-Here's an interesting preprint (from July 2019!) from a Japanese research group (Kyushu University):
+ちなみに、(2019年7月の）日本の研究グループ(九州大学）でも研究の事前登録がなされています：
 
 > Ikeda, A., Xu, H., Fuji, N., Zhu, S., & Yamada, Y. (2019). *Questionable research practices following pre-registration* [Preprint]. doi: [10.31234/osf.io/b8pw9](https://doi.org/10.31234/osf.io/b8pw9)
 
 
 
 
-# But *why*?... {.section}
+#*なぜ*事前登録だけではQRP（好ましくない研究行為）はなくならないのか?... {.section}
 
-## Why are QRPs so prevalent?
-It is strongly related to incentives [@nosek2012; @schonbrodt2015].
+## なぜQRP（好ましくない研究行為）は蔓延しているのか?
+それはインセンティブ（動機）と深く関係がある [@nosek2012; @schonbrodt2015].
 
-- "Publish or perish":<br>
-Publish a lot, at highly prestigious journals.
-    - Journals only publish a fraction of all manuscripts.
-    - Journals don't like publishing null findings...
-- Get tenured.
-- Get research grant.
-- Fame (prizes, press coverage, ...).
+- "Publish or perish"（論文を出版するか滅びるか）:<br>
+より多くの論文を、より権威あるジャーナルに出版しなければならないという現実.
+    - ジャーナルは提出されたうちのごく一部しか出版しない.
+    - ジャーナルは否定的な結果(予期されていない結果)を出版したがらない...
+- 終身雇用のポジションを得るため.
+- 研究費を得るため.
+- 名声 (賞, マスコミに注目される等).
 - ...
 <br><br><br>
 
-But, <span style="color:red">very importantly</span>, it also happens in spite of the <span style="color:green">researcher's best intentions</span>.
+しかし, <span style="color:red">忘れてはならないのは</span>, <span style="color:green">研究者の最善の意図を持ってしても</span>好ましくない研究行為は起こり得るということである.
 
-- Deficient statistics education (yes, statisticians need to acknowledge this!...).
-- Perpetuating traditions in the field.
+- 不十分な統計科目の教育 (そう、統計学者はこの点を理解すべきであると思います!...).
+- 各分野にある永続的な伝統.
 
-# (I)reproducibility {.section}
+# (I)reproducibility (再現性) {.section}
 
-## Threats to reproducible science
+## 再現できる研究への脅威
 <div style="float: left; width: 75%;">
 ```{r, out.width='80%'}
 knitr::include_graphics('figures/Mufano et al (2017).png')
@@ -183,38 +185,38 @@ knitr::include_graphics('figures/Mufano et al (2017).png')
 </div>
 
 <div style="float: left; width: 100%;">
-- Hypothetico-deductive model of the scientific method.
-- In <span style="color:red">red</span>: Potential threats to this model.
+- 研究における仮説演繹法.
+- <span style="color:red">赤</span>での記述: このモデルにおける潜在的な脅威.
 </div>
 
-## Lack of replications
-Until very recently [@makel2012].
+## 再現実験（追試）の欠如
+つい最近[@makel2012].
 <br>
 
 ```{r, out.width='80%'}
 knitr::include_graphics('figures/Makel 2012.png')
 ```
 
-- Very low rate of replications in Psychology (estimated ~1%).
-- Until 2012, majority of replications were actually <span style="color:red">successful</span>!!
-- However, in most cases both the original and replication studies shared authorship...
-- Conflict of interest?...
+- 心理学における再現率が非常に低い (推定1%未満).
+- 2012年までは, 主な再現実験は<span style="color:red">うまくいっていた</span>!!
+- しかし, 多くのケースにおいて、オリジナルの研究も追試研究も同日研究者によって報告されていた...
+- Conflict of interest(利益の衝突)?...
 
-## Famous [replication failures](https://bit.ly/2y7qeer)
-- The [Marshmallow Test](https://www.vox.com/science-and-health/2018/6/6/17413000/marshmallow-test-replication-mischel-psychology) [@watts2018]
-- [Ego depletion](https://digest.bps.org.uk/2017/12/14/strongest-evidence-yet-for-ego-depletion-the-idea-that-self-control-is-a-limited-resource/) [@hagger2016; @vadillo2018; @friese2019]
-- [Power posing](https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are#t-543464) [@ranehill2015]
-- The [Stanford Prison Experiment](https://medium.com/s/trustissues/the-lifespan-of-a-lie-d869212b1f62) [@reicher2006;@griggs2014]
-- The [facial feedback hypothesis](https://digest.bps.org.uk/2016/09/01/no-reason-to-smile-another-modern-psychology-classic-has-failed-to-replicate/) [@wagenmakers2016]
+## 有名な [追試の失敗](https://bit.ly/2y7qeer)
+- [マシュマロテスト](https://www.vox.com/science-and-health/2018/6/6/17413000/marshmallow-test-replication-mischel-psychology) [@watts2018]
+- [自己消耗](https://digest.bps.org.uk/2017/12/14/strongest-evidence-yet-for-ego-depletion-the-idea-that-self-control-is-a-limited-resource/) [@hagger2016; @vadillo2018; @friese2019]
+- [パワーポージング](https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are#t-543464) [@ranehill2015]
+- [スタンフォード監獄実験](https://medium.com/s/trustissues/the-lifespan-of-a-lie-d869212b1f62) [@reicher2006;@griggs2014]
+- [表情フィードバック仮説](https://digest.bps.org.uk/2016/09/01/no-reason-to-smile-another-modern-psychology-classic-has-failed-to-replicate/) [@wagenmakers2016]
 - [Newborn babies’ imitation](https://digest.bps.org.uk/2016/05/20/a-classic-finding-about-newborn-babies-imitation-skills-is-probably-wrong/) [@oostenbroek2016]
-- The [blocking effect](https://www-nature-com.proxy-ub.rug.nl/news/psychologists-fail-to-replicate-well-known-behaviour-linked-to-learning-1.20659) [@maes2016]
-- [The stereotype threat](https://www.nationalreview.com/corner/another-replication-failure-stereotype-threat-is-probably-empty/) [@flore2019]
-- The [facial expression](https://www.popsci.com/article/science/facial-expressions-arent-universal-we-thought/#page-2) [@gendron2018]
+- [ブロッキング効果](https://www-nature-com.proxy-ub.rug.nl/news/psychologists-fail-to-replicate-well-known-behaviour-linked-to-learning-1.20659) [@maes2016]
+- [ステレオタイプ・スレット](https://www.nationalreview.com/corner/another-replication-failure-stereotype-threat-is-probably-empty/) [@flore2019]
+- [表情](https://www.popsci.com/article/science/facial-expressions-arent-universal-we-thought/#page-2) [@gendron2018]
 - [ESP](https://www.theguardian.com/science/2012/mar/15/precognition-studies-curse-failed-replications), of course! [@ritchie2012;@galak2012]
 - The Mozart Effect [@steele1999; @mckelvie2002]
 - ...
 
-# Didn't we see this coming? {.section}
+# これは予測できる事ではなかったのか? {.section}
 ## @meehl1967
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
@@ -223,7 +225,7 @@ knitr::include_graphics('figures/Meehl.jpg')
 </div>
 
 <div style="float: right; width: 55%;">
-How poorly we build theory (see [Gelman](https://statmodeling.stat.columbia.edu/2016/05/06/needed-an-intellectual-history-of-research-criticism-in-psychology/)):
+我々がいかに不完全に仮説を立てているか (see [Gelman](https://statmodeling.stat.columbia.edu/2016/05/06/needed-an-intellectual-history-of-research-criticism-in-psychology/)):
 
 > "It is not unusual that (e) this *ad hoc* challenging of auxiliary hypotheses is repeated in the course of a series of related experiments, in which <span style="color:red">the auxiliary hypothesis involved in Experiment 1</span> (...) <span style="color:red">becomes the focus of interest in Experiment 2</span>, which in turn utilizes further plausible but easily challenged auxiliary hypotheses, and so forth. In this fashion a zealous and clever investigator can slowly wend his way through (...) a long series of related experiments (...) <span style="color:red">without ever once refuting or corroborating</span> so much as a single strand of the network."
 
@@ -244,7 +246,7 @@ knitr::include_graphics('figures/Cohen.jpg')
 </div>
 
 <div style="float: right; width: 55%;">
-Low-powered experiments:
+Low-powered experiments(検出力の低い実験):
 
 > "(...) It was found that the average power (probability of rejecting false null hypotheses) over the 70 research studies was .18 for small effects, .48 for medium effects, and .83 for large effects. These values are deemed to be <span style="color:red">far too small</span>."
 <br><br>
@@ -258,11 +260,11 @@ Low-powered experiments:
 knitr::include_graphics('figures/Kahneman.jpg')
 ```
 
-Nobel prize winner, 2002.
+ノーベル賞受賞者, 2002.
 </div>
 
 <div style="float: right; width: 55%;">
-About priming effects (but quite general remarks...):
+プライミング効果について (かなり一般的な所見...):
 
 > "The storm of doubts is fed by (...) the recent exposure of fraudulent researchers, general concerns with replicability (...), multiple reported failures to replicate salient results (...), and the growing belief in the existence of a pervasive file drawer problem (...)."
 <br><br>
@@ -277,8 +279,8 @@ About priming effects (but quite general remarks...):
 knitr::include_graphics('figures/Gelman 2016.png')
 ```
 
-- Gelman blogged about an impressive [timeline](https://statmodeling.stat.columbia.edu/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/) about the replication crisis.
-- The whole blog post is worth reading for many reasons, including Gelman's criticism over criticism!<br>
+- Gelman教授はブログに印象深い再現危機についての見解を公開しています[timeline](https://statmodeling.stat.columbia.edu/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/).
+- Gelman教授の批判の批判も含め、このブログは一見の価値があります!<br>
 (versus Susan Fiske's [position](https://www.psychologicalscience.org/observer/a-call-to-change-sciences-culture-of-shaming)).
 
 ## Timeline of a train wreck
@@ -289,18 +291,18 @@ See also this impressive dynamic plot:<br>
 knitr::include_graphics('figures/psyborgs.png')
 ```
 
-# $p$-values {.section}
+# $p$-values ($p$ー値){.section}
 
-## Definition
+## 定義
 > Probability of an effect at least as extreme as the one we observed, *given that $\mathcal{H}_0$ is true*.
-
+(*$\mathcal{H}_0$が正しいとして*、測定された効果(effect)が少なくともそれ同等かそれ以上に観測される確率)
 
 \[\fbox{$ p\text{-value} = P\left(X_\text{obs} \text{ or more extreme}|\mathcal{H}_0\right) $}\]
 
-The definition is simple enough, right?...
+この定義、わかりにくいですよね?...
 
-## Test yourself
-Consider the following statement [@oakes1986; @falk1995; @haller2002; @gigerenzer2004]:
+## 実際に自分で試してみましょう
+以下を読んでみましょう[@oakes1986; @falk1995; @haller2002; @gigerenzer2004]:
 
 > *Suppose you have a treatment that you suspect may alter performance on a certain task. You compare the
 means of your control and experimental groups (say, 20 subjects in each sample). Furthermore, suppose you
@@ -308,22 +310,22 @@ use a simple <span style="color:red">independent means $t$-test</span> and your 
 each of the statements below as "true" or "false."* False *means that the statement does not follow logically
 from the above premises. Also note that several or none of the statements may be correct.*
 
-## Test yourself
+## 自分で試してみよう
 ```{r, out.width='100%'}
 knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
-## Results
-**All** statements are <span style="color:red">incorrect</span>.
+## 結果
+**全ての** 文は間違っています <span style="color:red">incorrect</span>.
 
-## Results
-But how did students and teachers perceive these statements?
+## 結果
+でもどのように生徒と先生達はこれらのステートメントを理解しているでしょうか？
 
 ```{r, out.width='30%'}
 knitr::include_graphics('figures/Gigerenzer p values 2.png')
 ```
 
-This was in 2004. But things did not improve since...
+これは2004年のものです. でもそれ以降、改善は見られていません...
 
 ## @goodman2008
 
@@ -344,72 +346,72 @@ knitr::include_graphics('figures/Greenland.png')
 
 <br><br><br>
 
-This paper expands @goodman2008 and elaborates on <span style="color:red">25 misinterpretations</span>.
+この論文は @goodman2008 を拡張したもので、<span style="color:red">25 個の誤った解釈</span>について詳しく述べられています.
 
 ## *The American Statistician* (2019)
-Special issue with 43 (!!) papers [@wasserstein2019].
+43本の論文による特別号を出版[@wasserstein2019].
 
-<p align="center"><span style="color:red">Moving to a world beyond "$p<.05$"</span></p>
+<p align="center"><span style="color:red">"$p<.05$"の世界の向こう側</span></p>
 
-# Confidence intervals {.section}
+# 信頼区間 {.section}
 
-## A better alternative?
-- Confidence intervals (CIs) have been often advocated as the best inferential alternative to NHST.
-- Recall, for example the Wilkinson Task Force [@wilkinson1999]:
+## 他のベターな選択肢はあるのか？
+- 信頼区間 (Confidence Intervals; CIs)は仮説検定の代替推定手段としてよく推奨される.
+- 例）the Wilkinson Task Force [@wilkinson1999]:
 
 > "(...) it is hard to imagine a situation in which a dichotomous accept–reject decision is better than reporting an actual $p$ value or, better still, a <span style="color:red">confidence interval</span>.”
 
-- But, are CIs really a better alternative?
+- でも、信頼区間は本当に代替案として優れているのか?
 
-## Definition
-See, for instance, @hoekstra2014.
+## 定義
+例） @hoekstra2014.
 
 > A (say) 95% CI is a numerical interval found through a procedure that, if repeated across a series of hypothetical data, leads to an interval covering the true parameter 95% of the times.
 
-- A CI indicates a property of the performance of the <span style="color:red">procedure</span> used to compute it:<br>
-How is the <span style="color:red">procedure</span> expected to perform in the long run?
-- A CI for a parameter is constructed <span style="color:red"> around the parameter's estimate</span>.
-- However, a CI does not (really <span style="color:red">not</span>!) directly indicate a property of the parameter being estimated!
+- 信頼区間は<span style="color:red">手法(procedure)</span>のパフォーマンスの特性を示すものとして算出される:<br>
+長期的にみて、<span style="color:red">手法(procedure)</span>がどのようなパフォーマンスをみせると予測されるか？
+-　パラメーターの信頼区間は<span style="color:red"> パラメーターの推定値付近</span>に構成される.
+- しかし、信頼区間は推定されたパラメーターの特性を直接的に示すものでは(<span style="color:red">全く</span>!)ない！
 <br><br>
 
-Confused?<br>
-So is the vast majority of social scientists...
+頭の中が混乱していますか?<br>
+ほとんどの心理学者も同じです...
 
-## Test yourself
-From @hoekstra2014, mimicking the $p$ value study by @gigerenzer2004.
+## 自分で試してみましょう
+@hoekstra2014 を参考に, @gigerenzer2004 による$p$ー値の研究を模倣した.
 
 ```{r, out.width='75%'}
 knitr::include_graphics('figures/Hoekstra2014 I.png')
 ```
 
-## Test yourself
+## 自分で試してみましょう
 ```{r, out.width='65%'}
 knitr::include_graphics('figures/Hoekstra2014 II.png')
 ```
 
-## Results
-**All** statements are <span style="color:red">incorrect</span>.
+## 結果
+**全ての**文は <span style="color:red">間違っています</span>.
 
-## Results
-But how did students and teachers perceive these statements?
+## 結果
+でもどのように生徒と先生達はこれらのステートメントを理解しているでしょうか？
 
 ```{r, out.width='45%'}
 knitr::include_graphics('figures/Hoekstra2014 III.png')
 ```
 
-## What would be correct, then?...
+## 何が正解なの?...
 > “If we were to repeat the experiment over and over, then 95% of the time the confidence intervals contain the true mean.”
 
-How informative is this?!
+とっても参考になりますよね?!
 <br><br><br>
 
-Mental note:<br>
-Remember this when interpreting <span style="color:red">Bayesian credible intervals</span> in part 2 of today's workshop!
+心に留めておくノート:<br>
+今日のワークショップの第２部で扱う<span style="color:red">ベイズの信用区間</span>を解釈する時にこの事を覚えておいて下さい!
 <br><br><br>
 
-For completeness, not everyone agrees with the Hoekstra study [@garcia-perez2016; @miller2016; see also a reply by @morey2016].
+完全性のために述べておくと、全員がHoekstraの研究[@garcia-perez2016; @miller2016; see also a reply by @morey2016]を支持している訳ではない.
 
-# Publication policies {.section}
+# 出版の方針{.section}
 
 ## Psychological Science [@eich2014]
 ```{r, out.width='90%'}
@@ -423,7 +425,7 @@ knitr::include_graphics('figures/BASP 2015.png')
 
 > "The Basic and Applied Social Psychology (BASP) (...) emphasized that the null hypothesis significance testing procedure (NHSTP) is <span style="color:red">invalid</span> (...). From now on, <span style="color:red">BASP is banning the NHSTP</span>."
 
-Did it actually *work*? For a reflection, see @fricker2019.
+実際は*うまくいったのか*？see @fricker2019.
 
 ## Child Adolescent Mental Health
 ```{r, out.width='70%'}
@@ -432,7 +434,7 @@ knitr::include_graphics('figures/CAMH 2018.png')
 
 > (...) I will encourage authors to <span style="color:red">provide replication syntax and data</span> through public repositories. Moreover, I will encourage the journal to <span style="color:red">focus on a manuscript’s research design</span> and the author’s justification thereof, <span style="color:red">rather than the results</span>, with the aim of ensuring that transparent studies that explore a research question with equipoise, will be published.
 
-## The New England Journal of Medicin
+## The New England Journal of Medicine
 ```{r, out.width='60%'}
 knitr::include_graphics('figures/TNEJOM Editorial 2019.png')
 ```
@@ -441,15 +443,15 @@ Editorial [@harrington2019].
 
 > "(...) a requirement to <span style="color:red">replace $p$ values</span> with estimates of effects or association and 95% confidence intervals"
 
-# What do statistical associations advice? {.section}
+# 統計協会(statistical associations)はどうアドバイスしているのか? {.section}
 
 ## Wilkinson Task Force 1999
-Among many many, advices,
+多くのアドバイスの一部抜粋、
 
-- Do not focus on $p$ values.
-- Report effect sizes.
-- Report power analyses.
-- Check model assumptions.
+- $p$ー値ばかり気にするな.
+- 効果サイズ(effect sizes)を報告する.
+- 検出力分析(power analyses)を報告する.
+- モデルの仮定(model assumptions)を調べる.
 
 > "Novice researchers err either by overgeneralizing their results or, equally unfortunately, by overparticularizing."
 
@@ -458,14 +460,14 @@ Among many many, advices,
 knitr::include_graphics('figures/Wasserstein2016.png')
 ```
 
-Six principles:
+6つの原則:
 
-1. $p$-values can indicate how incompatible the data are with a specified statistical model.
-2. $p$-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
-3. Scientific conclusions and business or policy decisions should not be based only on whether a $p$-value passes a specific threshold.
-4. Proper inference requires full reporting and transparency.
-5. A $p$-value, or statistical significance, does not measure the size of an effect or the importance of a result.
-6. By itself, a $p$-value does not provide a good measure of evidence regarding a model or hypothesis.
+1. $p$-値は特定の統計モデルに対して、いかにデータが不適合であるかを示せる.
+2. $p$-値は研究仮説の正しさを示す確率、および、データがランダムによってのみ得られる確率を示すものではない.
+3. 科学的結論、ビジネスまたは政策的決断を $p$-値が特定の値を越えるかどうかのみによって決めるべきではない.
+4.適切な推定をするためには、全て報告し、透明でなければならない.
+5. $p$-値または統計的有意性は効果(effect size)の度合いや結果の重要性を示す指標ではない.
+6. $p$-値自体はモデルや仮説の適合性を示すものではない.
 
 ## ASA 2019 [@wasserstein2019]
 ```{r, out.width='80%'}
@@ -474,10 +476,10 @@ knitr::include_graphics('figures/Wasserstein2019.png')
 
 This is an editorial of a special issue consisting of 43 (!!) papers.
 
-Main ideas:
+主なアイデア:
 
-- "Don't" is not enough -- Some *what to do* advices are provided.
-- However... Don’t say “statistically significant” -- Just <span style="color:red">**don't**</span>.
+- 禁止するだけでは充分ではない-- いくつかの*具体案*が示されている.
+- ただ...「統計的有意差」という表現は<span style="color:red">**使うべきではない**</span> .
 
 > "(...) it is time to <span style="color:red">stop</span> using the term “statistically significant” entirely. Nor should variants such as “significantly different,” “$p < 0.05$,” and “nonsignificant” survive, whether expressed in words, by asterisks in a table, or in some other way."
 
@@ -487,20 +489,20 @@ But:
 $p$-values be discontinued. Where $p$-values are used, they should be reported as continuous quantities (e.g., $p = 0.08$).
 They should also be described in language stating what the value means in the scientific context."
 
-- There is no unique "do":
+- これだけ行えば良いという解決法はない:
 
 > "What you will NOT find in this issue is one solution that majestically replaces the outsized role that statistical significance has come to play."
 
-- <span style="color:red">Accept uncertainty</span> (I cannot stress this enough!). <br>
-Be thoughtful, open, and modest.
+- <span style="color:red">不確定性を受け入れる</span> (しつこいようですが!). <br>
+よく考え、オープンにし、謙虚である必要がある.
 
-- Editorial, educational, and other institutional practices will have to change.
+- ジャーナルの編集, 教育, そしてその他の組織のシステムを変える必要がある.
 <br>
-This includes: Journals, funding agencies, education, career system.
+その為には: ジャーナル、研究資金提供機関、教育、そしてキャリアシステムを変える必要がある.
 
-- Value replicability, open materials and data, and reliable practices (which all take time) over "publish or perish".
+- （当然、時間はかかりますが）再現性、実験材料やデータを公表し、信頼できるシステムを評価し、現在の「"publish or perish"（論文を出版するか滅びるか）」というシステムを変える必要がある.
 
-## ASA 2019: Also advocate Bayesian statistics
+## ASA 2019: ベイズ統計の推奨もしている
 ```{r, out.width='50%'}
 knitr::include_graphics('figures/Ruberg2019.png')
 ```
@@ -677,14 +679,14 @@ knitr::include_graphics('figures/Ruberg2019.png')
 <!-- ## 'statcheck' -->
 <!-- R package that can assist detecting statistical reporting of errors [@nuijten2016]. -->
 
-# What to avoid {.section}
+# 何を避けるべきか {.section}
 
-## Bullying
+## いじめ
 
-- Debates in blogs, Twitter, and journals can be fierce.
-- Criticism <span style="color:red">should be part</span> of science, of course.
-- It's not bullying to criticize, of course, in particular, with grounded reasons (vide Wansink).
-- But sometimes criticism gets <span style="color:red">too carried away</span>, IMHO.
+- ブログ、ツイッターそしてジャーナルにおける議論は激しくなる事も度々ある.
+- 当然、批判することは、研究の<span style="color:red">一部であるべきである</span>.
+- 勿論、いじめるために(特にしっかりした理由なく)批判すべきではない(例) Wansink).
+- 私見ですが、時に批判することに<span style="color:red">無我夢中になりすぎ</span>ている場合もある.
 <br><br>
 
 ```{r, out.width='50%'}
@@ -692,45 +694,46 @@ knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 ```
 [NYT, 2017](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html)
 
-(Interestingly: A recent comeback in [Psychological Science](https://journals-sagepub-com.proxy-ub.rug.nl/eprint/CzbNAn7Ch6ZZirK9yMGH/full).)
+(興味深い記事: 最近の反論 in [Psychological Science](https://journals-sagepub-com.proxy-ub.rug.nl/eprint/CzbNAn7Ch6ZZirK9yMGH/full).)
 
-## Self-appointed police
-Most likely, each of us has some skeleton's in their scientific closets.
+## 自称警察
+恐らく、我々自身も知られたくない内輪の秘密があることでしょう.
 
-We've all fallen prey to one or more of the problems mentioned today.
+我々も皆、今日紹介した問題点のいくつかに該当するところがあるのではないでしょうか.
 
-Full disclosure:
+情報を全面開示すると:
 
-> I have to!!
+> 私も該当するところがあります!!
 
-So:
+したがって:
 
-> *No one is better than anyone.*
+> *誰かが他の誰よりも優れているという訳ではない.*
 
-Or in the words of Brian Nosek (as quoted [here](https://fivethirtyeight.com/features/psychologys-replication-crisis-has-made-the-field-better/)):
+ Brian Nosekの言葉を借りると (as quoted [here](https://fivethirtyeight.com/features/psychologys-replication-crisis-has-made-the-field-better/)):
 
 > "We’re not here to *be right*. We’re here to *get it right*."
 
-# No time today for...
+# 今日は時間の都合上できませんが...
 
-## No time today for...
-- Replications projects
-- Registered reports
-- Preregistrations
-- Education
+## 今日は時間の都合上、カットした内容...
+- Replications projects(追試プロジェクト)
+- Registered reports（登録されたレポート）
+- Preregistrations（研究の事前登録）
+- Education(教育)
 - ...
 
-(But we can talk about it too!...)
+(でもこの事に興味があれば勿論お話することもできます!...)
 <br><br><br>
 
-Today we focus on *statistics*.
+今日は *統計について*お話しします.
 
-# Bayesian statistics {.section}
-## Alternative approach to statistical inference
-After the break:
+# ベイズ統計 {.section}
 
-Gentle introduction to <span style="color:red">Bayesian statistics</span>.
+## 統計的推定における代替的アプローチ
+休憩後:
 
+<span style="color:red">ベイズ統計</span>
+への簡単なイントロダクション
 
 
 

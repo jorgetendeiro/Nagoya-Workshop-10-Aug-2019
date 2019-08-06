@@ -53,12 +53,12 @@ Today we don't talk about fraud *explicitly*.
 
 We talk about something much harder to identify and erradicate:
 
-<p align="center"><span style="color:red">Questionable research practices</span>.</p>
+<p align="center"><span style="color:red">Questionable research practices (QRPs)</span>.</p>
 
 # Questionable research practices {.section}
 
 ## QRPs
-Coin termed by @john2012.<br>
+Term coined by @john2012.<br>
 See also @simmons2011.
 <br><br>
 
@@ -373,7 +373,7 @@ How is the <span style="color:red">procedure</span> expected to perform in the l
 <br><br>
 
 Confused?<br>
-So is the vast majority of social scientists...
+So is the vast majority of psychologists...
 
 ## Test yourself
 From @hoekstra2014, mimicking the $p$ value study by @gigerenzer2004.
@@ -432,7 +432,7 @@ knitr::include_graphics('figures/CAMH 2018.png')
 
 > (...) I will encourage authors to <span style="color:red">provide replication syntax and data</span> through public repositories. Moreover, I will encourage the journal to <span style="color:red">focus on a manuscript’s research design</span> and the author’s justification thereof, <span style="color:red">rather than the results</span>, with the aim of ensuring that transparent studies that explore a research question with equipoise, will be published.
 
-## The New England Journal of Medicin
+## The New England Journal of Medicine
 ```{r, out.width='60%'}
 knitr::include_graphics('figures/TNEJOM Editorial 2019.png')
 ```
@@ -701,7 +701,7 @@ We've all fallen prey to one or more of the problems mentioned today.
 
 Full disclosure:
 
-> I have to!!
+> I have too!!
 
 So:
 

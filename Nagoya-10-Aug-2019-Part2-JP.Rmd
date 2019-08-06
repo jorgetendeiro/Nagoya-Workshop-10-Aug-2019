@@ -1,6 +1,6 @@
 ---
 title: "From Frequentist Problems Towards Bayesian Solutions"
-subtitle: "Part 2: Introduction to Bayesian statistics (with JASP)"
+subtitle: "Part 2: (JASPを使っての)ベイズ統計入門"
 author: "Jorge N. Tendeiro"
 date: "10 August 2019"
 output: 
@@ -27,42 +27,42 @@ knitr::opts_chunk$set(
 pagedown::chrome_print("Nagoya-10-Aug-2019-Part2.html")
 -->
 
-## Today
+## コンテンツ
 <!-- add div element table of content for javascript to fill -->
 <div id="toc"></div>
 
-# Suggested reading material {.section}
+# 参考文献 {.section}
 
-## Introduction to Bayes {.build}
+## ベイズ統計入門{.build}
 <span style="color:green">Papers:</span>
 
 - @etz2018: The "Harry Potter" paper.<br>
-*Very* accessible introduction, with examples.
+例えが含まれていて*とても* 読みやすいイントロダクション.
 - @etz2018a: "How to become a Bayesian in eight easy steps: An annotated reading list".<br>
-Yes, Alexander Etz writes 'readible' papers *very* well. Strongly advised read, but it takes quite some time to process.
-- @kruschke2013: Besides providing an excellent introduction to core concepts, Kruschke offers a discussion over the "testing" versus "estimation" tension. I personally like Kruschke's position on this matter.
+Alexander Etz氏は*とても*読みやすい論文が多いです. 時間はかなり要しますが、この論文を強くお勧めします.
+- @kruschke2013: ベイズ統計の軸となるコンセプトへのわかりやすい導入に加えて、"検定"vs"推定"についての議論が展開されています.この点におけるKruschke氏の意見を個人的に支持しています.
 
 <span style="color:green">Books:</span>
 
 - @kruschke2015: The "puppies" book.<br>
-Accessible book, with plenty of examples and code. Perfect as a first pick.
-- @mcelreath2016: From what I read thus far, this book is a jewel.
-- @lambert2018: I'm currently half way. Seems perfect for teaching (hence learning!).
-- @gelman2014: More advanced read (perhaps not the first pick), but truly a master piece.
+初心者でもわかりやすい本で多くの例と分析コードが載せられています.　ベイズ統計初心者には最適の本です.
+- @mcelreath2016: 私が読んだ限りでは、この本は素晴らしいです.
+- @lambert2018: まだ半分程しか読めていませんが、ベイズ統計を教えるには最適な本だと思います.
+- @gelman2014: 上級者向きの本(恐らく初心者向きではないと思います). 名作である事は確かです.
 
-## Learn about JASP {.build}
+## JASPについて学ぶ {.build}
 
 <span style="color:green">Website</span><br> [https://jasp-stats.org/how-to-use-jasp/](https://jasp-stats.org/how-to-use-jasp/).<br>
-It includes:
+このサイトには以下の内容が含まれています:
 
 - [Tutorial section](https://jasp-stats.org/how-to-use-jasp/)
-- [YouTube channel](http://www.youtube.com/channel/UCSulowI4mXFyBkw3bmp7pXg) to see (and hear) it in action.
-- [Forum](http://forum.cogsci.nl/index.php?p=/categories/jasp-bayesfactor) to post lingering questions.
-- [Teaching with JASP](https://jasp-stats.org/teaching-with-jasp/) includes much more material.
+- [YouTube channel](http://www.youtube.com/channel/UCSulowI4mXFyBkw3bmp7pXg) 見て(聞きながら)学ぶことができる.
+- [Forum](http://forum.cogsci.nl/index.php?p=/categories/jasp-bayesfactor)　解決されない質問を聞くことができます.
+- [Teaching with JASP](https://jasp-stats.org/teaching-with-jasp/) より多くの教材が含まれています.
 
 <br>
 <span style="color:green">Video tutorials</span><br>
-Etz (who else?) is making videos as we speak.<br>
+Etz氏らは新しいビデオを随時追加しています.<br>
 [https://alexanderetz.com/jasp-tutorials/](https://alexanderetz.com/jasp-tutorials/).
 
 <br>
@@ -71,66 +71,65 @@ Etz (who else?) is making videos as we speak.<br>
 - @marsman2017[, in *European Journal of Developmental Psychology*].
 - @wagenmakers2018[, in a special issue in *Psychonomic Bulletin & Review*].
 
-# Frequentist *versus* Bayes {.section}
-## Frequentist paradigm {.build}
-Concept of <span style="color:green">probability</span>:
+# Frequentist *versus* Bayes (頻度論VSベイズ) {.section}
+## Frequentist paradigm(頻度論パラダイム) {.build}
+<span style="color:green">確率</span>の概念:
 
-- Long-run frequency of a <span style="color:red">procedure</span>.
+- <span style="color:red">procedure(手順)</span>の中における長期的にみた頻度.
 
 > The probability of a fair coin landing up heads is 50%.
 
-- One cannot state anything about one single event in the long-run sequence.
+- 長期的な連続の中の一つの事象については何も言うことができない.
 
 > What is the probability that the <span style="color:red">next</span> coin toss lands heads?
 
-- Recall the definitions of a <span style="color:red">$p$-value</span> and <span style="color:red">confidence interval</span>:
-They are based on long-run frequencies.<br>
-<span style="color:green">Conclusion:</span> What can we really conclude from one $p$-value or one confidence interval?...
+- <span style="color:red">$p$-値</span> と <span style="color:red">信頼区間</span>について思い出して下さい:
+これらは両方共長期的な頻度に基づいています.<br>
+<span style="color:green">結論:</span>１つの$p$-値または信頼区間から果たして何を結論付けれるのでしょう？...
 
+## Bayesian paradigm(ベイジアンパラダイム) {.build}
+<span style="color:green">確率</span>の概念:
 
-## Bayesian paradigm {.build}
-Concept of <span style="color:green">probability</span>:
-
-- Degree of belief.
-- Expression of uncertainty about the true state of affairs.
-- Subjective: Different people have different beliefs.
-- Data are used to update one's belief, by means of the *laws of probability*.
-- Applies to both single and repetitive events.
+- 信念の度合い.
+- 客観情勢(true state of affairs)についての不確定性を表すもの.
+- 主観的: 各自、それぞれの信念をもっている.
+- 各自の信念を*確率の法則*にしたがってアップデートする為にデータが使われる.
+- 一つまたは反復される事象の両方共に適用される.
 
 <br>
-But how do we update our belief in light of data?
+でも、どうやって我々の信念をデータに照合してアップデートすれば良いのでしょう？
 
-# Bayes' rule {.section}
+# Bayes' rule(ベイズの規則) {.section}
 
-## Bayes' rule {.build}
-Let $\mathcal{A}$ denote something we want to study.
+## Bayes' rule (ベイズの規則){.build}
+$\mathcal{A}$を「私たちが研究したい何か」としましょう.
 <br>
-This can be:
+例えば:
 
-- A parameter, like the mean $\mu$ of a population.
-- A hypothesis, like $\mu > 100$.
+- パラメーター(母集団の平均値$\mu$等).
+- 仮説($\mu > 100$等).
 
-Bayes' rule:
+Bayes' rule(ベイズの規則):
 
 <p align="center"><span style="color:green">
 $p(\mathcal{A}|\text{data}) = \frac{p(\mathcal{A})p(\text{data}|\mathcal{A})}{p(\text{data})}$
 </span></p>
 
-- $p(\mathcal{A})$: <span style="color:red">Prior</span> probability.
-- $p(\text{data}|\mathcal{A})$: Data <span style="color:red">likelihood</span>.
-- $p(\text{data})$: Marginal likelihood.
-- $p(\mathcal{A}|\text{data})$: <span style="color:red">Posterior</span> probability.
+- $p(\mathcal{A})$: <span style="color:red">Prior</span> probability(事前確率).
+- $p(\text{data}|\mathcal{A})$: Data <span style="color:red">likelihood</span> (データ尤度).
+- $p(\text{data})$: Marginal likelihood (周辺尤度 ).
+- $p(\mathcal{A}|\text{data})$: <span style="color:red">Posterior</span> probability(事後確率).
 
-## Bayes' rule and frequentism
-<span style="color:red">Important:</span>
+## Bayes' rule and frequentism　(ベイズの規則と頻度論)
+<span style="color:red">重要:</span>
 
-- The Bayes' rule is a mathematical necessity, it follows from the axioms of probability.
-- Frequentists do not dispute this formula!
+- ベイズの規則は数学的必要性であり、当然、確率の原理に従っている.
+- 頻度論はこの公式については異議を唱えていない!
 
-## Bayes' rule and model comparison {.build}
-Say we have <span style="color:red">in total</span> two competing hypotheses, $\mathcal{H}_0$ and $\mathcal{H}_1$.
+## ベイズの規則とモデル比較{.build}
+例えば、私たちが<span style="color:red">in 合計</span>２つの競合するモデル($\mathcal{H}_0$ と $\mathcal{H}_1$)を持っているとします.
 
-We can apply the Bayes' rule to either hypothesis:
+ここでベイズの規則を両方の仮説に適用することができる:
 
 <p align="center">
 $p(\mathcal{H}_0|\text{data}) = \frac{p(\mathcal{H}_0)p(\text{data}|\mathcal{H}_0)}{p(\text{data})}
@@ -138,7 +137,7 @@ $p(\mathcal{H}_0|\text{data}) = \frac{p(\mathcal{H}_0)p(\text{data}|\mathcal{H}_
 p(\mathcal{H}_1|\text{data}) = \frac{p(\mathcal{H}_1)p(\text{data}|\mathcal{H}_1)}{p(\text{data})}$.
 </p>
 
-Now divide both equations:
+次に両方の方程式を割る:
 
 <p align="center"><span style="color:green">
 $\underset{\text{Posterior odds}}{\underbrace{\frac{p(\mathcal{H}_0|\text{data})}{p(\mathcal{H}_1|\text{data})}}} =
@@ -147,49 +146,49 @@ $\underset{\text{Posterior odds}}{\underbrace{\frac{p(\mathcal{H}_0|\text{data})
 \underset{BF_{01}}{\underbrace{\frac{p(\text{data}|\mathcal{H}_0)}{p(\text{data}|\mathcal{H}_1)}}}$
 </span></p>
 
-where $BF_{01}$ is the <span style="color:red">Bayes factor</span>.
+この$BF_{01}$が<span style="color:red">ベイズ因子(Bayes factor)</span>と呼ばれるものである.
 
-The Bayes factor is a measure of the *relative evidence* in the data for either model.
-E.g., if $BF_{01} = 5$:
+ベイズ因子はデータによって得られる両モデルの*相対的な証拠*の指標である.
+E.g., もし$BF_{01} = 5$:
 
-- The data are 5 times as likely under $\mathcal{H}_0$ than under $\mathcal{H}_1$.
-- After looking at the data, we now support $\mathcal{H}_0$ five times as much.
+- $\mathcal{H}_0$よりも$\mathcal{H}_1$の下でデータが得られた可能性が５倍高い.
+- データを見た事によって、我々は$\mathcal{H}_0$を５倍サポートする.
 
-## Bayes factor
-A whole lot can be said about Bayes factors.
+## Bayes factor(ベイズ因子)
+ベイズ因子に関しては多くの事を言う事ができます.
 
-They have fervent followers [e.g., @kass1995; @dienes2014; @morey2016b; @wagenmakers2018a].
+ベイズ因子の熱烈なフォロワーがいます[e.g., @kass1995; @dienes2014; @morey2016b; @wagenmakers2018a].
 
-But there are also critics, including myself [@tendeiro2019a].
+しかし、自分を含め、批判的な意見もあります[@tendeiro2019a].
 
 # JASP {.section}
 
-## Note of caution
+## 注意書き
 
-JASP is 'Bayes factor'-oriented.
+JASPはベイズ因子を重視している.
 
-I personally dislike it, as I think parameter estimation offers a far a clearer, all-inclusive, paradigm.
+個人的に私はパラメーター推定を行う方がより明瞭で包括的な枠組みだと思うので、ベイズ因子を好ましいと思いません.
 
-- To see why I think this, see our preprint: @kiers2019a.
+- 私が何故そう思うのかについてはこちらの事前登録された論文をご覧下さい: @kiers2019a.
 
-## Worked-out example
-Let's jump to JASP now!
+## 問題例
+さぁ、JASPを始めてみましょう！
 
-The pet example that I will use is the first experiment of @bem2011:
+手始めに、この第一実験を例として使いましょう @bem2011:
 
-<p align="center"><span style="color:green">Precognitive detection of erotic stimuli</span>.</p>
+<p align="center"><span style="color:green">Precognitive detection of erotic stimuli(性的刺激の予知的検出)</span>.</p>
 
-- $n = 100$ (50 men, 50 women), 36 trials per subject.
-- In each trial:
-    - Two curtains shown side by side.
-    - One curtain hides a picture, the other hides a blank wall.
-    - Erotic and nonerotic pictures randomly intermixed.
+- $n = 100$ (男性50名, 女性50名), 各自36試行.
+- 各試行:
+    - ２つのカーテンが隣同士にパソコンのスクリーンに提示される.
+    - １つのカーテンは写真を隠し、もう一方は黒い壁を隠す.
+    - 性的な写真と非性的な写真をランダムに混ぜる.
 
-Main research hypothesis:
+主な研究仮定:
 
 > Subjects are able to "feel" where the erotic pictures are more often than chance (!!!).
 
-## Some results from Bem (2011)
+## Bem教授による結果の一部 (2011)
 
 > Across all 100 sessions, participants correctly identified the future position of the erotic pictures significantly more frequently than the 50% hit rate expected by chance: 53.1%, $t(99) = 2.51$, $p = .01$, $d = 0.25$. In contrast, their hit rate on the nonerotic pictures did not differ significantly from chance: 49.8%, $t(99) = -0.15$, $p = .56$.
 
