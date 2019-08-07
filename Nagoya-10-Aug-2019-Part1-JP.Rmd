@@ -40,7 +40,7 @@ Fraud = 科学における不正行為.
 
 - データの偽造または加工.
 - 意図的であり、故意的でないもの.
-- 全科学的研究が <span style="color:red">疑われる</span>.
+- すべての科学的研究が <span style="color:red">問われる</span>.
 - QRPsとは際立って異なるもの (next).
 
 ## 有名な例
@@ -56,27 +56,27 @@ Fraud = 科学における不正行為.
 
 <p align="center"><span style="color:red">Questionable research practices (QRPs)</span>.</p>
 
-# Questionable research practices （好ましくない研究行為）{.section}
+# Questionable research practices （問題ある研究活動）{.section}
 
-## QRPs（好ましくない研究行為）
+## QRPs（問題ある研究活動）
 @john2012 によって作られた用語.<br>
 See also @simmons2011.
 <br><br>
 
 - <span style="color:red">必ずしも</span> fraud(科学における不正行為）<span style="color:red">ではない</span>.
-- 実際に*許容される範囲内の* 研究行為とその悪用も含む.
-- QRPs（好ましくない研究行為）に関する問題点:<br>
+- 実際に*許容される範囲内の* 研究活動とその悪用も含む.
+- QRPs（問題ある研究活動）に関する問題点:<br>
     * <span style="color:red">バイアス</span>を加えてしまう (典型的には, 研究者の意図を*支持する*方向にバイアスが加えられる...).
     *  第一種過誤(Type I error)の確率が上がるのを犠牲に($\gg 5\%$)<span style="color:red">power(検出力)
     </span>がつり上げられる.
     * 結果が <span style="color:red">再現されない</span>.
 
-## QRPs（好ましくない研究行為）の例
+## QRPs（問題ある研究活動）の例
 [@john2012; @schimmack2015].
 
 - いくつかの従属変数（dependent variables）を取り除く.
 - いくつかの条件を取り除く.
-- <span style="color:red">覗き見</span>: 逐次試験 --- 結果を見ながら決める:
+- <span style="color:red">覗き見(peeking)</span>: 逐次試験 --- 結果を見ながら決める:
     * $p > .05$: もっとデータを集める.
     * $p < .05$: データ収集を止める.
 - $p<.05$の結果のみ報告する.
@@ -88,7 +88,7 @@ See also @simmons2011.
 - ...
 
 ## 研究者の自由度
-- 研究者は <span style="color:red">多数</span> の決断を下さなければならない (実験デザイン, データ収集,　分析手法); @wicherts2016, @steegen2016.
+- 研究者は <span style="color:red">多数</span> の決断を下さなければならない (実験デザイン, データ収集, 分析手法); @wicherts2016, @steegen2016.
 - 研究者にとって*好ましい*結果になるよう操作することは充分、考えられることである.
 - これらは *研究者の自由度*として知られている [@simmons2011].
 - 結果的に: 誤検出による発見が増える [@ioannidis2005].
@@ -102,11 +102,11 @@ knitr::include_graphics('figures/Fried 2017.png')
 
 <div style="float: right; width: 45%;">
 - 主に使われている７つのうつ病のスケールには52種類の症状が含まれている.
-- これは7つの異なるスケールに相当する.
-- しかし、これらは全て `うつ病のレベル'として解釈される.
+- これらは7つの異なるスケールに相当する.
+- しかし、これらはすべて 'うつ病のレベル'として解釈される.
 </div>
 
-## 今日における有名な例...
+## 最近の有名な例...
 コーネル大学のBrian Wansink教授.
 
 [His description](https://web.archive.org/web/20170312041524/http:/www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no) of the efforts of a visiting Ph.D student:
@@ -117,16 +117,16 @@ knitr::include_graphics('figures/Fried 2017.png')
 
 これは *クリエイティブ* または *型にはまらない考え方*といったものではない.
 
-<span style="color:red">これは QRPing　（好ましくない研究行為）である.</span>
+<span style="color:red">これは QRPing　（問題ある研究活動）である.</span>
 
 ## Wansink教授はどうなったか?
 - かなり批判され, 彼の研究は精査された [e.g., @vanderzee2017].
-- 100以上におよぶ間違い が４セットの論文から発見された...
+- 100以上におよぶ間違い が４本の論文から発見された...
 - 現在では <span style="color:red">40本</span> (!!) の論文が [撤回されている](http://retractiondatabase.org/RetractionSearch.aspx#?auth%3dWansink%252c%2bBrian) (as of July 2019).
 - １年に及ぶ国際的な調査の結果, 彼は [辞職](https://news.cornell.edu/stories/2018/09/provost-issues-statement-wansink-academic-misconduct-investigation)へと追い込まれた.
 
 ## これって本当に *そこまで* いけない事なの?...
-[もちろん](https://www.westernalliance.org.au/2018/05/restoring-trust-in-science-what-are-questionable-research-practices).
+[もちろんいけません](https://www.westernalliance.org.au/2018/05/restoring-trust-in-science-what-are-questionable-research-practices).
 
 - @martinson2005: "Scientists behaving badly".
 - @fanelli2009: Meta-analysis shows evidence of science misconduct.
@@ -142,7 +142,7 @@ knitr::include_graphics('figures/Fried 2017.png')
 参考までに:<br>
 数名の研究者は、現在の研究における現状は*それ程悪くない*としている[e.g., @fiedler2016].
 
-## 研究の事前登録(preregistration)をすればQRPs（好ましくない研究行為）はなくなるのか?...
+## 研究の事前登録(preregistration)をすればQRPs（問題ある研究活動）はなくなるのか?...
 残念ながら, （まだ）そうはならない.
 
 ちなみに、(2019年7月の）日本の研究グループ(九州大学）でも研究の事前登録がなされています：
@@ -152,14 +152,14 @@ knitr::include_graphics('figures/Fried 2017.png')
 
 
 
-#*なぜ*事前登録だけではQRP（好ましくない研究行為）はなくならないのか?... {.section}
+#*なぜ*事前登録だけではQRP（問題ある研究活動）はなくならないのか?... {.section}
 
-## なぜQRP（好ましくない研究行為）は蔓延しているのか?
-それはインセンティブ（動機）と深く関係がある [@nosek2012; @schonbrodt2015].
+## なぜQRP（問題ある研究活動）は蔓延しているのか?
+それはインセンティブ（誘因）と深く関係がある [@nosek2012; @schonbrodt2015].
 
-- "Publish or perish"（論文を出版するか滅びるか）:<br>
+- "Publish or perish"（論文などを書かない学者は消滅する）:<br>
 より多くの論文を、より権威あるジャーナルに出版しなければならないという現実.
-    - ジャーナルは提出されたうちのごく一部しか出版しない.
+    - ジャーナルは提出されたうちのごく一部の論文しか出版しない.
     - ジャーナルは否定的な結果(予期されていない結果)を出版したがらない...
 - 終身雇用のポジションを得るため.
 - 研究費を得るため.
@@ -167,7 +167,7 @@ knitr::include_graphics('figures/Fried 2017.png')
 - ...
 <br><br><br>
 
-しかし, <span style="color:red">忘れてはならないのは</span>, <span style="color:green">研究者の最善の意図を持ってしても</span>好ましくない研究行為は起こり得るということである.
+しかし, <span style="color:red">忘れてはならないのは</span>, <span style="color:green">研究者の最善の意図を持ってしても</span>問題ある研究活動は起こり得るということである.
 
 - 不十分な統計科目の教育 (そう、統計学者はこの点を理解すべきであると思います!...).
 - 各分野にある永続的な伝統.
@@ -316,10 +316,10 @@ knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
 ## 結果
-**全ての** 文は間違っています <span style="color:red">incorrect</span>.
+**すべての** 文は<span style="color:red">間違っています</span>.
 
 ## 結果
-でもどのように生徒と先生達はこれらのステートメントを理解しているでしょうか？
+では生徒と先生達はこれらの見方をどのように理解しているでしょうか？
 
 ```{r, out.width='30%'}
 knitr::include_graphics('figures/Gigerenzer p values 2.png')
@@ -355,7 +355,7 @@ knitr::include_graphics('figures/Greenland.png')
 
 # 信頼区間 {.section}
 
-## 他のベターな選択肢はあるのか？
+## 他のより良い選択肢はあるのか？
 - 信頼区間 (Confidence Intervals; CIs)は仮説検定の代替推定手段としてよく推奨される.
 - 例）the Wilkinson Task Force [@wilkinson1999]:
 
@@ -371,7 +371,7 @@ knitr::include_graphics('figures/Greenland.png')
 - 信頼区間は<span style="color:red">手法(procedure)</span>のパフォーマンスの特性を示すものとして算出される:<br>
 長期的にみて、<span style="color:red">手法(procedure)</span>がどのようなパフォーマンスをみせると予測されるか？
 -　パラメーターの信頼区間は<span style="color:red"> パラメーターの推定値付近</span>に構成される.
-- しかし、信頼区間は推定されたパラメーターの特性を直接的に示すものでは(<span style="color:red">全く</span>!)ない！
+- しかし、信頼区間は推定されたパラメーターの特性を直接的に示すものでは(<span style="color:red">まったく</span>!)ない！
 <br><br>
 
 頭の中が混乱していますか?<br>
@@ -390,7 +390,7 @@ knitr::include_graphics('figures/Hoekstra2014 II.png')
 ```
 
 ## 結果
-**全ての**文は <span style="color:red">間違っています</span>.
+**すべての**文は <span style="color:red">間違っています</span>.
 
 ## 結果
 でもどのように生徒と先生達はこれらのステートメントを理解しているでしょうか？
@@ -405,11 +405,11 @@ knitr::include_graphics('figures/Hoekstra2014 III.png')
 とっても参考になりますよね?!
 <br><br><br>
 
-心に留めておくノート:<br>
+心に留めておくべきこと:<br>
 今日のワークショップの第２部で扱う<span style="color:red">ベイズの信用区間</span>を解釈する時にこの事を覚えておいて下さい!
 <br><br><br>
 
-完全性のために述べておくと、全員がHoekstraの研究[@garcia-perez2016; @miller2016; see also a reply by @morey2016]を支持している訳ではない.
+ちなみに、全員がHoekstra氏の研究[@garcia-perez2016; @miller2016; see also a reply by @morey2016]を支持している訳ではない.
 
 # 出版の方針{.section}
 
@@ -443,14 +443,14 @@ Editorial [@harrington2019].
 
 > "(...) a requirement to <span style="color:red">replace $p$ values</span> with estimates of effects or association and 95% confidence intervals"
 
-# 統計協会(statistical associations)はどうアドバイスしているのか? {.section}
+# statistical associations(統計学協会)はどうアドバイスしているのか? {.section}
 
 ## Wilkinson Task Force 1999
 多くのアドバイスの一部抜粋、
 
-- $p$ー値ばかり気にするな.
-- 効果サイズ(effect sizes)を報告する.
-- 検出力分析(power analyses)を報告する.
+- $p$ー値のみに注目しない.
+- 効果サイズ(effect sizes)を記述する.
+- 検出力分析(power analyses)を記述する.
 - モデルの仮定(model assumptions)を調べる.
 
 > "Novice researchers err either by overgeneralizing their results or, equally unfortunately, by overparticularizing."
@@ -464,9 +464,9 @@ knitr::include_graphics('figures/Wasserstein2016.png')
 
 1. $p$-値は特定の統計モデルに対して、いかにデータが不適合であるかを示せる.
 2. $p$-値は研究仮説の正しさを示す確率、および、データがランダムによってのみ得られる確率を示すものではない.
-3. 科学的結論、ビジネスまたは政策的決断を $p$-値が特定の値を越えるかどうかのみによって決めるべきではない.
-4.適切な推定をするためには、全て報告し、透明でなければならない.
-5. $p$-値または統計的有意性は効果(effect size)の度合いや結果の重要性を示す指標ではない.
+3. 科学的結論、ビジネスまたは政策の判断を $p$-値が特定の値を越えるかどうかのみによって決めるべきではない.
+4. 適切な推定をするためには、すべてを報告し、透明性を保たなければならない.
+5. $p$-値または統計的有意性は効果の程度(effect size)や結果の重要性を示す指標ではない.
 6. $p$-値自体はモデルや仮説の適合性を示すものではない.
 
 ## ASA 2019 [@wasserstein2019]
@@ -474,7 +474,7 @@ knitr::include_graphics('figures/Wasserstein2016.png')
 knitr::include_graphics('figures/Wasserstein2019.png')
 ```
 
-This is an editorial of a special issue consisting of 43 (!!) papers.
+これは43(!!)本の論文からなる特別号の編集者のコメントである.
 
 主なアイデア:
 
@@ -685,8 +685,8 @@ knitr::include_graphics('figures/Ruberg2019.png')
 
 - ブログ、ツイッターそしてジャーナルにおける議論は激しくなる事も度々ある.
 - 当然、批判することは、研究の<span style="color:red">一部であるべきである</span>.
-- 勿論、いじめるために(特にしっかりした理由なく)批判すべきではない(例) Wansink).
-- 私見ですが、時に批判することに<span style="color:red">無我夢中になりすぎ</span>ている場合もある.
+- もちろん、いじめるために(特にしっかりした理由なく)批判すべきではない(例 Wansink).
+- 私見ですが、時に批判することだけに<span style="color:red">夢中になりすぎ</span>ている場合もある.
 <br><br>
 
 ```{r, out.width='50%'}
@@ -696,18 +696,18 @@ knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 
 (興味深い記事: 最近の反論 in [Psychological Science](https://journals-sagepub-com.proxy-ub.rug.nl/eprint/CzbNAn7Ch6ZZirK9yMGH/full).)
 
-## 自称警察
+## 警察気取りの活動について一言
 恐らく、我々自身も知られたくない内輪の秘密があることでしょう.
 
 我々も皆、今日紹介した問題点のいくつかに該当するところがあるのではないでしょうか.
 
-情報を全面開示すると:
+正直に告白すると:
 
-> 私も該当するところがあります!!
+> 私自身も該当するところがあります!!
 
-したがって:
+つまり:
 
-> *誰かが他の誰よりも優れているという訳ではない.*
+> *完璧な人などいない.*
 
  Brian Nosekの言葉を借りると (as quoted [here](https://fivethirtyeight.com/features/psychologys-replication-crisis-has-made-the-field-better/)):
 
@@ -722,10 +722,10 @@ knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 - Education(教育)
 - ...
 
-(でもこの事に興味があれば勿論お話することもできます!...)
+(でもこれらの事に興味があればお話することもできます!...)
 <br><br><br>
 
-今日は *統計について*お話しします.
+今日は*統計に限定して*お話しします.
 
 # ベイズ統計 {.section}
 

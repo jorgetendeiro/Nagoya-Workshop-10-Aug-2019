@@ -48,21 +48,21 @@ Alexander Etz氏は*とても*読みやすい論文が多いです. 時間はか
 初心者でもわかりやすい本で多くの例と分析コードが載せられています.　ベイズ統計初心者には最適の本です.
 - @mcelreath2016: 私が読んだ限りでは、この本は素晴らしいです.
 - @lambert2018: まだ半分程しか読めていませんが、ベイズ統計を教えるには最適な本だと思います.
-- @gelman2014: 上級者向きの本(恐らく初心者向きではないと思います). 名作である事は確かです.
+- @gelman2014: 上級者向きの本(おそらく初心者向きではないと思います). 名作である事は確かです.
 
 ## JASPについて学ぶ {.build}
 
 <span style="color:green">Website</span><br> [https://jasp-stats.org/how-to-use-jasp/](https://jasp-stats.org/how-to-use-jasp/).<br>
-このサイトには以下の内容が含まれています:
+このサイトには以下の内容が含まれている:
 
 - [Tutorial section](https://jasp-stats.org/how-to-use-jasp/)
-- [YouTube channel](http://www.youtube.com/channel/UCSulowI4mXFyBkw3bmp7pXg) 見て(聞きながら)学ぶことができる.
-- [Forum](http://forum.cogsci.nl/index.php?p=/categories/jasp-bayesfactor)　解決されない質問を聞くことができます.
-- [Teaching with JASP](https://jasp-stats.org/teaching-with-jasp/) より多くの教材が含まれています.
+- [YouTube channel](http://www.youtube.com/channel/UCSulowI4mXFyBkw3bmp7pXg) 動画で学ぶことができる.
+- [Forum](http://forum.cogsci.nl/index.php?p=/categories/jasp-bayesfactor)　問題が自分では解決できない時に質問することができる.
+- [Teaching with JASP](https://jasp-stats.org/teaching-with-jasp/) より多くの教材が含まれている.
 
 <br>
 <span style="color:green">Video tutorials</span><br>
-Etz氏らは新しいビデオを随時追加しています.<br>
+Etz氏らは新しいビデオを随時追加している.<br>
 [https://alexanderetz.com/jasp-tutorials/](https://alexanderetz.com/jasp-tutorials/).
 
 <br>
@@ -71,33 +71,33 @@ Etz氏らは新しいビデオを随時追加しています.<br>
 - @marsman2017[, in *European Journal of Developmental Psychology*].
 - @wagenmakers2018[, in a special issue in *Psychonomic Bulletin & Review*].
 
-# Frequentist *versus* Bayes (頻度論VSベイズ) {.section}
+# Frequentist *versus* Bayes<br> (頻度論VSベイズ) {.section}
 ## Frequentist paradigm(頻度論パラダイム) {.build}
 <span style="color:green">確率</span>の概念:
 
-- <span style="color:red">procedure(手順)</span>の中における長期的にみた頻度.
+- <span style="color:red">procedure(手順)</span>をlong-run (無限回) 繰り返すことを想定した頻度.
 
 > The probability of a fair coin landing up heads is 50%.
 
-- 長期的な連続の中の一つの事象については何も言うことができない.
+- 無限回を想定した連続の中では、一つの事象については何も結論づけることができない.
 
 > What is the probability that the <span style="color:red">next</span> coin toss lands heads?
 
 - <span style="color:red">$p$-値</span> と <span style="color:red">信頼区間</span>について思い出して下さい:
-これらは両方共長期的な頻度に基づいています.<br>
-<span style="color:green">結論:</span>１つの$p$-値または信頼区間から果たして何を結論付けれるのでしょう？...
+これらは両方とも、無限回を想定した頻度に基づいている.<br>
+<span style="color:green">結論:</span>１つの$p$-値または信頼区間から果たして何を結論づけられるのでしょうか？...
 
 ## Bayesian paradigm(ベイジアンパラダイム) {.build}
 <span style="color:green">確率</span>の概念:
 
 - 信念の度合い.
-- 客観情勢(true state of affairs)についての不確定性を表すもの.
+- 実相(true state of affairs)についての不確定性を表すもの.
 - 主観的: 各自、それぞれの信念をもっている.
-- 各自の信念を*確率の法則*にしたがってアップデートする為にデータが使われる.
-- 一つまたは反復される事象の両方共に適用される.
+- 各自の信念を*確率の法則*にしたがってアップデートするためにデータが使われる.
+- 一回の事象または反復される事象の両方ともに適用される.
 
 <br>
-でも、どうやって我々の信念をデータに照合してアップデートすれば良いのでしょう？
+でも、どうやって我々の信念をデータをもとにアップデートすれば良いのでしょう？
 
 # Bayes' rule(ベイズの規則) {.section}
 
@@ -120,16 +120,16 @@ $p(\mathcal{A}|\text{data}) = \frac{p(\mathcal{A})p(\text{data}|\mathcal{A})}{p(
 - $p(\text{data})$: Marginal likelihood (周辺尤度 ).
 - $p(\mathcal{A}|\text{data})$: <span style="color:red">Posterior</span> probability(事後確率).
 
-## Bayes' rule and frequentism　(ベイズの規則と頻度論)
+## Bayes' rule and frequentism <br>(ベイズの規則と頻度論)
 <span style="color:red">重要:</span>
 
-- ベイズの規則は数学的必要性であり、当然、確率の原理に従っている.
+- ベイズの規則は数学的に証明されたものであり、当然、確率の原理に従っている.
 - 頻度論はこの公式については異議を唱えていない!
 
 ## ベイズの規則とモデル比較{.build}
-例えば、私たちが<span style="color:red">in 合計</span>２つの競合するモデル($\mathcal{H}_0$ と $\mathcal{H}_1$)を持っているとします.
+例えば、私たちが<span style="color:red"> ２つの</span>競合する仮説($\mathcal{H}_0$ と $\mathcal{H}_1$)を持っているとします.
 
-ここでベイズの規則を両方の仮説に適用することができる:
+ここでベイズの規則を両方の仮説($\mathcal{H}_0$ と $\mathcal{H}_1$)に適用することができる:
 
 <p align="center">
 $p(\mathcal{H}_0|\text{data}) = \frac{p(\mathcal{H}_0)p(\text{data}|\mathcal{H}_0)}{p(\text{data})}
@@ -148,18 +148,18 @@ $\underset{\text{Posterior odds}}{\underbrace{\frac{p(\mathcal{H}_0|\text{data})
 
 この$BF_{01}$が<span style="color:red">ベイズ因子(Bayes factor)</span>と呼ばれるものである.
 
-ベイズ因子はデータによって得られる両モデルの*相対的な証拠*の指標である.
-E.g., もし$BF_{01} = 5$:
+ベイズ因子はデータによって得られる両仮説の*相対的な証拠*の指標である.<br>
+E.g., 例えば$BF_{01} = 5$であれば:
 
 - $\mathcal{H}_0$よりも$\mathcal{H}_1$の下でデータが得られた可能性が５倍高い.
-- データを見た事によって、我々は$\mathcal{H}_0$を５倍サポートする.
+- データを基に、我々は$\mathcal{H}_0$を$\mathcal{H}_1$の５倍支持する.
 
 ## Bayes factor(ベイズ因子)
 ベイズ因子に関しては多くの事を言う事ができます.
 
 ベイズ因子の熱烈なフォロワーがいます[e.g., @kass1995; @dienes2014; @morey2016b; @wagenmakers2018a].
 
-しかし、自分を含め、批判的な意見もあります[@tendeiro2019a].
+しかし、私を含め、批判的な意見もあります[@tendeiro2019a].
 
 # JASP {.section}
 
@@ -182,7 +182,7 @@ JASPはベイズ因子を重視している.
 - 各試行:
     - ２つのカーテンが隣同士にパソコンのスクリーンに提示される.
     - １つのカーテンは写真を隠し、もう一方は黒い壁を隠す.
-    - 性的な写真と非性的な写真をランダムに混ぜる.
+    - 性的な写真と性的でない写真をランダムに混ぜる.
 
 主な研究仮定:
 
