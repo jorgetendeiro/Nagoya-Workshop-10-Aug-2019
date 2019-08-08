@@ -198,7 +198,51 @@ Main research hypothesis:
 
 > (...) the correlation between stimulus seeking and psi performance was .18 ($p = .035$).
 
+# Summary of today's workshop
 
+## Main ideas: Replication crisis {.build}
+
+Plenty of problems in psychological research have been identified throughout the years:
+
+- Results do not replicate.
+- Bias.
+- QRPs.
+- CIs and $p$-values poorly understood and often misused.
+
+<br>
+Psychology is currently in the middle of a revolution. Several solutions are being worked out:
+
+- Preregistration.
+- Registered reports.
+- Open data, materials.
+- Embrace uncertainty. Avoid dichotomous thinking.
+- Better statistical analyses. In particular: <span style="color:red">Stop using NHST.</span>
+
+<br>
+The entire research ecosystem is picking up on these changes <span style="color:red">fast</span>!
+    
+## Main ideas: Bayesian statistics {.build}
+Bayesian statistics is gaining traction as a viable alternative.
+
+- Quantification and accumulation of evidence.
+- Logical updating of belief.
+- Avoid long-standing fallacies of classical statistics.
+
+<br>
+JASP in particular is one very friendly software that can ease the use of Bayesian statistics.
+
+<br>
+JASP is mostly model comparison/ hypothesis testing based.
+
+<br>
+I suggested that there is valid criticism against *only* hypothesis testing<br>
+[e.g., @tendeiro2019a; @kiers2019a].
+
+<br>
+Beyond JASP, I advocate model fitting, parameter estimation, and reporting summaries of posterior distributions.
+
+<br>
+Tools needed: MCMC sampling (e.g., JAGS, Stan).
 
 <style type="text/css">
 slides > slide { overflow: scroll; }

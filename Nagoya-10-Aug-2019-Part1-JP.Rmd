@@ -106,17 +106,17 @@ knitr::include_graphics('figures/Fried 2017.png')
 - しかし、これらはすべて 'うつ病のレベル'として解釈される.
 </div>
 
-## Turning exploratory into confirmatory analysis
+## 探索的分析から確認的分析へ
 
-From @bem2004:
+@bem2004:
 
 > "(...) [L]et us (...) become intimately familiar with (...) the data. Examine them <span style="color:red">from every angle</span>. Analyze the sexes separately. Make up new composite indices. <span style="color:red">If a datum suggests a new hypothesis, try to find further evidence for it elsewhere in the data.</span> If you see dim traces of interesting patterns, try to reorganize the data to bring them into bolder relief. If there are participants you don't like, or trials, observers, or interviewers who gave you anomalous results, <span style="color:red">drop them</span> (temporarily). <span style="color:red">Go on a fishing expedition for something-- anything-- interesting.</span>"
 
-This is not OK *unless* the exploration is explicity stated.
+これは探索的研究であることが*はっきり書かれていない限り*ダメである.
 
 <br><br>
-Daryl Bem is the author of the famous 2011 precognition paper<br>
-(data used in Part 2 of today's workshop).
+Daryl Bem氏は2011年の予知に関する有名な論文の著者である<br>
+(今日の後半部分でこのデータを使います).
 
 ## 最近の有名な例...
 コーネル大学のBrian Wansink教授.
@@ -162,7 +162,7 @@ Daryl Bem is the author of the famous 2011 precognition paper<br>
 
 > Ikeda, A., Xu, H., Fuji, N., Zhu, S., & Yamada, Y. (2019). *Questionable research practices following pre-registration* [Preprint]. doi: [10.31234/osf.io/b8pw9](https://doi.org/10.31234/osf.io/b8pw9)
 
-# But *why*?...<br>*なぜ*事前登録だけではQRP（問題ある研究活動）はなくならないのか?... {.section}
+# But *why*?... {.section}
 
 ## なぜQRP（問題ある研究活動）は蔓延しているのか?
 それはインセンティブ（誘因）と深く関係がある [@nosek2012; @schonbrodt2015].
@@ -327,7 +327,7 @@ from the above premises. Also note that several or none of the statements may be
 knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
-Try it!: [rebrand.ly/pvalue](https://rebrand.ly/pvalue)
+試してみよう!: [rebrand.ly/pvalue](https://rebrand.ly/pvalue)
 
 <!-- Poll here: http://www.polljunkie.com/poll/yezkij/what-is-a-p-value/admin -->
 <!-- Shorter: https://rebrand.ly/pvalue -->
@@ -407,7 +407,7 @@ knitr::include_graphics('figures/Hoekstra2014 I.png')
 knitr::include_graphics('figures/Hoekstra2014 II.png')
 ```
 
-Try it!: [rebrand.ly/confint](https://rebrand.ly/confint)
+試してみよう!: [rebrand.ly/confint](https://rebrand.ly/confint)
 <!-- Poll here: http://www.polljunkie.com/poll/ykmrid/what-is-a-confidence-interval-hoekstra-et-al-2014 -->
 <!-- Shorter: https://rebrand.ly/confint -->
 <!-- Available only until 31 August 2019 -->
