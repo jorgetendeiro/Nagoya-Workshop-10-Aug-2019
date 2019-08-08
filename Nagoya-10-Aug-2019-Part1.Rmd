@@ -2,7 +2,8 @@
 title: "From Frequentist Problems Towards Bayesian Solutions"
 subtitle: "Part 1: Replication crisis in Psychology <br> (and what does Statistics have to do with it)"
 author: "Jorge N. Tendeiro"
-date: "10 August 2019"
+date: "10 August 2019<br><br>Slides at: [https://rebrand.ly/Nagoya2019-Part1](https://rebrand.ly/Nagoya2019-Part1)<br>GitHub: [https://github.com/jorgetendeiro/Nagoya-Workshop-10-Aug-2019 ](https://github.com/jorgetendeiro/Nagoya-Workshop-10-Aug-2019)"
+# https://jorgetendeiro.github.io/Nagoya-Workshop-10-Aug-2019/Nagoya-10-Aug-2019-Part1.html
 output: 
   ioslides_presentation:
     smaller: true

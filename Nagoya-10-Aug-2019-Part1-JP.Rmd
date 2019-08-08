@@ -2,7 +2,8 @@
 title: "From Frequentist Problems Towards Bayesian Solutions"
 subtitle: "Part 1: 心理学における再現性の危機 <br> (と統計学との関係)"
 author: "Jorge N. Tendeiro"
-date: "10 August 2019"
+date: "10 August 2019<br><br>Slides at: [https://rebrand.ly/Nagoya2019-Part1-JP](https://rebrand.ly/Nagoya2019-Part1-JP)<br>GitHub: [https://github.com/jorgetendeiro/Nagoya-Workshop-10-Aug-2019 ](https://github.com/jorgetendeiro/Nagoya-Workshop-10-Aug-2019)"
+# https://jorgetendeiro.github.io/Nagoya-Workshop-10-Aug-2019/Nagoya-10-Aug-2019-Part1-JP.html
 output: 
   ioslides_presentation:
     smaller: true
