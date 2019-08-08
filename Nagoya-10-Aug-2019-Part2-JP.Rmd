@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 ```
 
 <!-- To print to PDF, run: 
-pagedown::chrome_print("Nagoya-10-Aug-2019-Part2.html")
+pagedown::chrome_print("Nagoya-10-Aug-2019-Part2-JP.html")
 -->
 
 ## Today
