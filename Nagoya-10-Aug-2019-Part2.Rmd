@@ -8,11 +8,11 @@ output:
     smaller: true
     widescreen: true
     transition: .4
-    css: [slides.css, toc-style.css]
+    css: [style/slides.css, style/toc-style.css]
     includes:
-      in_header: TOC_generator.js.wrapper
+      in_header: style/TOC_generator.js.wrapper
 bibliography: references.bib
-csl: apa-old-doi-prefix.csl
+csl: style/apa-old-doi-prefix.csl
 ---
 
 ```{r setup, include = FALSE, fig.align = 'center'}

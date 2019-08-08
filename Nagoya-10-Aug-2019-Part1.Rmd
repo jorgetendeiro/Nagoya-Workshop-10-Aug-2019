@@ -8,11 +8,11 @@ output:
     smaller: true
     widescreen: true
     transition: .4
-    css: [slides.css, toc-style.css]
+    css: [style/slides.css, style/toc-style.css]
     includes:
-      in_header: TOC_generator.js.wrapper
+      in_header: style/TOC_generator.js.wrapper
 bibliography: references.bib
-csl: apa-old-doi-prefix.csl
+csl: style/apa-old-doi-prefix.csl
 nocite: | 
   @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999, @ikeda2019, @meehl1967, @fried2017, @cohen1962, @eich2014, @greenland2016
 ---

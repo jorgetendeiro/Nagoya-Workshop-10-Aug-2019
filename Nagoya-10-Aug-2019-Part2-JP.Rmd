@@ -8,11 +8,11 @@ output:
     smaller: true
     widescreen: true
     transition: .4
-    css: [slides.css, toc-style.css]
+    css: [style/slides.css, style/toc-style.css]
     includes:
-      in_header: TOC_generator.js.wrapper
+      in_header: style/TOC_generator.js.wrapper
 bibliography: references.bib
-csl: apa-old-doi-prefix.csl
+csl: style/apa-old-doi-prefix.csl
 ---
 
 ```{r setup, include = FALSE, fig.align = 'center'}
@@ -27,11 +27,11 @@ knitr::opts_chunk$set(
 pagedown::chrome_print("Nagoya-10-Aug-2019-Part2.html")
 -->
 
-## コンテンツ
+## Today
 <!-- add div element table of content for javascript to fill -->
 <div id="toc"></div>
 
-# 参考文献 {.section}
+# Suggested reading material<br>参考文献 {.section}
 
 ## ベイズ統計入門{.build}
 <span style="color:green">Papers:</span>
@@ -71,7 +71,7 @@ Etz氏らは新しいビデオを随時追加している.<br>
 - @marsman2017[, in *European Journal of Developmental Psychology*].
 - @wagenmakers2018[, in a special issue in *Psychonomic Bulletin & Review*].
 
-# Frequentist *versus* Bayes<br> (頻度論VSベイズ) {.section}
+# Frequentist *versus* Bayes<br>頻度論VSベイズ {.section}
 ## Frequentist paradigm(頻度論パラダイム) {.build}
 <span style="color:green">確率</span>の概念:
 
@@ -99,7 +99,7 @@ Etz氏らは新しいビデオを随時追加している.<br>
 <br>
 でも、どうやって我々の信念をデータをもとにアップデートすれば良いのでしょう？
 
-# Bayes' rule(ベイズの規則) {.section}
+# Bayes' rule<br>ベイズの規則 {.section}
 
 ## Bayes' rule (ベイズの規則){.build}
 $\mathcal{A}$を「私たちが研究したい何か」としましょう.
