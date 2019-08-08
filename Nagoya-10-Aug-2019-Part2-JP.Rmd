@@ -3,7 +3,7 @@ title: "From Frequentist Problems Towards Bayesian Solutions"
 subtitle: "Part 2: (JASPを使っての)ベイズ統計入門"
 author: "Jorge N. Tendeiro"
 date: "10 August 2019<br><br>Slides at: [https://rebrand.ly/Nagoya2019-Part2-JP](https://rebrand.ly/Nagoya2019-Part2-JP)<br>GitHub: [https://github.com/jorgetendeiro/Nagoya-Workshop-10-Aug-2019 ](https://github.com/jorgetendeiro/Nagoya-Workshop-10-Aug-2019)"
-# https://jorgetendeiro.github.io/Nagoya-Workshop-10-Aug-2019/Nagoya-10-Aug-2019-Part2  -JP.html
+# https://jorgetendeiro.github.io/Nagoya-Workshop-10-Aug-2019/Nagoya-10-Aug-2019-Part2-JP.html
 output: 
   ioslides_presentation:
     smaller: true
