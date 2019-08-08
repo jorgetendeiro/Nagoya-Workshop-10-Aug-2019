@@ -10,11 +10,11 @@ output:
     transition: .4
     css: [slides.css, toc-style.css]
     includes:
-      in_header: TOC_generator.js.wrapper
+        in_header: TOC_generator.js.wrapper
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
 nocite: | 
-  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999, @ikeda2019
+  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999, @ikeda2019, @meehl1967, @fried2017, @cohen1962, @eich2014, @greenland2016
 ---
 
 ```{r setup, include = FALSE, fig.align = 'center'}
@@ -56,7 +56,7 @@ Fraud = 科学における不正行為.
 
 <p align="center"><span style="color:red">Questionable research practices (QRPs)</span>.</p>
 
-# Questionable research practices （問題ある研究活動）{.section}
+# Questionable research practices<br>問題ある研究活動 {.section}
 
 ## QRPs（問題ある研究活動）
 @john2012 によって作られた用語.<br>
@@ -83,8 +83,7 @@ See also @simmons2011.
 - <span style="color:red">$p$-hacking</span>: 例,
     -  $p<.05$になるかどうかに基づいて外れ値を取り除く.
     - $p = .054 \longrightarrow p = .05$.
-- <span style="color:red">HARKing</span> [@kerr1998]: 探索的に得られた結果を研究課題に変えること.<br>
-(@bem2004,  2011年に出版された予知に関する有名な論文の著者はこの手法を, *正当防衛しようと*したが...)
+- <span style="color:red">HARKing</span> [@kerr1998]: 探索的に得られた結果を研究課題に変えること.
 - ...
 
 ## 研究者の自由度
@@ -93,7 +92,7 @@ See also @simmons2011.
 - これらは *研究者の自由度*として知られている [@simmons2011].
 - 結果的に: 誤検出による発見が増える [@ioannidis2005].
 
-## @fried2017
+## Fried (2017)
 <div style="float: left; width: 50%;">
 ```{r, out.width='100%'}
 knitr::include_graphics('figures/Fried 2017.png')
@@ -106,12 +105,24 @@ knitr::include_graphics('figures/Fried 2017.png')
 - しかし、これらはすべて 'うつ病のレベル'として解釈される.
 </div>
 
+## Turning exploratory into confirmatory analysis
+
+From @bem2004:
+
+> "(...) [L]et us (...) become intimately familiar with (...) the data. Examine them <span style="color:red">from every angle</span>. Analyze the sexes separately. Make up new composite indices. <span style="color:red">If a datum suggests a new hypothesis, try to find further evidence for it elsewhere in the data.</span> If you see dim traces of interesting patterns, try to reorganize the data to bring them into bolder relief. If there are participants you don't like, or trials, observers, or interviewers who gave you anomalous results, <span style="color:red">drop them</span> (temporarily). <span style="color:red">Go on a fishing expedition for something-- anything-- interesting.</span>"
+
+This is not OK *unless* the exploration is explicity stated.
+
+<br><br>
+Daryl Bem is the author of the famous 2011 precognition paper<br>
+(data used in Part 2 of today's workshop).
+
 ## 最近の有名な例...
 コーネル大学のBrian Wansink教授.
 
 [His description](https://web.archive.org/web/20170312041524/http:/www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no) of the efforts of a visiting Ph.D student:
 
-> I gave her a <span style="color:red">data set</span> of a self-funded, failed study which had <span style="color:red">null results</span> (...). I said, "This cost us a lot of time and our own money to collect. There’s got to be something here we can salvage because it’s a cool (rich & unique) data set." I had three ideas for potential Plan B, C, & D directions (since Plan A had failed). I told her what the analyses should be and what the tables should look like. I then asked her if she wanted to do them.
+> I gave her a <span style="color:red">data set</span> of a self-funded, failed study which had <span style="color:red">null results</span> (...). I said, "This cost us a lot of time and our own money to collect. <span style="color:red">There’s got to be something here</span> we can salvage because it’s a cool (rich & unique) data set." I had three ideas for potential Plan B, C, & D directions (since Plan A had failed). I told her what the analyses should be and what the tables should look like. I then asked her if she wanted to do them.
 
 > Every day she came back with puzzling new results, and every day we would scratch our heads, ask "Why," and <span style="color:red">come up with another way to reanalyze the data</span> with yet another set of plausible hypotheses. Eventually <span style="color:red">we started discovering solutions</span> that held up regardless of how we pressure-tested them. I outlined the first paper, and she wrote it up (...). This happened with a second paper, and then a third paper (which was one that was based on her own discovery while digging through the data).
 
@@ -143,16 +154,14 @@ knitr::include_graphics('figures/Fried 2017.png')
 数名の研究者は、現在の研究における現状は*それ程悪くない*としている[e.g., @fiedler2016].
 
 ## 研究の事前登録(preregistration)をすればQRPs（問題ある研究活動）はなくなるのか?...
+
 残念ながら, （まだ）そうはならない.
 
 ちなみに、(2019年7月の）日本の研究グループ(九州大学）でも研究の事前登録がなされています：
 
 > Ikeda, A., Xu, H., Fuji, N., Zhu, S., & Yamada, Y. (2019). *Questionable research practices following pre-registration* [Preprint]. doi: [10.31234/osf.io/b8pw9](https://doi.org/10.31234/osf.io/b8pw9)
 
-
-
-
-#*なぜ*事前登録だけではQRP（問題ある研究活動）はなくならないのか?... {.section}
+# But *why*?...<br>*なぜ*事前登録だけではQRP（問題ある研究活動）はなくならないのか?... {.section}
 
 ## なぜQRP（問題ある研究活動）は蔓延しているのか?
 それはインセンティブ（誘因）と深く関係がある [@nosek2012; @schonbrodt2015].
@@ -172,7 +181,7 @@ knitr::include_graphics('figures/Fried 2017.png')
 - 不十分な統計科目の教育 (そう、統計学者はこの点を理解すべきであると思います!...).
 - 各分野にある永続的な伝統.
 
-# (I)reproducibility (再現性) {.section}
+# (I)reproducibility<br>再現性 {.section}
 
 ## 再現できる研究への脅威
 <div style="float: left; width: 75%;">
@@ -216,8 +225,8 @@ knitr::include_graphics('figures/Makel 2012.png')
 - The Mozart Effect [@steele1999; @mckelvie2002]
 - ...
 
-# これは予測できる事ではなかったのか? {.section}
-## @meehl1967
+# Didn't we see this coming?<br>これは予測できる事ではなかったのか? {.section}
+## Meehl (1967)
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Meehl.jpg')
@@ -227,7 +236,7 @@ knitr::include_graphics('figures/Meehl.jpg')
 <div style="float: right; width: 55%;">
 我々がいかに不完全に仮説を立てているか (see [Gelman](https://statmodeling.stat.columbia.edu/2016/05/06/needed-an-intellectual-history-of-research-criticism-in-psychology/)):
 
-> "It is not unusual that (e) this *ad hoc* challenging of auxiliary hypotheses is repeated in the course of a series of related experiments, in which <span style="color:red">the auxiliary hypothesis involved in Experiment 1</span> (...) <span style="color:red">becomes the focus of interest in Experiment 2</span>, which in turn utilizes further plausible but easily challenged auxiliary hypotheses, and so forth. In this fashion a zealous and clever investigator can slowly wend his way through (...) a long series of related experiments (...) <span style="color:red">without ever once refuting or corroborating</span> so much as a single strand of the network."
+> "It is not unusual that (...) this *ad hoc* challenging of auxiliary hypotheses is repeated in the course of a series of related experiments, in which <span style="color:red">the auxiliary hypothesis involved in Experiment 1</span> (...) <span style="color:red">becomes the focus of interest in Experiment 2</span>, which in turn utilizes further plausible but easily challenged auxiliary hypotheses, and so forth. In this fashion a zealous and clever investigator can slowly wend his way through (...) a long series of related experiments (...) <span style="color:red">without ever once refuting or corroborating</span> so much as a single strand of the network."
 
 </div>
 
@@ -238,7 +247,7 @@ knitr::include_graphics('figures/tylervigen.png')
 
 [http://www.tylervigen.com/spurious-correlations](http://www.tylervigen.com/spurious-correlations)
 
-## @cohen1962
+## Cohen (1962)
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Cohen.jpg')
@@ -246,7 +255,7 @@ knitr::include_graphics('figures/Cohen.jpg')
 </div>
 
 <div style="float: right; width: 55%;">
-Low-powered experiments(検出力の低い実験):
+Low-powered experiments (検出力の低い実験):
 
 > "(...) It was found that the average power (probability of rejecting false null hypotheses) over the 70 research studies was .18 for small effects, .48 for medium effects, and .83 for large effects. These values are deemed to be <span style="color:red">far too small</span>."
 <br><br>
@@ -254,7 +263,9 @@ Low-powered experiments(検出力の低い実験):
 
 </div>
 
-## Kahneman (2012), see [here](https://www.nature.com/news/polopoly_fs/7.6716.1349271308!/suppinfoFile/Kahneman%20Letter.pdf)
+## Kahneman (2012)
+See [here](https://www.nature.com/news/polopoly_fs/7.6716.1349271308!/suppinfoFile/Kahneman%20Letter.pdf).
+
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Kahneman.jpg')
@@ -291,10 +302,10 @@ See also this impressive dynamic plot:<br>
 knitr::include_graphics('figures/psyborgs.png')
 ```
 
-# $p$-values ($p$ー値){.section}
+# $p$-values<br>$p$ー値{.section}
 
 ## 定義
-> Probability of an effect at least as extreme as the one we observed, *given that $\mathcal{H}_0$ is true*.
+> Probability of an effect at least as extreme as the one we observed, *given that $\mathcal{H}_0$ is true*.<br>
 (*$\mathcal{H}_0$が正しいとして*、測定された効果(effect)が少なくともそれ同等かそれ以上に観測される確率)
 
 \[\fbox{$ p\text{-value} = P\left(X_\text{obs} \text{ or more extreme}|\mathcal{H}_0\right) $}\]
@@ -315,6 +326,12 @@ from the above premises. Also note that several or none of the statements may be
 knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
+Try it!: [rebrand.ly/pvalue](https://rebrand.ly/pvalue)
+
+<!-- Poll here: http://www.polljunkie.com/poll/yezkij/what-is-a-p-value/admin -->
+<!-- Shorter: https://rebrand.ly/pvalue -->
+<!-- Available only until 31 August 2019 -->
+
 ## 結果
 **すべての** 文は<span style="color:red">間違っています</span>.
 
@@ -327,7 +344,7 @@ knitr::include_graphics('figures/Gigerenzer p values 2.png')
 
 これは2004年のものです. でもそれ以降、改善は見られていません...
 
-## @goodman2008
+## Goodman (2008)
 
 ```{r, out.width='60%'}
 knitr::include_graphics('figures/Goodman.png')
@@ -338,7 +355,7 @@ knitr::include_graphics('figures/Goodman.png')
 knitr::include_graphics('figures/Goodman2.png')
 ```
 
-## @greenland2016
+## Greenland et al. (2016)
 
 ```{r, out.width='80%'}
 knitr::include_graphics('figures/Greenland.png')
@@ -353,7 +370,7 @@ knitr::include_graphics('figures/Greenland.png')
 
 <p align="center"><span style="color:red">"$p<.05$"の世界の向こう側</span></p>
 
-# 信頼区間 {.section}
+# Confidence intervals<br>信頼区間 {.section}
 
 ## 他のより良い選択肢はあるのか？
 - 信頼区間 (Confidence Intervals; CIs)は仮説検定の代替推定手段としてよく推奨される.
@@ -385,9 +402,14 @@ knitr::include_graphics('figures/Hoekstra2014 I.png')
 ```
 
 ## 自分で試してみましょう
-```{r, out.width='65%'}
+```{r, out.width='60%'}
 knitr::include_graphics('figures/Hoekstra2014 II.png')
 ```
+
+Try it!: [rebrand.ly/confint](https://rebrand.ly/confint)
+<!-- Poll here: http://www.polljunkie.com/poll/ykmrid/what-is-a-confidence-interval-hoekstra-et-al-2014 -->
+<!-- Shorter: https://rebrand.ly/confint -->
+<!-- Available only until 31 August 2019 -->
 
 ## 結果
 **すべての**文は <span style="color:red">間違っています</span>.
@@ -411,9 +433,9 @@ knitr::include_graphics('figures/Hoekstra2014 III.png')
 
 ちなみに、全員がHoekstra氏の研究[@garcia-perez2016; @miller2016; see also a reply by @morey2016]を支持している訳ではない.
 
-# 出版の方針{.section}
+# Publication policies<br>出版の方針{.section}
 
-## Psychological Science [@eich2014]
+## Psychological Science (Eich, 2014)
 ```{r, out.width='90%'}
 knitr::include_graphics('figures/Psychological Science 2014.png')
 ```
@@ -443,7 +465,7 @@ Editorial [@harrington2019].
 
 > "(...) a requirement to <span style="color:red">replace $p$ values</span> with estimates of effects or association and 95% confidence intervals"
 
-# statistical associations(統計学協会)はどうアドバイスしているのか? {.section}
+# What do statistical associations advice?<br>statistical associations(統計学協会)はどうアドバイスしているのか? {.section}
 
 ## Wilkinson Task Force 1999
 多くのアドバイスの一部抜粋、
@@ -455,7 +477,7 @@ Editorial [@harrington2019].
 
 > "Novice researchers err either by overgeneralizing their results or, equally unfortunately, by overparticularizing."
 
-## ASA 2016 [@wasserstein2016]
+## ASA 2016 (Wasserstein & Lazar, 2016)
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Wasserstein2016.png')
 ```
@@ -469,7 +491,7 @@ knitr::include_graphics('figures/Wasserstein2016.png')
 5. $p$-値または統計的有意性は効果の程度(effect size)や結果の重要性を示す指標ではない.
 6. $p$-値自体はモデルや仮説の適合性を示すものではない.
 
-## ASA 2019 [@wasserstein2019]
+## ASA 2019 (Wasserstein et al., 2019)
 ```{r, out.width='80%'}
 knitr::include_graphics('figures/Wasserstein2019.png')
 ```
@@ -679,7 +701,7 @@ knitr::include_graphics('figures/Ruberg2019.png')
 <!-- ## 'statcheck' -->
 <!-- R package that can assist detecting statistical reporting of errors [@nuijten2016]. -->
 
-# 何を避けるべきか {.section}
+# What to avoid<br>何を避けるべきか {.section}
 
 ## いじめ
 
@@ -713,7 +735,7 @@ knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 
 > "We’re not here to *be right*. We’re here to *get it right*."
 
-# 今日は時間の都合上できませんが...
+# No time today for...<br>今日は時間の都合上できませんが...
 
 ## 今日は時間の都合上、カットした内容...
 - Replications projects(追試プロジェクト)
@@ -727,7 +749,7 @@ knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 
 今日は*統計に限定して*お話しします.
 
-# ベイズ統計 {.section}
+# Bayesian statistics<br>ベイズ統計 {.section}
 
 ## 統計的推定における代替的アプローチ
 休憩後:

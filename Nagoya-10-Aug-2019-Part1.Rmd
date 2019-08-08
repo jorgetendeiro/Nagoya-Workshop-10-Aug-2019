@@ -14,7 +14,7 @@ output:
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
 nocite: | 
-  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999, @ikeda2019
+  @cuddy2018, @wasserstein2016, @klein2014, @trafimow2015, @heathers2018, @spreckelsen2018, @wilkinson1999, @ikeda2019, @meehl1967, @fried2017, @cohen1962, @eich2014, @greenland2016
 ---
 
 ```{r setup, include = FALSE, fig.align = 'center'}
@@ -81,8 +81,7 @@ See also @simmons2011.
 - <span style="color:red">$p$-hacking</span>: E.g.,
     - Exclusion of outliers depending on whether $p<.05$.
     - $p = .054 \longrightarrow p = .05$.
-- <span style="color:red">HARKing</span> [@kerr1998]: Convert exploratory results into research questions.<br>
-(@bem2004, the author of the famous 2011 precognition paper, *defended* this practice...)
+- <span style="color:red">HARKing</span> [@kerr1998]: Convert exploratory results into research questions.
 - ...
 
 ## Researcher's degrees of freedom
@@ -91,7 +90,7 @@ See also @simmons2011.
 - This is now known as *researcher's degrees of freedom* [@simmons2011].
 - Consequence: Inflated false positive findings [@ioannidis2005].
 
-## @fried2017
+## Fried (2017)
 <div style="float: left; width: 50%;">
 ```{r, out.width='100%'}
 knitr::include_graphics('figures/Fried 2017.png')
@@ -104,12 +103,24 @@ knitr::include_graphics('figures/Fried 2017.png')
 - Yet, all are interpreted as `level of depression'.
 </div>
 
+## Turning exploratory into confirmatory analysis
+
+From @bem2004:
+
+> "(...) [L]et us (...) become intimately familiar with (...) the data. Examine them <span style="color:red">from every angle</span>. Analyze the sexes separately. Make up new composite indices. <span style="color:red">If a datum suggests a new hypothesis, try to find further evidence for it elsewhere in the data.</span> If you see dim traces of interesting patterns, try to reorganize the data to bring them into bolder relief. If there are participants you don't like, or trials, observers, or interviewers who gave you anomalous results, <span style="color:red">drop them</span> (temporarily). <span style="color:red">Go on a fishing expedition for something-- anything-- interesting.</span>"
+
+This is not OK *unless* the exploration is explicity stated.
+
+<br><br>
+Daryl Bem is the author of the famous 2011 precognition paper<br>
+(data used in Part 2 of today's workshop).
+
 ## A now famous example...
 Prof. Brian Wansink at Cornell University.
 
 [His description](https://web.archive.org/web/20170312041524/http:/www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no) of the efforts of a visiting Ph.D student:
 
-> I gave her a <span style="color:red">data set</span> of a self-funded, failed study which had <span style="color:red">null results</span> (...). I said, "This cost us a lot of time and our own money to collect. There’s got to be something here we can salvage because it’s a cool (rich & unique) data set." I had three ideas for potential Plan B, C, & D directions (since Plan A had failed). I told her what the analyses should be and what the tables should look like. I then asked her if she wanted to do them.
+> I gave her a <span style="color:red">data set</span> of a self-funded, failed study which had <span style="color:red">null results</span> (...). I said, "This cost us a lot of time and our own money to collect. <span style="color:red">There’s got to be something here</span> we can salvage because it’s a cool (rich & unique) data set." I had three ideas for potential Plan B, C, & D directions (since Plan A had failed). I told her what the analyses should be and what the tables should look like. I then asked her if she wanted to do them.
 
 > Every day she came back with puzzling new results, and every day we would scratch our heads, ask "Why," and <span style="color:red">come up with another way to reanalyze the data</span> with yet another set of plausible hypotheses. Eventually <span style="color:red">we started discovering solutions</span> that held up regardless of how we pressure-tested them. I outlined the first paper, and she wrote it up (...). This happened with a second paper, and then a third paper (which was one that was based on her own discovery while digging through the data).
 
@@ -146,9 +157,6 @@ Well, maybe not (yet).
 Here's an interesting preprint (from July 2019!) from a Japanese research group (Kyushu University):
 
 > Ikeda, A., Xu, H., Fuji, N., Zhu, S., & Yamada, Y. (2019). *Questionable research practices following pre-registration* [Preprint]. doi: [10.31234/osf.io/b8pw9](https://doi.org/10.31234/osf.io/b8pw9)
-
-
-
 
 # But *why*?... {.section}
 
@@ -215,7 +223,7 @@ knitr::include_graphics('figures/Makel 2012.png')
 - ...
 
 # Didn't we see this coming? {.section}
-## @meehl1967
+## Meehl (1967)
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Meehl.jpg')
@@ -225,7 +233,7 @@ knitr::include_graphics('figures/Meehl.jpg')
 <div style="float: right; width: 55%;">
 How poorly we build theory (see [Gelman](https://statmodeling.stat.columbia.edu/2016/05/06/needed-an-intellectual-history-of-research-criticism-in-psychology/)):
 
-> "It is not unusual that (e) this *ad hoc* challenging of auxiliary hypotheses is repeated in the course of a series of related experiments, in which <span style="color:red">the auxiliary hypothesis involved in Experiment 1</span> (...) <span style="color:red">becomes the focus of interest in Experiment 2</span>, which in turn utilizes further plausible but easily challenged auxiliary hypotheses, and so forth. In this fashion a zealous and clever investigator can slowly wend his way through (...) a long series of related experiments (...) <span style="color:red">without ever once refuting or corroborating</span> so much as a single strand of the network."
+> "It is not unusual that (...) this *ad hoc* challenging of auxiliary hypotheses is repeated in the course of a series of related experiments, in which <span style="color:red">the auxiliary hypothesis involved in Experiment 1</span> (...) <span style="color:red">becomes the focus of interest in Experiment 2</span>, which in turn utilizes further plausible but easily challenged auxiliary hypotheses, and so forth. In this fashion a zealous and clever investigator can slowly wend his way through (...) a long series of related experiments (...) <span style="color:red">without ever once refuting or corroborating</span> so much as a single strand of the network."
 
 </div>
 
@@ -236,7 +244,7 @@ knitr::include_graphics('figures/tylervigen.png')
 
 [http://www.tylervigen.com/spurious-correlations](http://www.tylervigen.com/spurious-correlations)
 
-## @cohen1962
+## Cohen (1962)
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Cohen.jpg')
@@ -252,7 +260,9 @@ Low-powered experiments:
 
 </div>
 
-## Kahneman (2012), see [here](https://www.nature.com/news/polopoly_fs/7.6716.1349271308!/suppinfoFile/Kahneman%20Letter.pdf)
+## Kahneman (2012)
+See [here](https://www.nature.com/news/polopoly_fs/7.6716.1349271308!/suppinfoFile/Kahneman%20Letter.pdf).
+
 <div style="float: left; width: 40%;">
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Kahneman.jpg')
@@ -313,6 +323,12 @@ from the above premises. Also note that several or none of the statements may be
 knitr::include_graphics('figures/Gigerenzer p values.png')
 ```
 
+Try it!: [rebrand.ly/pvalue](https://rebrand.ly/pvalue)
+
+<!-- Poll here: http://www.polljunkie.com/poll/yezkij/what-is-a-p-value/admin -->
+<!-- Shorter: https://rebrand.ly/pvalue -->
+<!-- Available only until 31 August 2019 -->
+
 ## Results
 **All** statements are <span style="color:red">incorrect</span>.
 
@@ -325,7 +341,7 @@ knitr::include_graphics('figures/Gigerenzer p values 2.png')
 
 This was in 2004. But things did not improve since...
 
-## @goodman2008
+## Goodman (2008)
 
 ```{r, out.width='60%'}
 knitr::include_graphics('figures/Goodman.png')
@@ -336,7 +352,7 @@ knitr::include_graphics('figures/Goodman.png')
 knitr::include_graphics('figures/Goodman2.png')
 ```
 
-## @greenland2016
+## Greenland et al. (2016)
 
 ```{r, out.width='80%'}
 knitr::include_graphics('figures/Greenland.png')
@@ -383,9 +399,14 @@ knitr::include_graphics('figures/Hoekstra2014 I.png')
 ```
 
 ## Test yourself
-```{r, out.width='65%'}
+```{r, out.width='60%'}
 knitr::include_graphics('figures/Hoekstra2014 II.png')
 ```
+
+Try it!: [rebrand.ly/confint](https://rebrand.ly/confint)
+<!-- Poll here: http://www.polljunkie.com/poll/ykmrid/what-is-a-confidence-interval-hoekstra-et-al-2014 -->
+<!-- Shorter: https://rebrand.ly/confint -->
+<!-- Available only until 31 August 2019 -->
 
 ## Results
 **All** statements are <span style="color:red">incorrect</span>.
@@ -411,7 +432,7 @@ For completeness, not everyone agrees with the Hoekstra study [@garcia-perez2016
 
 # Publication policies {.section}
 
-## Psychological Science [@eich2014]
+## Psychological Science (Eich, 2014)
 ```{r, out.width='90%'}
 knitr::include_graphics('figures/Psychological Science 2014.png')
 ```
@@ -453,7 +474,7 @@ Among many many, advices,
 
 > "Novice researchers err either by overgeneralizing their results or, equally unfortunately, by overparticularizing."
 
-## ASA 2016 [@wasserstein2016]
+## ASA 2016 (Wasserstein & Lazar, 2016)
 ```{r, out.width='70%'}
 knitr::include_graphics('figures/Wasserstein2016.png')
 ```
@@ -467,7 +488,7 @@ Six principles:
 5. A $p$-value, or statistical significance, does not measure the size of an effect or the importance of a result.
 6. By itself, a $p$-value does not provide a good measure of evidence regarding a model or hypothesis.
 
-## ASA 2019 [@wasserstein2019]
+## ASA 2019 (Wasserstein et al., 2019)
 ```{r, out.width='80%'}
 knitr::include_graphics('figures/Wasserstein2019.png')
 ```
