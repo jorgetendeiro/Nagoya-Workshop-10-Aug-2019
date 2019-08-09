@@ -197,7 +197,7 @@ JASPはベイズ因子を重視している.
 
 > (...) the correlation between stimulus seeking and psi performance was .18 ($p = .035$).
 
-# 今日のワークショップのまとめ
+# Summary of today's workshop<br>今日のワークショップのまとめ {.section}
 
 ## 主な考え: 再現の危機 {.build}
 
@@ -241,7 +241,7 @@ JASPはおもにモデル比較/仮説検定を中心としている.
 JASPの域を越えて、私はモデルフィッティング、パラメーター推定と事後分布の要約統計量を記述することを推奨する.
 
 <br>
-そのために必要なツール: MCMCサンプリング (e.g., JAGS, Stan).
+そのために必要なツール: MCMC サンプリング (e.g., JAGS, Stan).
 
 <style type="text/css">
 slides > slide { overflow: scroll; }

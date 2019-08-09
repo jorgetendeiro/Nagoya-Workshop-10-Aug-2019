@@ -198,7 +198,7 @@ Main research hypothesis:
 
 > (...) the correlation between stimulus seeking and psi performance was .18 ($p = .035$).
 
-# Summary of today's workshop
+# Summary of today's workshop {.section}
 
 ## Main ideas: Replication crisis {.build}
 
