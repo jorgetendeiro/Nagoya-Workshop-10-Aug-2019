@@ -736,7 +736,7 @@ knitr::include_graphics('figures/AmyCuddy_NYT2017.png')
 
 > "We’re not here to *be right*. We’re here to *get it right*."
 
-# No time today for...<br>今日は時間の都合上できませんが...
+# No time today for...<br>今日は時間の都合上できませんが... {.section}
 
 ## 今日は時間の都合上、カットした内容...
 - Replications projects(追試プロジェクト)

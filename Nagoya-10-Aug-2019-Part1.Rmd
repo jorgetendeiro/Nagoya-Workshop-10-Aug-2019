@@ -733,7 +733,7 @@ Or in the words of Brian Nosek (as quoted [here](https://fivethirtyeight.com/fea
 
 > "We’re not here to *be right*. We’re here to *get it right*."
 
-# No time today for...
+# No time today for... {.section}
 
 ## No time today for...
 - Replications projects
