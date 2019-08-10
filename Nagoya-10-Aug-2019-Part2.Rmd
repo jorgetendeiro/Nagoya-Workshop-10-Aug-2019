@@ -198,6 +198,22 @@ Main research hypothesis:
 
 > (...) the correlation between stimulus seeking and psi performance was .18 ($p = .035$).
 
+## Descriptive classification of Bayes factors
+
+| $BF_{10}$  | Qualitative descriptive                   |
+|-----------:|------------------------------------------:|
+| 1          | No evidence                               |
+| 1 --- 3    | Anecdotal evidence for $\mathcal{H}_1$    |
+| 3 --- 10   | Moderate evidence for $\mathcal{H}_1$     |
+| 10 --- 30  | Strong evidence for $\mathcal{H}_1$       |
+| 30 --- 100 | Very strong evidence for $\mathcal{H}_1$  |
+| > 100      | Extreme evidence for $\mathcal{H}_1$      |
+
+Source: @lee2013
+
+<br>
+*Note:* Do not take these qualitative labels strictly. Use them as loose reference bounds.
+
 # Summary of today's workshop {.section}
 
 ## Main ideas: Replication crisis {.build}
